@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { ErrorModule } from './layouts/error/error.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimplebarAngularModule } from 'simplebar-angular';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SimplebarAngularModule } from 'simplebar-angular';
     ErrorModule,
     RouterModule,
     BrowserAnimationsModule,
-    SimplebarAngularModule
+    SimplebarAngularModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

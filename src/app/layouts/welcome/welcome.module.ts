@@ -12,6 +12,8 @@ import { DialogOneComponent } from 'src/app/dialogProjectsPopup/dialog-one/dialo
 import { DialogTwoComponent } from 'src/app/dialogProjectsPopup/dialog-two/dialog-two.component';
 import { DialogThreeComponent } from 'src/app/dialogProjectsPopup/dialog-three/dialog-three.component';
 import { DialogFourComponent } from 'src/app/dialogProjectsPopup/dialog-four/dialog-four.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 
@@ -37,7 +39,9 @@ import { DialogFourComponent } from 'src/app/dialogProjectsPopup/dialog-four/dia
     CommonModule,
     RouterModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ]
 })
 export class WelcomeModule { }
