@@ -26,3 +26,72 @@ body {
 .mat-dialog-container {
     background-color: #343A41;
 }
+
+
+//Loading animation
+@keyframes ldio-yvrhcn1gxp {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}
+.loading-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ldio-yvrhcn1gxp div { box-sizing: border-box!important }
+.ldio-yvrhcn1gxp > div {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  top: 28px;
+  left: 28px;
+  border-radius: 50%;
+  border: 16px solid #000;
+  border-color: #af957e transparent #af957e transparent;
+  animation: ldio-yvrhcn1gxp 1s linear infinite;
+}
+.ldio-yvrhcn1gxp > div:nth-child(2) { border-color: transparent }
+.ldio-yvrhcn1gxp > div:nth-child(2) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.ldio-yvrhcn1gxp > div:nth-child(2) div:before, .ldio-yvrhcn1gxp > div:nth-child(2) div:after { 
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -16px;
+  left: 48px;
+  background: #af957e;
+  border-radius: 50%;
+  box-shadow: 0 128px 0 0 #af957e;
+}
+.ldio-yvrhcn1gxp > div:nth-child(2) div:after { 
+  left: -16px;
+  top: 48px;
+  box-shadow: 128px 0 0 0 #af957e;
+}
+.loadingio-spinner-dual-ring-p77mdvdnix {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  //background: #ffffff;
+}
+.ldio-yvrhcn1gxp {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-yvrhcn1gxp div { box-sizing: content-box; }

@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   faGithub = faGithub;
 
   emailFormControl = new FormControl('', [
-    Validators.required,
+    //Validators.required,
     Validators.email,
   ]);
 
