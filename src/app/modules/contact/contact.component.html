@@ -11,7 +11,8 @@
     </div>
 
     <div fxFlex="40%">
-        <form name="contact" method="POST" data-netlify="true" class="example-form">
+        <form name="contact" netlify method="POST" netlify-honeypot="bot-field" class="example-form">
+            <input type="hidden" name="form-name" value="contact"/>
             <mat-form-field class="example-full-width" >
                 <mat-label>Name</mat-label>
                 <input matInput type="text" name="name" class="form-control">
@@ -38,6 +39,7 @@
             <br>
 
             <button mat-button type="submit">Submit</button>
+            <input type="submit">
         </form>
     </div>
 
