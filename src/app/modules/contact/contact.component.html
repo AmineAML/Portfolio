@@ -11,16 +11,16 @@
     </div>
 
     <div fxFlex="40%">
-        <form action="" name="contact" method="POST" data-netlify="true" class="example-form">
+        <form name="contact" method="POST" data-netlify="true" class="example-form">
             <mat-form-field class="example-full-width" >
                 <mat-label>Name</mat-label>
-                <input matInput type="text" class="form-control">
+                <input matInput type="text" name="name" class="form-control">
             </mat-form-field>
             <br>
 
             <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
-                <input matInput [formControl]="emailFormControl" class="form-control">
+                <input matInput [formControl]="emailFormControl" name="email" class="form-control">
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                     Please enter a valid email address
                 </mat-error>
@@ -32,7 +32,7 @@
 
             <mat-form-field class="example-full-width">
                 <mat-label>Message</mat-label>
-                <input matInput #message maxlength="500" class="form-control">
+                <input matInput #message maxlength="500" name="message" class="form-control">
                 <mat-hint align="end">{{message.value.length}} / 500</mat-hint>
             </mat-form-field>
             <br>
