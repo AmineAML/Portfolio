@@ -33,3 +33,4 @@ https://github.com/Grsmto/simplebar
 
 ## How To   
 - "Simple" scroll to: https://stackoverflow.com/questions/48044711/scroll-to-a-component-on-a-click-using-angular
+- Contact form using Netlify: https://community.netlify.com/t/cannot-get-netlify-to-recognize-form-in-angular-app/7002/7 and https://github.com/huntzinger92/personal-website-angular   
