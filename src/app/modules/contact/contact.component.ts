@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   contactForm = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(''),
+    email: this.emailFormControl, //new FormControl(''),
     message: new FormControl(''),
   });
 
