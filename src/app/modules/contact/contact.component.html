@@ -11,8 +11,11 @@
     </div>
 
     <div fxFlex="40%">
-        <form name="contact" method="POST" class="example-form">
+        <form name="contact" netlify method="POST" netlify-honeypot="bot-field" class="example-form">
             <input type="hidden" name="form-name" value="contact"/>
+            <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
             <mat-form-field class="example-full-width" >
                 <mat-label>Name</mat-label>
                 <input matInput type="text" name="name" class="form-control">
@@ -21,7 +24,7 @@
 
             <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
-                <input matInput [formControl]="emailFormControl" type="email" name="email" class="form-control">
+                <input matInput [formControl]="emailFormControl" name="email" class="form-control">
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                     Please enter a valid email address
                 </mat-error>
