@@ -1,0 +1,47 @@
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlexFill>
+
+    <div fxFlex="40%">
+        <p class="mat-display-1" style="color:#ad8174">Contact me</p>
+        <a href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
+            <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+        </a>
+        <a href="https://github.com/AmineAML" target="_blank">
+            <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+        </a>
+    </div>
+
+    <div fxFlex="40%">
+        <form action="" class="example-form">
+            <mat-form-field class="example-full-width" >
+                <mat-label>Name</mat-label>
+                <input matInput type="text" class="form-control">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput [formControl]="emailFormControl" class="form-control">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Message</mat-label>
+                <input matInput #message maxlength="500" class="form-control">
+                <mat-hint align="end">{{message.value.length}} / 500</mat-hint>
+            </mat-form-field>
+            <br>
+
+            <button mat-button type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>
+<!--
+
+-->

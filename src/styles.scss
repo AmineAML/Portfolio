@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'src/assets/Fonts/scss/modules/_fonts.scss';
+@import '~simplebar/dist/simplebar.css';
+
+html, body { 
+    height: 100%; 
+    background-color: #262626;
+    .simplebar-content-wrapper {
+        overflow: hidden;
+    }
+}
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    .simplebar-content-wrapper {
+        scroll-behavior: smooth; 
+        scroll-snap-type: y mandatory;
+    }
+}
+
+.mat-form-field-label{
+    color: #ad8174 !important;
+}
+.mat-form-field-underline{
+    background-color: #ad8174 !important;
+}
+.mat-dialog-container {
+    background-color: #343A41;
+}

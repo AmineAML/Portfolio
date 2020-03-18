@@ -1,0 +1,46 @@
+div{
+    //transform: translateY(50%);
+    //padding: 200px;
+    margin-top: 17%;
+    margin-bottom: auto;
+    padding-left: 20px;
+    #animationName {
+        animation: typingAnimName 3s steps(14);
+        overflow: hidden;
+        white-space: nowrap;
+        width: 14ch;
+    }
+    #animatioNameTyping {
+        animation: typingAnim 1s infinite 0s linear;
+    }
+    ul {
+        li {
+            display: inline;
+            padding-right: 1rem;
+            a {
+                text-decoration: none;
+                color: #917164;
+            }
+        }
+    }
+}
+
+@keyframes typingAnimName {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 14ch;
+    }
+}
+
+@keyframes typingAnim {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+}

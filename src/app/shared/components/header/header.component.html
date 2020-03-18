@@ -1,0 +1,46 @@
+<mat-toolbar>
+  <div>
+    <ul>
+      <li>
+        <a href="/" style="font-family: 'Bunch Blossoms Personal Use'; font-size:xx-large;">AA</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li fxHide fxShow.gt-sm>
+        <a href="javascript:;" (click)="goTo('home')">HOME /></a>
+      </li>
+      <li fxHide fxShow.gt-sm>
+        <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+      </li>
+      <li fxHide fxShow.gt-sm>
+        <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
+      </li>
+      <li fxHide fxShow.gt-sm>
+        <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+      </li>
+      <!--
+      <li fxHide fxShow.gt-md>
+        href="javascript:; (this is used so a click does only open the languages menu-->
+        <!--
+        <a href="javascript:;" mat-button [matMenuTriggerFor]="menu" style="font-weight: normal;">EN/FR</a>
+      </li>
+      <li fxHide fxShow.gt-md>
+        <mat-slide-toggle mat-button color="accent">
+        </mat-slide-toggle>
+      </li>
+      -->
+      <li fxShow fxHide.gt-md>
+        <a href=""><fa-icon [icon]="faBars"></fa-icon></a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
+
+<!--
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>EN</button>
+  <button mat-menu-item>FR</button>
+</mat-menu>
+-->

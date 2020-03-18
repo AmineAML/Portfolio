@@ -1,0 +1,40 @@
+<mat-dialog-content>
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+        <div fxFlex="50%">
+            <p>Demonstration of this project is not availlable</p>
+        </div>
+        <div fxFlex="50%">
+            <button class="floatRight" mat-button [mat-dialog-close]="true">X</button>
+
+            <p class="mat-headline">PROJECT</p>
+            <p class="mat-display-1" id="ProjectName">UniFace</p>
+            <div class="mat-subheading-2" class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
+                fxLayoutGap="0.5%" fxLayoutAlign="left">
+                <span>C#</span>
+                <span>.NET</span>
+                <span>SQL Server</span>
+                <span>DataGridView Printer</span>
+                <span>SMTP</span>
+            </div>
+            <br>
+            <p class="mat-headline">ABOUT</p>
+            <br>
+            <p class="mat-body-1">
+                For this project I worked with C# making a CRUD application allowing also to retrive account by sending
+                an email and printing lists and results.
+                University's face or the face of the university is an application intended for professors,
+                administration and students allowing them to access their university accounts either to insert notes
+                (for professor), manage privileges of accounts (for administration), or to consult the results (for
+                students)
+            </p>
+            <br>
+            <!-- Code is unavaillabe because private, and Demo is unavaillabe because it's a desktop app-->
+            <button mat-button>
+                <fa-icon [icon]="faEye"></fa-icon> Demo
+            </button>
+            <button mat-button>
+                <fa-icon [icon]="faCode"></fa-icon> Code
+            </button>
+        </div>
+    </div>
+</mat-dialog-content>

@@ -1,27 +1,35 @@
 # PortfolioWebsite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+Angular 9   
+Sass *scss   
+Angular Material Design   
+Angular Material typography   
+browser animations to Angular Material   
+Angular FxLayout (flex layout)    
+https://github.com/Grsmto/simplebar  
 
-## Development server
+## Tools
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Chrome keyframes extension   
+- Chrome ColorZilla extension   
+- Remove background from image: https://www.remove.bg/
+- https://codepen.io/
 
-## Code scaffolding
+## Inspiration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- https://visme.co/blog/website-color-schemes/   
+- https://yasio.pl/   
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Font
 
-## Running unit tests
+- https://www.fontspace.com/bunch-blossoms-font-f30021
+- How to use it: https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Intersting blog about Angular   
+- https://www.bennadel.com/blog/complete-blog-entry-list.htm  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## How To   
+- "Simple" scroll to: https://stackoverflow.com/questions/48044711/scroll-to-a-component-on-a-click-using-angular

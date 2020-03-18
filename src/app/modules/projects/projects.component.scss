@@ -1,0 +1,34 @@
+div {
+
+    padding-left: 40px;
+    padding-right: 40px;
+    p {
+        color: #917164;
+    }
+    div {
+      .mat-card {
+        cursor: pointer;
+      }
+      .mat-card:hover {
+        transform: scale(1.1);
+        z-index: 10;
+      }
+    }
+}
+/*
+      a {
+        text-decoration: none;
+      }
+      span {
+        color: #917164;
+        border-style: groove ;
+        border-color: #917164;
+      }
+    }
+    div #technologies {
+      //background-color: gray;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      */

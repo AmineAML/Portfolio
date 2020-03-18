@@ -1,0 +1,48 @@
+$main-color: #917164;
+$secondary-color: #c7493a;
+
+mat-toolbar {
+    justify-content: space-between;
+    animation: navbarAnimation 3s forwards 0s ease;
+    background-color: transparent;
+    position: fixed;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 5;
+    ul {
+        li {
+            display: inline;
+            padding-right: 2rem;
+            a {
+                text-decoration: none;  
+                color: $main-color;
+
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(
+                      0deg,
+                      $secondary-color,
+                      $secondary-color 50%,
+                      $main-color 50%);
+                      background-size: 100% 200%;
+                      background-position: 0% 0%;
+              
+            }
+            a:hover {
+                transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+                background-position: 100% 100%;
+            }
+        }
+    }
+}
+
+@keyframes navbarAnimation{
+    0%{
+        transform: rotate(0) translateY(-100%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+        }
+}

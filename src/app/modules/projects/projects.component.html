@@ -1,0 +1,86 @@
+<!--
+    <mat-tab-group animationDuration="0ms" style="background-color: gray;">
+        <mat-tab label="First" >
+            <ng-template matTabContent>
+                The First Content
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Second">
+            <ng-template matTabContent>
+                The Second Content
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+-->
+
+
+<!--
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+        <a href="javascript:;"><span>All</span></a>
+        <a href="javascript:;"><span>Angular</span></a>
+        <a href="javascript:;"><span>.NET</span></a>
+        <a href="javascript:;"><span>Ionic</span></a>
+        <a href="javascript:;"><span>HTML & CSS</span></a>
+    </div>
+    <br>
+
+            <a href="javascript:;" id="technologies" (click)="openDialog()" fxFlex="20%">
+                <img mat-card-image src="assets\imgs\LocaIT logo.png">
+            </a>
+            <a href="javascript:;" id="technologies" (click)="openDialog()" fxFlex="20%">
+                <img mat-card-image src="assets\imgs\rubiks-2-512.png" width="50%">
+            </a>
+            <a href="javascript:;" id="technologies" (click)="openDialog()" fxFlex="20%">
+                <img mat-card-image src="assets\imgs\Logo NoteTaker.ico">
+            </a>
+            <a href="javascript:;" id="technologies" (click)="openDialog()" fxFlex="20%">
+                <img mat-card-image src="assets\imgs\uniface_app_logo_Yr2_Ico_icon.ico">
+            </a>
+-->
+<div class="container" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+
+    <p class="mat-display-1" style="color: #ad8174;" fxFlex="40%">Check out projects I worked on</p>
+    <br>
+    <br>
+    <br>
+
+    <div class="container" fxFlex="40%" fxLayoutGap="1.%" fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+        <mat-card (click)="openDialogLocaIT()" fxFlex="20%">
+            <img mat-card-image src="assets\imgs\LocaIT logo.png">
+            <mat-card-content>
+                <p>
+                    HTML <br>
+                    CSS <br>
+                    Bootstrap
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)="openDialogCubeSolvesTimer()" fxFlex="20%">
+            <img mat-card-image src="assets\imgs\rubiks-2-512.png">
+            <mat-card-content>
+                <p>
+                    C#
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)="openDialogNoteTaker()" fxFlex="20%">
+            <img mat-card-image src="assets\imgs\Logo NoteTaker.ico">
+            <mat-card-content>
+                <p>
+                    C#
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)="openDialogUniFaceApp()" fxFlex="20%">
+            <img mat-card-image src="assets\imgs\uniface_app_logo_Yr2_Ico_icon.ico">
+            <mat-card-content>
+                <p>
+                    C# <br>
+                    SMTP <br>
+                    SQL Server
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
