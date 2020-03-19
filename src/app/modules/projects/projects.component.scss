@@ -6,13 +6,45 @@ div {
         color: #917164;
     }
     div {
-      .mat-card {
+      margin-bottom: 100px;
+      p {
+        color: #D8D2D2;
+      }
+      div {
         cursor: pointer;
+        margin-bottom: 5%;
+        h1 {
+          color: #D8D2D2;
+        }
+        ul {
+          list-style-type: none;
+          color: whitesmoke;
+          margin:0;
+          margin-bottom: 5px;
+          padding:0;
+          li {
+            display: inline;
+          }
+        }
+        p {
+          color: #A4A4A4;
+        }
+        img {
+          width: 100%;
+        }
+        button {
+          background-color: whitesmoke;
+          margin-left: 10px;
+        }
       }
-      .mat-card:hover {
-        transform: scale(1.1);
-        z-index: 10;
-      }
+
+      //.mat-card {
+        //cursor: pointer;
+      //}
+      //.mat-card:hover {
+        //transform: scale(1.1);
+        //z-index: 10;
+      //}
     }
     .mcc {
       ul {

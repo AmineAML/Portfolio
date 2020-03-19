@@ -20,22 +20,22 @@ div {
         max-width: none;
         @include responsiveSectionsHeight(tab-land) {
             //margin-top: 5em;
-            height: 100%;
+            hmin-height: 100vh;
             //font-size: 56.25;
         }
         @include responsiveSectionsHeight(tab-port) {
             //margin-top: 5em;
-            height: 100%;
+            min-height: 100vh;
             //font-size: 50%;
         }
         @include responsiveSectionsHeight(phone) {
             //margin-top: 5em;
-            height: 100%;
+            min-height: 100vh;
             //font-size: 43.75%;
         }
         @include responsiveSectionsHeight(big-desktop) {
-            height: 100vh;
-            scroll-snap-align: center;
+            min-height: 100vh;
+            //scroll-snap-align: center;
         }
     }
 

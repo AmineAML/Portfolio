@@ -5,8 +5,8 @@ import { ErrorComponent } from './layouts/error/error.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/welcome', pathMatch: 'full'},
-  {path: 'welcome', component: WelcomeComponent},
+  //{path: '', redirectTo: '/welcome', pathMatch: 'full'},
+  {path: '', component: WelcomeComponent},
   {path: '**', component: ErrorComponent}
 ];
 

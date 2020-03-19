@@ -37,14 +37,127 @@
                 <img mat-card-image src="assets\imgs\uniface_app_logo_Yr2_Ico_icon.ico">
             </a>
 -->
-<div class="container" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="" fxLayoutAlign="center">
 
-    <p class="mat-display-1" style="color: #D8D2D2;" fxFlex="40%">Check out projects I worked on</p>
-    <br>
-    <br>
-    <br>
+    <div class="projects">
+        <p class="mat-display-1">Projects</p>
+        <br>
+        <br>
 
-    <div class="container" fxFlex="40%" fxLayoutGap="2%" fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="40%">
+                <div (mouseenter)="DisplayProject1=true" (mouseleave)="DisplayProject1=false">
+                    <h1>LocaIT</h1>
+                    <ul>
+                        <li>HTML</li> |
+                        <li>CSS</li> |
+                        <li>Bootstrap</li>
+                    </ul>
+                    <p>For this project I worked with a collegue to make a rental car landing page website</p>
+                    <button mat-button>
+                        <fa-icon [icon]="faEye"></fa-icon> Demo
+                    </button>
+                    <button mat-button>
+                        <fa-icon [icon]="faCode"></fa-icon> Code
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="60%">
+                <img *ngIf="DisplayProject1" class="DisplayOnHoverProject4" src="assets/imgs/projects-gifs/LocaIT.gif" alt="">
+            </div>
+        </div>
+
+        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="60%">
+                <div (mouseenter)="DisplayProject2=true" (mouseleave)="DisplayProject2=false">
+                    <h1>Cube Solves Timer</h1>
+                    <ul>
+                        <li>C#</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <p>For this project I used C# to make an application that allows to users to keep track on their progress of
+                        solving the Rubik's Cube
+                    </p>
+                    <button mat-button>
+                        <fa-icon [icon]="faEye"></fa-icon> Demo
+                    </button>
+                    <button mat-button>
+                        <fa-icon [icon]="faCode"></fa-icon> Code
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="60%">
+                <img *ngIf="DisplayProject2" class="DisplayOnHoverProject3" src="assets/imgs/projects-gifs/CubeSolvesTimer.gif" alt="">
+            </div>
+        </div>
+
+        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="60%">
+                <div (mouseenter)="DisplayProject3=true" (mouseleave)="DisplayProject3=false">
+                    <h1>NoteTaker</h1>
+                    <ul>
+                        <li>C#</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <p>For this project I used C# to make an application for Windows 10 that resembles to the Windows 7 gadgets,
+                        which allow the users to take notes on their screen, it stores them and keeps them organized in a text file,
+                        with the feature of notifiying how many notes the app has stored
+                    </p>
+                    <button mat-button>
+                        <fa-icon [icon]="faEye"></fa-icon> Demo
+                    </button>
+                    <button mat-button>
+                        <fa-icon [icon]="faCode"></fa-icon> Code
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="60%">
+                <img *ngIf="DisplayProject3" class="DisplayOnHoverProject2" src="assets/imgs/projects-gifs/NoteTaker.gif" alt="">
+            </div>
+        </div>
+    
+        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="40%">
+                <div (mouseenter)="DisplayProject4=true" (mouseleave)="DisplayProject4=false">
+                    <h1>UniFace</h1>
+                    <ul>
+                        <li>C#</li> |
+                        <li>SMTP</li> |
+                        <li>SQL Server</li>
+                    </ul>
+                    <p>For this project I worked with C# making a CRUD application allowing also to retrive account by sending an
+                        email and printing lists and results. University's face or the face of the university is an application
+                        intended for professors, administration and students allowing them to access their university accounts
+                        either to insert notes (for professor), manage privileges of accounts (for administration), or to consult
+                        the results (for students)
+                    </p>
+                    <button mat-button>
+                        <fa-icon [icon]="faEye"></fa-icon> Demo
+                    </button>
+                    <button mat-button>
+                        <fa-icon [icon]="faCode"></fa-icon> Code
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="60%">
+                <!--
+                <img *ngIf="DisplayProject4" class="DisplayOnHoverProject1" src="" alt="">
+                -->
+                <p *ngIf="DisplayProject4">Demonstration unvaillable</p>
+            </div>
+        </div>
+    
+
+    </div>
+<!--
+    <div fxFlex="40%">
+ fxLayoutGap="2%" fxLayoutWrap fxLayout="column" fxLayout.xs="column"
+
+            
+-->
+        <!--
         <mat-card (click)="openDialogLocaIT()" fxFlex="40%">
             <img mat-card-image src="assets\imgs\LocaIT logo.png">
             <mat-card-content class="mcc">
@@ -81,6 +194,7 @@
                 </ul>
             </mat-card-content>
         </mat-card>
-    </div>
 
+    </div>
+-->
 </div>

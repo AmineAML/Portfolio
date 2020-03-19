@@ -8,6 +8,10 @@ browser animations to Angular Material
 Angular FxLayout (flex layout)    
 https://github.com/Grsmto/simplebar  
 
+## Angular projects   
+
+- https://medium.com/flatlogic/top-angular-open-source-projects-6e9b91a455c0   
+
 ## Tools
 
 - Chrome keyframes extension   

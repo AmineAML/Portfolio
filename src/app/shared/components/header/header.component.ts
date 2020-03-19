@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
 
  goTo(location: string): void {
   window.location.hash = location;
+
+  //Remove the # and whatever after it from the url
+  history.replaceState({}, document.title, window.location.hash.split('#')[0]);
   }
   
 

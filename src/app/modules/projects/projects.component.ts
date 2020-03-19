@@ -17,7 +17,17 @@ export class ProjectsComponent implements OnInit {
   faCode = faCode;
   faHandPointer = faHandPointer;
 
-  constructor(public dialog: MatDialog) { }
+  DisplayProject1: boolean;
+  DisplayProject2: boolean;
+  DisplayProject3: boolean;
+  DisplayProject4: boolean;
+
+  constructor(public dialog: MatDialog) { 
+    this.DisplayProject1 = false;
+    this.DisplayProject2 = false;
+    this.DisplayProject3 = false;
+    this.DisplayProject4 = false;
+  }
 
   openDialogUniFaceApp() {
     this.dialog.open(DialogOneComponent);

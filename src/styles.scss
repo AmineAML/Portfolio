@@ -15,6 +15,9 @@ body {
         scroll-behavior: smooth; 
         scroll-snap-type: y mandatory;
     }
+    .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+      background-color: #D8D2D2;
+  }
 }
 
 .mat-form-field-label{
