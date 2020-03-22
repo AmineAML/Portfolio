@@ -10,7 +10,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
 
   faBars = faBars;
-  
+  public changeWidth;
+
+  public displayMobileNav: boolean = false;
+
   constructor() { }
 
  goTo(location: string): void {
@@ -18,8 +21,17 @@ export class HeaderComponent implements OnInit {
 
   //Remove the # and whatever after it from the url
   history.replaceState({}, document.title, window.location.hash.split('#')[0]);
+
+  this.closeNav();
   }
   
+  openNav() {
+    this.displayMobileNav = true;
+  }
+
+  closeNav() {
+    this.displayMobileNav = false;
+  }
 
   ngOnInit(): void {
   }

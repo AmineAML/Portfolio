@@ -7,6 +7,7 @@ Angular Material typography
 browser animations to Angular Material   
 Angular FxLayout (flex layout)    
 https://github.com/Grsmto/simplebar  
+Angular animations
 
 ## Angular projects   
 

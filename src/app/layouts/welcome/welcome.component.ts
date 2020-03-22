@@ -9,7 +9,7 @@ export class WelcomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     //As page open it scrolls to the home section
     //window.onload = Scrolldown;
     //function Scrolldown() {

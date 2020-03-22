@@ -1,47 +1,107 @@
 <div>
     <!--Small devices-->
-    <p id="animationName" class="mat-display-1" style="color: #ad8174; font-size:3rem;" fxHide fxShow.lt-md>
-        <span>Amine
-            <span style="color: #a33327;">AMELLOUK</span>
-        </span>
-        <span id="animatioNameTyping" class="mat-display-4" style="color: #917164; font-size:3rem;">|</span>
-    </p>
+
+    <div fxHide fxShow.lt-md>
+        <div  style="bottom: 70%;">
+            <p  style="color: #ad8174; font-size:30px;">
+                
+                <span >{{typewriter_display | slice:0:highlightStart}}</span>
+                <span style="color: #a33327;">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
+                <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
+                
+                <span id="animatioNameTyping"  style="color: #917164; font-size:30px;">|</span>
+            </p>
+    
+            <p  style="color: #917164;font-size: 20px;">Software Engineer</p>
+        
+            <ul >
+                <li>
+                    <a href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
+                        <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/AmineAML" target="_blank">
+                        <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
+                        target="_blank">
+                        <fa-icon [icon]="faDownload" size="2x"></fa-icon>
+                        <span> Resume</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cards">
+            <div class="card">Project</div>
+            <div class="card">Project</div>
+            <div class="card">Project</div>
+            <div class="card">Project</div>
+            <div class="card">Project</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--Other devices-->
-    <p id="animationName" class="mat-display-4" style="color: #ad8174;" fxHide fxShow.gt-sm>
-        <span>Amine
-            <span style="color: #a33327;">AMELLOUK</span>
-        </span>
-        <span id="animatioNameTyping" class="mat-display-4" style="color: #917164;">|</span>
-    </p>
-    <!--
-    <p style="color: #689775; float:right; padding-right: 20px;">
-        <q>
-        Any fool can write code that computers can understand. <br> Good programmers write code that humans can
-        understand. 
-        </q>
-        <br><span style="float: right;">- Martin Fowler</span>
-    </p>
-    -->
-    <p class="mat-display-1" style="color: #917164;">Software Engineer</p>
+    <div  fxHide fxShow.gt-sm>
+        <p  style="color: #ad8174;">
 
-    <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
-                <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/AmineAML" target="_blank">
-                <fa-icon [icon]="faGithub" size="2x"></fa-icon>
-            </a>
-        </li>
-        <li>
-            <a href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
-                target="_blank">
-                <fa-icon [icon]="faDownload" size="2x"></fa-icon>
-                <span> Resume</span>
-            </a>
-        </li>
-    </ul>
+            <span class="mat-display-4">{{typewriter_display | slice:0:highlightStart}}</span>
+            <span class="mat-display-4" style="color: #a33327;">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
+            <span class="mat-display-4">{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
+
+            <span id="animatioNameTyping" class="mat-display-4" style="color: #917164;" *ngIf="typingSign">|</span>
+        </p>
+        <!--
+        <p style="color: #689775; float:right; padding-right: 20px;">
+            <q>
+            Any fool can write code that computers can understand. <br> Good programmers write code that humans can
+            understand. 
+            </q>
+            <br><span style="float: right;">- Martin Fowler</span>
+        </p>
+        -->
+        <p class="mat-display-1" style="color: #917164;">
+            <span>{{typewriter_display2}}</span>
+            <span id="animatioNameTyping" class="mat-display-1" style="color: #917164;" *ngIf="typingSign2">|</span>
+        </p>
+
+        
+    
+        <ul *ngIf="iconHideShow" [@slideInOut]>
+            <li>
+                <a href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
+                    <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/AmineAML" target="_blank">
+                    <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
+                    target="_blank">
+                    <fa-icon [icon]="faDownload" size="2x"></fa-icon>
+                    <span> Resume</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </div>

@@ -4,14 +4,12 @@ div{
     margin-top: 17%;
     margin-bottom: auto;
     padding-left: 20px;
-    #animationName {
-        animation: typingAnimName 3s steps(14);
-        overflow: hidden;
-        white-space: nowrap;
-        width: 14ch;
-    }
+
     #animatioNameTyping {
         animation: typingAnim 1s infinite 0s linear;
+    }
+    p {
+        font-family: 'Montserrat', sans-serif;
     }
     ul {
         li {
@@ -23,14 +21,17 @@ div{
             }
         }
     }
-}
 
-@keyframes typingAnimName {
-    0% {
-        width: 0ch;
+    .cards {
+        display: flex;
+        //position: fixed;
+        bottom: 2%;
     }
-    100% {
-        width: 14ch;
+    .card {
+        background: palegreen;
+        border-radius: 1rem;
+        box-shadow: 4px 4px 12px 2px rgba($color: #000000, $alpha: 0.7);
+        padding: 4rem;
     }
 }
 

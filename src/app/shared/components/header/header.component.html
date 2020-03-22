@@ -31,8 +31,18 @@
         </mat-slide-toggle>
       </li>
       -->
-      <li fxShow fxHide.gt-md>
-        <a href=""><fa-icon [icon]="faBars"></fa-icon></a>
+      <li fxShow fxHide.gt-sm>
+        <a href="javascript:;" (click)="openNav()"><fa-icon [icon]="faBars"></fa-icon></a>
+
+        <div id="myNav" class="overlay" *ngIf="displayMobileNav">
+          <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="javascript:;" (click)="goTo('home')">HOME /></a>
+            <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+            <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
+            <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

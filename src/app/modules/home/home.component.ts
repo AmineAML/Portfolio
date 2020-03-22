@@ -1,21 +1,92 @@
 import { Component, OnInit } from '@angular/core';
-import { faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { trigger, transition, animate, style } from '@angular/animations'
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)' }),
+        animate('400ms ease-in', style({ transform: 'translateY(0%)' }))
+      ]),
+      //transition(':leave', [
+      //animate('200ms ease-in', style({transform: 'translateY(-100%)'}))
+      //])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
 
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faDownload = faDownload;
-  
+
+  //Hide and show the sign of typing
+  public typingSign = true;
+  public typingSign2 = false;
+
+  //Hide and Show icons
+  public iconHideShow = false;
+
+  // Change color or last name
+  highlightStart = 6;
+  highlightLength = 14;
+
+  //Typing animation
+  public typewriter_text: string = "Amine AMELLOUK";
+  public typewriter_display: string = "";
+
+  typingCallback(that) {
+    let total_length = that.typewriter_text.length;
+    let current_length = that.typewriter_display.length;
+    if (current_length < total_length) {
+      that.typewriter_display += that.typewriter_text[current_length];
+      setTimeout(that.typingCallback, 200, that);
+    }
+  }
+
+  public typewriter_text2: string = "Software Engineer";
+  public typewriter_display2: string = "";
+
+  typingCallback2(that) {
+    let total_length = that.typewriter_text2.length;
+    let current_length = that.typewriter_display2.length;
+    if (current_length < total_length) {
+      that.typewriter_display2 += that.typewriter_text2[current_length];
+      setTimeout(that.typingCallback2, 200, that);
+    }
+  }
+
+  //Run typing animations in order while stimulating a return to a new line by "moving" the typing sign to this new line then display the icons
+  public async run(): Promise<void> {
+    this.typingCallback(this);
+
+    await new Promise<void>(resolve => {
+      setTimeout(resolve, 3500);
+    });
+
+    this.typingSign = false;
+    this.typingSign2 = true;
+
+    this.typingCallback2(this);
+
+    await new Promise<void>(resolve => {
+      setTimeout(resolve, 4000);
+    });
+
+    this.iconHideShow = true;
+  }
+
   constructor() { }
 
+
   ngOnInit(): void {
+    this.run();
   }
 
 }
