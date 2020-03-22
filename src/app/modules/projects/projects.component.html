@@ -5,7 +5,7 @@
         <br>
         <br>
 
-        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column" *ngFor="let project of projects">
+        <div fxLayoutWrap fxLayout="row" fxLayout.xs="column" *ngFor="let project of projects" data-aos="fade-up-right">
             <div fxFlex="40%">
                 <div (mouseenter)="project.displayImg=true" (mouseleave)="project.displayImg=false">
                     <h1>{{project.name}}</h1>

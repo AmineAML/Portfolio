@@ -8,6 +8,7 @@ browser animations to Angular Material
 Angular FxLayout (flex layout)    
 https://github.com/Grsmto/simplebar  
 Angular animations
+https://michalsnik.github.io/aos/
 
 ## Angular projects   
 
@@ -40,5 +41,6 @@ Angular animations
 ## How To   
 - "Simple" scroll to: https://stackoverflow.com/questions/48044711/scroll-to-a-component-on-a-click-using-angular
 - Contact form using Netlify: https://community.netlify.com/t/cannot-get-netlify-to-recognize-form-in-angular-app/7002/7 and https://github.com/huntzinger92/personal-website-angular   
-- Angular loading screen: https://alligator.io/angular/custom-loading-screen/
-- Netlify enable Angular routing (redirects): https://medium.com/@mgd4375/how-to-enable-angular-routing-in-a-netlify-deployment-with-the-angular-cli-e2eda69f1b5b
+- Angular loading screen: https://alligator.io/angular/custom-loading-screen/  
+- Netlify enable Angular routing (redirects): https://medium.com/@mgd4375/how-to-enable-angular-routing-in-a-netlify-deployment-with-the-angular-cli-e2eda69f1b5b    
+- Common bug that AOS triggers only on resize of the browser, and to fix it use scroll listener to refresh the AOS(Animate On Scroll) because it doesn't work on page load: https://github.com/michalsnik/aos/issues/429 and https://stackblitz.com/edit/angular-hostlisteners?file=src%2Fapp%2Fapp.component.ts   

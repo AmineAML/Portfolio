@@ -7,14 +7,14 @@ html, body {
     height: 100%; 
     background-color: #262626;
     .simplebar-content-wrapper {
-        overflow: hidden;
+        //overflow: hidden;
     }
 }
 body { 
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
     .simplebar-content-wrapper {
         scroll-behavior: smooth; 
-        scroll-snap-type: y mandatory;
+        //scroll-snap-type: y mandatory;
     }
     .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
       background-color: #D8D2D2;
