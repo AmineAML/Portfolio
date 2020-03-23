@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style } from '@angular/animations'
 
 
@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
 
   faLinkedin = faLinkedin;
   faGithub = faGithub;
-  faDownload = faDownload;
+  faFileAlt = faFileAlt;
+  faStackOverflow = faStackOverflow;
 
   //Hide and show the sign of typing
   public typingSign = true;
@@ -81,7 +82,7 @@ export class HomeComponent implements OnInit {
     });
 
     this.iconHideShow = true;
-    this.ScrollIndicatorShowHide = true;
+    this.ScrollIndicatorShowHide = true;  
   }
 
   constructor() { }
