@@ -32,7 +32,9 @@ body {
 .mat-dialog-container {
     background-color: #343A41;
 }
-
+.mat-toolbar-row, .mat-toolbar-single-row {
+  size: 100px;
+}
 
 //Loading animation
 @keyframes ldio-yvrhcn1gxp {

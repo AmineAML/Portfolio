@@ -45,3 +45,71 @@ div{
         opacity: 0;
     }
 }
+
+//Scroll indicator
+
+$indicator-size: 24px;
+
+@mixin scroll-indicator() {
+	$border-color: #998471;
+	$border-width: 3px;
+	border-radius: 0 0 0 2px;
+	
+	
+	//animation: scroll-indicate 1s linear 0s infinite alternate;
+	position: absolute;
+	width: $indicator-size;
+	height: $indicator-size;
+	
+	transform: rotate(-45deg);
+	
+	border-bottom: $border-width solid $border-color;
+	border-left: $border-width solid $border-color;
+	box-sizing: border-box;
+}
+
+
+@keyframes scroll-indicate {
+	0% {
+		opacity: 1;	
+	}
+	
+	20% {
+		opacity: 0;
+	}
+	
+	40% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.scrollIndicator {
+//	@include scroll-indicator();
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	
+	&:before {
+		@include scroll-indicator();
+		content: "";
+		top: 0px;
+		left: 50%;
+		margin-left: -$indicator-size/2;
+		
+		animation: scroll-indicate 1.5s linear 0s infinite;
+	}
+	
+	&:after {
+		@include scroll-indicator();
+		content: "";
+		top: $indicator-size/2;
+		left: 50%;
+		margin-left: -$indicator-size/2;
+		animation: scroll-indicate 1.5s linear 0.25s infinite;
+	}
+}

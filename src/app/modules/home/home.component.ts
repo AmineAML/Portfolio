@@ -30,8 +30,9 @@ export class HomeComponent implements OnInit {
   public typingSign = true;
   public typingSign2 = false;
 
-  //Hide and Show icons
+  //Hide and Show icons and the scroll indicator
   public iconHideShow = false;
+  public ScrollIndicatorShowHide = false;
 
   // Change color or last name
   highlightStart = 6;
@@ -80,6 +81,7 @@ export class HomeComponent implements OnInit {
     });
 
     this.iconHideShow = true;
+    this.ScrollIndicatorShowHide = true;
   }
 
   constructor() { }

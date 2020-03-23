@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+ 
   goTo(location: string): void {
 
     window.location.hash = location;
