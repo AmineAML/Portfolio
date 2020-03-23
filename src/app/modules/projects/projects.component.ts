@@ -5,11 +5,29 @@ import { DialogOneComponent } from 'src/app/dialogProjectsPopup/dialog-one/dialo
 import { DialogTwoComponent } from 'src/app/dialogProjectsPopup/dialog-two/dialog-two.component';
 import { DialogThreeComponent } from 'src/app/dialogProjectsPopup/dialog-three/dialog-three.component';
 import { DialogFourComponent } from 'src/app/dialogProjectsPopup/dialog-four/dialog-four.component';
+import { trigger, transition, animate, style, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateY(100%)' }),
+        animate('400ms ease-in', keyframes([
+          style({transform: 'translateY(50%)', opacity: 0, offset: 0}),
+          style({transform: 'translateY(0%)', opacity: 1, offset: 1.0})
+        ]))
+      ]),
+      transition(':leave', [
+      animate('400ms ease-in', keyframes([
+        style({transform: 'translateY(0%)'}),
+        style({transform: 'translateY(50%)'})
+      ])) //style({transform: 'translateY(100%)', opacity: 0, offset: 0}))
+      ])
+    ])
+  ]
 })
 export class ProjectsComponent implements OnInit {
 

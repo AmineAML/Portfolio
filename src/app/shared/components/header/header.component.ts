@@ -16,19 +16,19 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
- goTo(location: string): void {
+  goTo(location: string): void {
 
-  window.location.hash = location;
+    window.location.hash = location;
 
-  //Remove the # and whatever after it from the url
-  history.replaceState({}, document.title, window.location.hash.split('#')[0]);
+    //Remove the # and whatever after it from the url
+    history.replaceState({}, document.title, window.location.hash.split('#')[0]);
 
-  //Trigger an on scroll event without scrolling
-  AOS.refresh();
+    //Trigger an on scroll event without scrolling
+    AOS.refresh();
 
-  this.closeNav();
+    this.closeNav();
   }
-  
+
   openNav() {
     this.displayMobileNav = true;
   }

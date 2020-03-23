@@ -34,7 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/aos/dist/aos.css"
+              "./node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
