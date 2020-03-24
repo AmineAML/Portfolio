@@ -1,4 +1,15 @@
-$main-color: #917164;
+a {
+    font-family: 'Bunch Blossoms Personal Use'; 
+    font-size:5vw;
+    left: 47%;
+    margin-top: 4%;
+    text-decoration: none;
+    position: fixed;
+    color: #917164;
+    animation: navbarAnimation 3s forwards 0s ease;
+}
+
+/*$main-color: #917164;
 $secondary-color: #c7493a;
 
 mat-toolbar {
@@ -78,7 +89,7 @@ mat-toolbar {
             font-size: 40px;
         }          
     }
-}
+}*/
 
 @keyframes navbarAnimation{
     0%{

@@ -8,10 +8,6 @@ import { ContactComponent } from 'src/app/modules/contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
-import { DialogOneComponent } from 'src/app/dialogProjectsPopup/dialog-one/dialog-one.component';
-import { DialogTwoComponent } from 'src/app/dialogProjectsPopup/dialog-two/dialog-two.component';
-import { DialogThreeComponent } from 'src/app/dialogProjectsPopup/dialog-three/dialog-three.component';
-import { DialogFourComponent } from 'src/app/dialogProjectsPopup/dialog-four/dialog-four.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -23,18 +19,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent,
-    DialogOneComponent,
-    DialogTwoComponent,
-    DialogThreeComponent,
-    DialogFourComponent
+    ContactComponent
   ],
-  entryComponents: [
-    DialogOneComponent,
-    DialogTwoComponent,
-    DialogThreeComponent,
-    DialogFourComponent
-  ],
+  entryComponents: [],
   imports: [
     CommonModule,
     RouterModule,

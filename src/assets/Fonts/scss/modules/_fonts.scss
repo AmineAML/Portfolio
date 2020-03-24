@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Bunch Blossoms Personal Use';
-    src: url('src/assets/Fonts/Regular/BunchBlossomsPersonalUse.woff2') format('woff2'),
-        url('src/assets/Fonts/Regular/BunchBlossomsPersonalUse.woff') format('woff');
+    src: url('src/assets/Fonts/Regular/BunchBlossomsPersonalUse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
+//Removed url('src/assets/Fonts/Regular/BunchBlossomsPersonalUse.woff2') format('woff2'), and also its file BunchBlossomsPersonalUse.woff2 to optimize the website as it's not used

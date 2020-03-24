@@ -9,19 +9,9 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'portfolio-website';
 
-  //Animate On Scroll animations
-  @HostListener('document:mousewheel', ['$event'])
-  onDocumentMousewheelEvent(event) {
-    AOS.refresh();
-  }
 
-  @HostListener('window:keydown', ['$event'])
-  onDocumentKeydownEvent(event) {
-    AOS.refresh();
-  }
-
-  @HostListener('document:click', ['$event'])
-  onDocumentClickEvent(event) {
+  @HostListener("window:scroll", ['$event'])
+  onWindowScroll(event) {
     AOS.refresh();
   }
 
@@ -39,6 +29,25 @@ export class AppComponent implements OnInit {
   onDocumentTouchcancelEvent(event) {
     AOS.refresh();
   }
+
+  //Different HostListener examples
+  /*
+  @HostListener('document:mousewheel', ['$event'])
+  onDocumentMousewheelEvent(event) {
+    AOS.refresh();
+    console.log('Scrolling')
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  onDocumentKeydownEvent(event) {
+    AOS.refresh();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClickEvent(event) {
+    AOS.refresh();
+  }
+  */
 
 
   ngOnInit(): void {

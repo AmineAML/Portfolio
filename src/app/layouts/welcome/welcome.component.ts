@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -10,11 +10,6 @@ export class WelcomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //As page open it scrolls to the home section
-    //window.onload = Scrolldown;
-    //function Scrolldown() {
-      //window.location.hash = '#home';
-    //}
   }
 
 }

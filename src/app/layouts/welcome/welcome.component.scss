@@ -19,23 +19,16 @@ div {
         margin: 0;
         max-width: none;
         @include responsiveSectionsHeight(tab-land) {
-            //margin-top: 5em;
-            hmin-height: 100vh;
-            //font-size: 56.25;
+            min-height: 100vh;
         }
         @include responsiveSectionsHeight(tab-port) {
-            //margin-top: 5em;
             min-height: 100vh;
-            //font-size: 50%;
         }
         @include responsiveSectionsHeight(phone) {
-            //margin-top: 5em;
             min-height: 100vh;
-            //font-size: 43.75%;
         }
         @include responsiveSectionsHeight(big-desktop) {
             min-height: 100vh;
-            //scroll-snap-align: center;
         }
     }
 
@@ -54,7 +47,7 @@ div {
         }
     }
     
-    #home {
+    #home, #homeShowOnlySmallDevices {
         background-image: url("src/assets/imgs/darpan-dodiya-2Wa4T-n2WaU-unsplash.jpg"); 
         alt: quote($string: "Photo by Darpan Dodiya on Unsplash");
         background-size: cover;
@@ -62,11 +55,12 @@ div {
         -webkit-background-size:cover;
         box-shadow: inset 0 0 0 1000px rgba(177, 169, 169, 0.2);
 
-        //rgba(0, 0, 0, 0.705);
-
         // Parallax scrolling effect
         background-attachment: fixed;
         background-repeat: no-repeat;
-        //background-position: center;
+    }
+
+    #homeShowOnlySmallDevices {
+        background-position: center;
     }
 }

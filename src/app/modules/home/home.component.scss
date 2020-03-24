@@ -1,6 +1,5 @@
 div{
-    //transform: translateY(50%);
-    //padding: 200px;
+	position: relative;
     margin-top: 17%;
     margin-bottom: auto;
     padding-left: 20px;
@@ -21,18 +20,6 @@ div{
             }
         }
     }
-
-    /*.cards {
-        display: flex;
-        //position: fixed;
-        bottom: 2%;
-    }
-    .card {
-        background: palegreen;
-        border-radius: 1rem;
-        box-shadow: 4px 4px 12px 2px rgba($color: #000000, $alpha: 0.7);
-        padding: 4rem;
-    }*/
 }
 
 @keyframes typingAnim {

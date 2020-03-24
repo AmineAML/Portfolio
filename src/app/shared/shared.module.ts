@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QuicklinkModule } from 'ngx-quicklink';
+
 
 
 @NgModule({
@@ -18,11 +20,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonModule,
     RouterModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    QuicklinkModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    QuicklinkModule
   ]
 })
 export class SharedModule { }

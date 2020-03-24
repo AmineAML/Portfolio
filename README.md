@@ -44,3 +44,4 @@ https://michalsnik.github.io/aos/
 - Angular loading screen: https://alligator.io/angular/custom-loading-screen/  
 - Netlify enable Angular routing (redirects): https://medium.com/@mgd4375/how-to-enable-angular-routing-in-a-netlify-deployment-with-the-angular-cli-e2eda69f1b5b    
 - Common bug that AOS triggers only on resize of the browser, and to fix it use scroll listener to refresh the AOS(Animate On Scroll) because it doesn't work on page load: https://github.com/michalsnik/aos/issues/429 and https://stackblitz.com/edit/angular-hostlisteners?file=src%2Fapp%2Fapp.component.ts   
+- Angular quicklink preloading strategy using ngx-quicklick: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/   

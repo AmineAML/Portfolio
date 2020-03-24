@@ -19,7 +19,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-
 const Material = [
   FontAwesomeModule,
   BrowserAnimationsModule,
