@@ -18,7 +18,9 @@ export class AppComponent implements OnInit {
 //simulate a scroll
 
   ngOnInit(): void {
-    AOS.init();
+    AOS.init({
+      disable: 'mobile'
+    });
   }
 
 }

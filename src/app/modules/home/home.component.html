@@ -2,7 +2,7 @@
     <!--Small devices-->
 
     <div fxHide fxShow.lt-md>
-        <div  style="bottom: 70%;">
+        <div  style="bottom: 60%;">
             <p  style="color: #ad8174; font-size:30px;">
                 
                 <span >{{typewriter_display | slice:0:highlightStart}}</span>
@@ -12,9 +12,12 @@
                 <span id="animatioNameTyping"  style="color: #917164; font-size:30px;">|</span>
             </p>
     
-            <p  style="color: #917164;font-size: 20px;">Software Engineer</p>
-        
-            <ul >
+            <p  style="color: #917164;font-size: 20px;">
+                <span>{{typewriter_display2}}</span>
+                <span id="animatioNameTyping" class="mat-display-1" style="color: #917164;" *ngIf="typingSign2">|</span>
+            </p>
+
+            <ul *ngIf="iconHideShow" [@slideInOut]>
                 <li>
                     <a href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
                     target="_blank">
@@ -38,14 +41,14 @@
                 </li>
             </ul>
         </div>
-
+<!--
         <div class="cards">
             <div class="card">Project</div>
             <div class="card">Project</div>
             <div class="card">Project</div>
             <div class="card">Project</div>
             <div class="card">Project</div>
-        </div>
+        </div>-->
     </div>
 
 
