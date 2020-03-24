@@ -15,24 +15,28 @@ export class AppComponent implements OnInit {
     AOS.refresh();
   }
 
-
   @HostListener('window:keydown', ['$event'])
-  onDocumentMousewheelEvent2(event) {
+  onDocumentKeydownEvent(event) {
+    AOS.refresh();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClickEvent(event) {
     AOS.refresh();
   }
 
   @HostListener('touchstart', ['$event'])
-  onDocumentMousewheelEvent3(event) {
+  onDocumentTouchstartEvent(event) {
     AOS.refresh();
   }
 
   @HostListener('touchend', ['$event'])
-  onDocumentMousewheelEvent4(event) {
+  onDocumentTouchendEvent(event) {
     AOS.refresh();
   }
   
   @HostListener('touchcancel', ['$event'])
-  onDocumentMousewheelEvent5(event) {
+  onDocumentTouchcancelEvent(event) {
     AOS.refresh();
   }
 
