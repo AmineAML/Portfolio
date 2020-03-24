@@ -14,12 +14,32 @@ export class AppComponent implements OnInit {
   onDocumentMousewheelEvent(event) {
     AOS.refresh();
   }
+
+
+  @HostListener('window:keydown', ['$event'])
+  onDocumentMousewheelEvent2(event) {
+    AOS.refresh();
+  }
+
+  @HostListener('touchstart', ['$event'])
+  onDocumentMousewheelEvent3(event) {
+    AOS.refresh();
+  }
+
+  @HostListener('touchend', ['$event'])
+  onDocumentMousewheelEvent4(event) {
+    AOS.refresh();
+  }
   
-//simulate a scroll
+  @HostListener('touchcancel', ['$event'])
+  onDocumentMousewheelEvent5(event) {
+    AOS.refresh();
+  }
+
 
   ngOnInit(): void {
     AOS.init({
-      disable: 'mobile'
+      //disable: 'mobile'
     });
   }
 
