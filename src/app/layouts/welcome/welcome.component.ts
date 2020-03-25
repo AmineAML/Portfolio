@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  name = environment.application.name;
+  angular = environment.application.angular;
+  material = environment.application.material;
+  fontawesome = environment.application.fontawesome;
+  aos = environment.application.aos;
+
+  features: any;
+
+  constructor(    
+    private meta: Meta,
+    private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('portfolio.amineamellouk: Amine AMELLOUK Portfolio');
+    this.meta.addTag({
+      name: 'portfolio.amineamellouk',
+      content: 'amine amellouk'
+    });
+    this.meta.updateTag(
+      {
+        name: 'description',
+        content: 'Software engineer' +
+          ' apps developer'
+      });
   }
+
 
 }

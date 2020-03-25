@@ -10,9 +10,11 @@ https://github.com/Grsmto/simplebar
 Angular animations
 https://michalsnik.github.io/aos/
 
+
 ## Angular projects   
 
 - https://medium.com/flatlogic/top-angular-open-source-projects-6e9b91a455c0   
+
 
 ## Tools
 
@@ -21,6 +23,7 @@ https://michalsnik.github.io/aos/
 - Remove background from image: https://www.remove.bg/
 - https://codepen.io/
 - Loading animation: https://loading.io/
+
 
 ## Inspiration
 
@@ -46,3 +49,8 @@ https://michalsnik.github.io/aos/
 - Common bug that AOS triggers only on resize of the browser, and to fix it use scroll listener to refresh the AOS(Animate On Scroll) because it doesn't work on page load: https://github.com/michalsnik/aos/issues/429 and https://stackblitz.com/edit/angular-hostlisteners?file=src%2Fapp%2Fapp.component.ts   
 - Angular quicklink preloading strategy using ngx-quicklick: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/   
 - Angular scroll to the top of the page: https://stackblitz.com/edit/angular-scrolling-goto-top   
+
+
+## SEO  
+- https://www.ganatan.com/tutorials/search-engine-optimization-with-angular   
+- https://www.youtube.com/watch?v=_bZDjQOMf4U   
