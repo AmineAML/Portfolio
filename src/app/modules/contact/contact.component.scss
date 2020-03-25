@@ -2,32 +2,33 @@ div {
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 15px;
-    p, button {
-        color: #917164;
-    }
-    .example-form {
-        min-width: 150px;
-        max-width: 500px;
-        width: 100%;
-        .example-full-width {
-            width: 100%;
-        }
-        a {
-            float: right;
-        }
-        button {
-            background-color: #a33327;
-            color: whitesmoke;
+    div {
+        p {
+            color: #D8D2D2
         }
     }
     div {
-        a {
-            //color: #917164;
-            color: #D8D2D2;
-            margin-left: 10px;
+        .example-form {
+            min-width: 150px;
+            max-width: 500px;
+            width: 100%;
+            p {
+                display: none;
+            }
+            .example-full-width {
+                width: 100%;
+            }
+            a {
+                float: right;
+                color: #D8D2D2;
+                margin-left: 10px;
+            }
+            button {
+                background-color: #a33327;
+                color: whitesmoke;
+            }
         }
     }
-
 }
 .mat-input-element {
     color: whitesmoke;

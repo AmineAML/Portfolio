@@ -14,10 +14,14 @@
 }
 div {
     .fullScreenSections {
-        width: 100%;
         display: table;
         margin: 0;
         max-width: none;
+
+        //Don't allow the content to expand outside the screen
+        height:100%;
+        width:100%;
+        overflow:hidden;
         @include responsiveSectionsHeight(tab-land) {
             min-height: 100vh;
         }

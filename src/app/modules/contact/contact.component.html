@@ -1,14 +1,14 @@
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlexFill>
 
     <div fxFlex="40%" data-aos="fade-right">
-        <p class="mat-display-1" style="color: #D8D2D2" >Contact me</p>
+        <p class="mat-display-1" >Contact me</p>
 
     </div>
 
     <div fxFlex="40%" data-aos="fade-right" data-aos-delay="300">
         <form [formGroup]="contactForm" name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()" class="example-form">
             <input type="hidden" name="form-name" value="contact"/>
-            <p style='display: none;'>
+            <p>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
             <mat-form-field class="example-full-width" >

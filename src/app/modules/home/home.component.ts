@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
-import { trigger, transition, animate, style } from '@angular/animations'
+import { trigger, transition, animate, style } from '@angular/animations';
 
 
 @Component({

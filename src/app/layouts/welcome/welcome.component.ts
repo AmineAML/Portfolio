@@ -9,6 +9,7 @@ import { environment } from '../../../environments/environment';
 })
 export class WelcomeComponent implements OnInit {
 
+  //SEO
   name = environment.application.name;
   angular = environment.application.angular;
   material = environment.application.material;

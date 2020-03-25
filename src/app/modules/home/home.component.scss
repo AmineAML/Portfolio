@@ -1,24 +1,68 @@
+$color-one: #ad8174;
+$color-two: #a33327;
+$color-three: #917164;
+$font-stack: 'Montserrat', sans-serif;
+
 div{
 	position: relative;
     margin-top: 17%;
     margin-bottom: auto;
     padding-left: 20px;
-
+	.smallDevices {
+		div {
+			bottom: 60%;
+			p {
+				color: $color-one; 
+				font-size:30px;
+				font-family: $font-stack;
+				.smallDeviceLastNameColor {
+					color: $color-two;
+				}
+				.smallDeviceNameTyping {
+					color: $color-three; 
+					font-size:30px;
+				}
+			}
+			.smallDevicesTitle {
+				color: $color-three;
+				font-size: 20px;
+				.smallDeviceTitleTyping {
+					color: $color-three;
+				}
+			}
+		}
+	}
+	.otherDevices {
+		.otherDevicesP {
+			font-family: $font-stack;
+			color: $color-one;
+			#lastNameColor {
+				color: $color-two;
+			}
+			.NameTyping{
+				color: $color-three;
+			}
+		}
+		#title {
+			font-family: $font-stack;
+			color: $color-three;
+			.TitleTyping {
+				color: $color-three;
+			}
+		}
+	}
+	ul {
+		li {
+			display: inline;
+			padding-right: 1rem;
+			a {
+				text-decoration: none;
+				color: $color-three;
+			}
+		}
+	}
     #animatioNameTyping {
         animation: typingAnim 1s infinite 0s linear;
-    }
-    p {
-        font-family: 'Montserrat', sans-serif;
-    }
-    ul {
-        li {
-            display: inline;
-            padding-right: 1rem;
-            a {
-                text-decoration: none;
-                color: #917164;
-            }
-        }
     }
 }
 
@@ -78,8 +122,9 @@ $indicator-size: 24px;
 .scrollIndicator {
 //	@include scroll-indicator();
 	position: absolute;
-	width: 100%;
-	top: 50%;
+	//width: 100%;
+	bottom: 10%;
+	left: 50%;
 	
 	&:before {
 		@include scroll-indicator();

@@ -1,20 +1,18 @@
 <div>
     <!--Small devices-->
-
-    <div fxHide fxShow.lt-md>
-        <div  style="bottom: 60%;">
-            <p  style="color: #ad8174; font-size:30px;">
-                
+    <div class="smallDevices" fxHide fxShow.lt-md>
+        <div>
+            <p>        
                 <span >{{typewriter_display | slice:0:highlightStart}}</span>
-                <span style="color: #a33327;">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
+                <span class="smallDeviceLastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
                 <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
                 
-                <span id="animatioNameTyping"  style="color: #917164; font-size:30px;">|</span>
+                <span class="smallDeviceNameTyping" id="animatioNameTyping">|</span>
             </p>
     
-            <p  style="color: #917164;font-size: 20px;">
+            <p class="smallDevicesTitle">
                 <span>{{typewriter_display2}}</span>
-                <span id="animatioNameTyping" class="mat-display-1" style="color: #917164;" *ngIf="typingSign2">|</span>
+                <span class="smallDeviceTitleTyping" id="animatioNameTyping" class="mat-display-1" *ngIf="typingSign2">|</span>
             </p>
 
             <ul *ngIf="iconHideShow" [@slideInOut]>
@@ -46,19 +44,18 @@
 
 
     <!--Other devices-->
-    <div  fxHide fxShow.gt-sm>
-        <p  style="color: #ad8174;">
-
+    <div class="otherDevices" fxHide fxShow.gt-sm>
+        <p class="otherDevicesP">
             <span class="mat-display-4">{{typewriter_display | slice:0:highlightStart}}</span>
-            <span class="mat-display-4" style="color: #a33327;">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
+            <span class="mat-display-4" id="lastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
             <span class="mat-display-4">{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
 
-            <span id="animatioNameTyping" class="mat-display-4" style="color: #917164;" *ngIf="typingSign">|</span>
+            <span class="NameTyping" id="animatioNameTyping" class="mat-display-4" *ngIf="typingSign">|</span>
         </p>
 
-        <p class="mat-display-1" style="color: #917164;">
+        <p id="title" class="mat-display-1">
             <span>{{typewriter_display2}}</span>
-            <span id="animatioNameTyping" class="mat-display-1" style="color: #917164;" *ngIf="typingSign2">|</span>
+            <span class="TitleTyping" id="animatioNameTyping" class="mat-display-1" *ngIf="typingSign2">|</span>
         </p>
 
         
@@ -88,5 +85,6 @@
         </ul>
     </div>
 
-    <div class="scrollIndicator" *ngIf="ScrollIndicatorShowHide" [@slideInOut]></div>
+    
 </div>
+<div class="scrollIndicator" *ngIf="ScrollIndicatorShowHide" [@slideInOut]></div>

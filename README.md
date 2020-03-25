@@ -6,7 +6,7 @@ Angular Material Design
 Angular Material typography   
 browser animations to Angular Material   
 Angular FxLayout (flex layout)    
-https://github.com/Grsmto/simplebar  
+https://github.com/Grsmto/simplebar  (REMOVED: better user experience)   
 Angular animations
 https://michalsnik.github.io/aos/
 
@@ -49,6 +49,7 @@ https://michalsnik.github.io/aos/
 - Common bug that AOS triggers only on resize of the browser, and to fix it use scroll listener to refresh the AOS(Animate On Scroll) because it doesn't work on page load: https://github.com/michalsnik/aos/issues/429 and https://stackblitz.com/edit/angular-hostlisteners?file=src%2Fapp%2Fapp.component.ts   
 - Angular quicklink preloading strategy using ngx-quicklick: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/   
 - Angular scroll to the top of the page: https://stackblitz.com/edit/angular-scrolling-goto-top   
+- Responsive font size: https://www.w3schools.com/howto/howto_css_responsive_text.asp   
 
 
 ## SEO  
