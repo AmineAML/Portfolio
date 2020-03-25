@@ -49,7 +49,8 @@ https://michalsnik.github.io/aos/
 - Common bug that AOS triggers only on resize of the browser, and to fix it use scroll listener to refresh the AOS(Animate On Scroll) because it doesn't work on page load: https://github.com/michalsnik/aos/issues/429 and https://stackblitz.com/edit/angular-hostlisteners?file=src%2Fapp%2Fapp.component.ts   
 - Angular quicklink preloading strategy using ngx-quicklick: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/   
 - Angular scroll to the top of the page: https://stackblitz.com/edit/angular-scrolling-goto-top   
-- Responsive font size: https://www.w3schools.com/howto/howto_css_responsive_text.asp   
+- Responsive font size: https://www.w3schools.com/howto/howto_css_responsive_text.asp  
+- Angular Flex Layout: https://medium.com/angular-in-depth/angular-flex-layout-the-masquerade-58fb58d0ab45 
 
 
 ## SEO  
