@@ -9,7 +9,14 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'portfolio-website';
 
+  
+  ngOnInit(): void {
+    AOS.init({
+      //disable: 'mobile'
+    });
+  }
 
+  /*
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event) {
     AOS.refresh();
@@ -31,7 +38,7 @@ export class AppComponent implements OnInit {
   }
 
   //Different HostListener examples
-  /*
+
   @HostListener('document:mousewheel', ['$event'])
   onDocumentMousewheelEvent(event) {
     AOS.refresh();
@@ -48,12 +55,5 @@ export class AppComponent implements OnInit {
     AOS.refresh();
   }
   */
-
-
-  ngOnInit(): void {
-    AOS.init({
-      //disable: 'mobile'
-    });
-  }
 
 }
