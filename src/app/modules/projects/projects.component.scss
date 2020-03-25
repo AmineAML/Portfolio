@@ -42,9 +42,10 @@ div {
             background-color: whitesmoke;
             margin-left: 10px;
           }
-          div:hover {
-            opacity: 1;
-          }
+        }
+        #projectOnHoverEffect:hover {
+          opacity: 1;
+          filter: brightness(200%);
         }
         img {
           width: 100%;

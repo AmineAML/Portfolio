@@ -7,7 +7,7 @@
 
     <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" *ngFor="let project of projects" data-aos="fade-up-right">
         <div fxFlex="50%">
-            <div (mouseenter)="project.displayImg=true" (mouseleave)="project.displayImg=false">
+            <div id="projectOnHoverEffect" (mouseenter)="project.displayImg=true" (mouseleave)="project.displayImg=false">
                 <h1>{{project.name}}</h1>
                 <ul *ngIf='project.technologies'>
                     <li *ngFor="let listOfTechnologies of project.technologies">{{listOfTechnologies.t}}</li>
