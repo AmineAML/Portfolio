@@ -6,7 +6,7 @@
 html, body { 
     //Changed the height from 100% to 100vh to allow the HostListener to listen to scroll
     //height: 100%; 
-    min-height: 100%;
+    min-height: 100vh;
     background-color: #262626;
     .simplebar-content-wrapper {
         //overflow: hidden;
