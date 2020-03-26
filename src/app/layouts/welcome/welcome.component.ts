@@ -23,9 +23,9 @@ export class WelcomeComponent implements OnInit {
     private titleService: Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle('portfolio.amineamellouk: Amine AMELLOUK Portfolio');
+    this.titleService.setTitle('Amine Amellouk Developer Portfolio | Amine Amellouk');
     this.meta.addTag({
-      name: 'portfolio.amineamellouk',
+      name: 'amine amellouk portfolio',
       content: 'amine amellouk'
     });
     this.meta.updateTag(
