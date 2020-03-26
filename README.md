@@ -7,8 +7,7 @@ Angular Material typography
 browser animations to Angular Material   
 Angular FxLayout (flex layout)    
 https://github.com/Grsmto/simplebar  (REMOVED: better user experience)   
-Angular animations
-https://michalsnik.github.io/aos/
+Animate On Scroll https://michalsnik.github.io/aos/   
 
 
 ## Angular projects   
