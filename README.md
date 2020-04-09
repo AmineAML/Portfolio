@@ -56,6 +56,7 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Angular scroll to the top of the page: https://stackblitz.com/edit/angular-scrolling-goto-top   
 - Responsive font size: https://www.w3schools.com/howto/howto_css_responsive_text.asp  
 - Angular Flex Layout: https://medium.com/angular-in-depth/angular-flex-layout-the-masquerade-58fb58d0ab45 
+- Background effect animation: https://codepen.io/WebSonick/pen/vjmgu   
 
 
 ## SEO  
