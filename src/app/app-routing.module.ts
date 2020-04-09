@@ -10,7 +10,8 @@ const routes: Routes = [
   //{path: '', redirectTo: '/welcome', pathMatch: 'full'},
   {path: '', component: WelcomeComponent},
   {path: 'resume', component: ResumeComponent},
-  {path: '**', component: ErrorComponent}
+  {path: '404', component: ErrorComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
