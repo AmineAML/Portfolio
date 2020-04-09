@@ -8,10 +8,27 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   
+  imgs = new Array();
+
   ngOnInit(): void {
     AOS.init({
       //disable: 'mobile'
     });
+    //Preload images to increase website user experience
+    this.pload(
+      "./assets/imgs/clouds3.png",
+      "./assets/imgs/Portfolio icon.png",
+      "./assets/imgs/projects-gifs/CubeSolvesTimer.gif",
+      "./assets/imgs/projects-gifs/LocaIT.gif",
+      "./assets/imgs/projects-gifs/NoteTaker.gif");
+  }
+
+  pload(...args: any[]):void {
+    for (var i = 0; i < args.length; i++) {
+      this.imgs[i] = new Image();
+      this.imgs[i].src = args[i];
+      //console.log('loaded: ' + args[i]);
+    }
   }
 
   /*
