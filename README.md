@@ -23,17 +23,23 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - https://codepen.io/
 - Loading animation: https://loading.io/
 
+## Develop better internet application   
+- https://www.w3.org/TR/wai-aria-practices-1.1/   
 
 ## Inspiration
 
 - https://visme.co/blog/website-color-schemes/   
 - https://yasio.pl/   
+- https://lusion.co   
+- https://veritystudios.com/ 
+- https://www.quentinlengele.com/    
 
 
 ## Font
 
 - https://www.fontspace.com/bunch-blossoms-font-f30021
-- How to use it: https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551
+- How to use it: https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551   
+- https://fonts.google.com/   
 
 
 ## Intersting blog about Angular   
@@ -55,3 +61,10 @@ Animate On Scroll https://michalsnik.github.io/aos/
 ## SEO  
 - https://www.ganatan.com/tutorials/search-engine-optimization-with-angular   
 - https://www.youtube.com/watch?v=_bZDjQOMf4U   
+
+## CV-Resume
+- Resume is inspired by this website using a the flat theme: https://jsonresume.org/   
+- https://www.reddit.com/r/Angular2/comments/9phvw1/pro_tip_with_angular_7_you_can_import_json_files/   
+- https://stackoverflow.com/questions/50975358/nested-interface   
+- Convert JSON to Interface Typescript: https://quicktype.io/   
+- Resume language proficiency: https://zety.com/blog/resume-language-skills   

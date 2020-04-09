@@ -4,10 +4,11 @@ $color-three: #917164;
 $font-stack: 'Montserrat', sans-serif;
 
 div{
-	position: relative;
-    margin-top: 17%;
+	//position: relative;
+    //margin-top: 17%;
     margin-bottom: auto;
-    padding-left: 20px;
+	//padding-left: 20px;
+	margin-top: 7%;
 	.smallDevices {
 		div {
 			bottom: 60%;
@@ -33,6 +34,7 @@ div{
 		}
 	}
 	.otherDevices {
+		width: 70%;
 		.otherDevicesP {
 			font-family: $font-stack;
 			color: $color-one;

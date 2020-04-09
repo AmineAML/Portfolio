@@ -1,0 +1,112 @@
+.page {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
+    .header {
+        background-color: #F4F6F6;
+        margin-bottom: 30px;
+        padding: 50px 0;
+        div {
+            .name {
+                color: #333333;
+            }
+            .title {
+                color: #95A5A6;
+            }
+        }
+    }
+    .body {
+        //padding-top: 40px;
+        div {
+            .sections {
+                margin-top: 30px;
+                .sectionsTitles {
+                    text-align: right;
+                    color: #f1c40f;
+                    font-size: 26px;
+                    font-weight: 500;
+                    line-height: 1.1;
+                }
+                section {
+                    .data {
+                        margin-bottom: 10px;                         
+                        strong {
+                            font-weight: 700;
+                        }
+                        div {
+                            a {
+                                text-decoration: none;
+                                color: #2ecc71;
+                            }
+                        }
+                    }
+                    #basicsAndProfiles {
+                        float: left;
+                        width: 200px;
+                    }
+                    #basicsAndProfiles:nth-child(3) {
+                        clear: both;
+                    }
+                    .dataCation {
+                        //margin-bottom: 10px;
+                        margin-bottom: 30px;
+                        line-height: 1.428571;
+                        div {
+                            .headerAtion:nth-child(1) {
+                                //color: #000;
+                                font-weight: 700;
+                                font-size: 18px;
+                                line-height: 1.1;
+                            }
+                            .headerAtion:nth-child(2) {
+                                text-align: right;
+                                font-weight: 500;
+                                font-size: 14px;
+                            }
+                            @media (max-width: 480px) {
+                                .headerAtion:nth-child(2) {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .secondSectionAtion {
+                            margin-top: 10px;
+                            div {
+                                fa-icon {
+                                }
+                                span {
+                                    margin-left: 6px;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                }
+                            }
+                            .studyType {
+                                margin-left: 25px;
+                                font-size: 14px;
+                            }
+                        }
+                        div {
+                            margin-top: 7px;
+                            h4 {
+                                //font-weight: 500;
+                                line-height: 1.1;
+                                font-size: 18px;
+                            }
+                            ul {
+                                //list-style-type: circle;
+                                list-style: none; /* Remove default bullets */
+                            }
+                            ul li::before {
+                                content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                                color: #EBEBEB; /* Change the color */
+                                font-weight: bold; /* If you want it to be bold */
+                                display: inline-block; /* Needed to add space between the bullet and the text */
+                                width: 1em; /* Also needed for space (tweak if needed) */
+                                margin-left: -1em; /* Also needed for space (tweak if needed) */
+                              }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

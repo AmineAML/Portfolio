@@ -1,0 +1,117 @@
+{
+    "basics": {
+      "name": "Amine Amellouk",
+      "label": "Junior Developer",
+      "image": "https://media-exp1.licdn.com/dms/image/C4D03AQGFmEG5nXmTHQ/profile-displayphoto-shrink_200_200/0?e=1591228800&v=beta&t=GI9OCxfOH0toIy66WWNPiCMWDnsyd-2fEdJB5DH-oyo",
+      "summary": "My passion for technology led me to twi relational fields. My desire to understand the market, economy is a path that I chose which enables me to understand its functioning and make analyzes to expalin it. Even if time invested on this path, the dedication of the evenings and the weekends to feed my technological passion, IT development is a path that allowed me to learn analysis, design and development of applications and software. These iterrelational paths allow me to develop with asense of budget and market needs to deliver quality solutions. As I do like to learn from different experiences trough adventures and challenges, seeking to enrich my knowledge and skills through internship oppurtunities. ",
+      "phone": "(+212) 623618278",
+      "website": "aaml.netlify.com",
+      "email": "amin_aml@live.fr",
+      "location": [
+        {
+          "city": "Rabat",
+          "countryCode": "MA"
+        }
+      ],
+      "profiles": [
+        {
+          "url": "https://github.com/AmineAML",
+          "username": "AmineAML",
+          "network": "GitHub"
+        },
+        {
+          "username": "amine-amellouk",
+          "url": "https://linkedin.com/in/amine-amellouk",
+          "network": "Linkedin"
+        },
+        {
+          "url": "https://stackoverflow.com/users/10453610/amineze",
+          "username": "amineze",
+          "network": "Stack Overflow"
+        }
+      ]
+    },
+    "education": [
+      {
+        "endDate": "Present",
+        "area": "Ingénierie des Applications Mobiles",
+        "studyType": "Licence Professionnelle",
+        "institution": "IT-Learning - Faculté des Sciences et Technique de Settat"
+      },
+      {
+        "endDate": "2019",
+        "area": "Développement Informatique",
+        "studyType": "Technicien Spécialisé",
+        "institution": "École MIAGE",
+        "thesis": "Conception et réalisation d'une application de gestion de notes"
+      },
+      {
+        "endDate": "2019",
+        "area": "Sciences Économiques",
+        "studyType": "Licence Fondamentale",
+        "institution": "Unversité Mohammed V",
+        "thesis": "L'impact de l'investissement public et privé sur la croissance économique"
+      },
+      {
+        "endDate": "2016",
+        "area": "Sciences Économiques",
+        "studyType": "Baccalauréat",
+        "institution": "Lycée Lalla Aicha"
+      }
+    ],
+    "skills": [
+      {
+        "keywords": [
+          "HTML5",
+          "CSS3 / SCSS",
+          "Javascript / Typescript",
+          "Angular",
+          "C# / Blazor",
+          "PHP / Node.js",
+          "SQL Server / MySQL",
+          "Firebase / JSON"
+        ],
+        "level": "Junior",
+        "name": "Frontend-Backend"
+      }
+    ],
+    "certification": [
+        {
+          "endDate": "2018",
+          "area": "Comptabilité des opérations Courantes",
+          "studyType": "MOOC",
+          "institution": "Université Mohammed V"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Limited working proficiency"
+        },
+        {
+            "language": "French",
+            "fluency": "Limited working proficiency"
+        },
+        {
+            "language": "Arabic",
+            "fluency": "Native Speaker"
+        }
+    ],
+    "interests": [
+      {
+        "name": "Technology and Science"
+      },
+      {
+        "name": "Role-playing games"
+      },
+      {
+        "name": "Languages"
+      },
+      {
+        "name": "History"
+      },      
+      {
+        "name": "Fitness"
+      }
+    ]
+}

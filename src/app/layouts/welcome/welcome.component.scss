@@ -52,12 +52,12 @@ div {
     }
     
     #home, #homeShowOnlySmallDevices {
-        background-image: url("src/assets/imgs/darpan-dodiya-2Wa4T-n2WaU-unsplash.jpg"); 
+        //background-image: url("src/assets/imgs/darpan-dodiya-2Wa4T-n2WaU-unsplash.jpg"); 
         alt: quote($string: "Photo by Darpan Dodiya on Unsplash");
         background-size: cover;
         -moz-background-size:cover;
         -webkit-background-size:cover;
-        box-shadow: inset 0 0 0 1000px rgba(177, 169, 169, 0.2);
+        //box-shadow: inset 0 0 0 1000px rgba(177, 169, 169, 0.2);
 
         // Parallax scrolling effect
         background-attachment: fixed;
@@ -67,4 +67,13 @@ div {
     #homeShowOnlySmallDevices {
         background-position: center;
     }
+
+
+}
+a {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    color: #998471;
+    background-color: transparent;
 }

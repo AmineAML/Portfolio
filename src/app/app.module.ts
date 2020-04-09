@@ -10,10 +10,11 @@ import { ErrorModule } from './layouts/error/error.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimplebarAngularModule } from 'simplebar-angular';
 import { HttpClientModule } from "@angular/common/http";
+import { ResumeModule } from './layouts/resume/resume.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     SharedModule,
     WelcomeModule,
     ErrorModule,
+    ResumeModule,
     RouterModule,
     BrowserAnimationsModule,
     SimplebarAngularModule,

@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     let current_length = that.typewriter_display.length;
     if (current_length < total_length) {
       that.typewriter_display += that.typewriter_text[current_length];
-      setTimeout(that.typingCallback, 200, that);
+      setTimeout(that.typingCallback, 100, that);
     }
   }
 
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
     let current_length = that.typewriter_display2.length;
     if (current_length < total_length) {
       that.typewriter_display2 += that.typewriter_text2[current_length];
-      setTimeout(that.typingCallback2, 200, that);
+      setTimeout(that.typingCallback2, 100, that);
     }
   }
 
@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
     this.typingCallback(this);
 
     await new Promise<void>(resolve => {
-      setTimeout(resolve, 3500);
+      setTimeout(resolve, 1750);
     });
 
     this.typingSign = false;
@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit {
     this.typingCallback2(this);
 
     await new Promise<void>(resolve => {
-      setTimeout(resolve, 4000);
+      setTimeout(resolve, 2000);
     });
 
     this.iconHideShow = true;

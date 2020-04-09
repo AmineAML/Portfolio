@@ -11,12 +11,14 @@ export class HeaderComponent implements OnInit {
 
   faBars = faBars;
 
-  //public displayMobileNav: boolean = false;
-  isShow: boolean;
+  public displayMobileNav: boolean = false;
+  ChangeBackgroundColor: boolean;
   topPosToStartShowing = 100;
+  
 
   constructor() { }
 
+  
   //Scroll to the top of the page
   @HostListener('window:scroll')
   checkScroll() {
@@ -27,12 +29,13 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     
     if (scrollPosition >= this.topPosToStartShowing) {
-      this.isShow = true;
+      this.ChangeBackgroundColor = true;
     } else {
-      this.isShow = false;
+      this.ChangeBackgroundColor = false;
     }
   }
 
+  /*
   // TODO: Cross browsing
   gotoTop() {
     window.scroll({ 
@@ -40,11 +43,10 @@ export class HeaderComponent implements OnInit {
       left: 0, 
       behavior: 'smooth' 
     });
-  }
+  }*/
  
-  /* Scroll to a section
+  //Scroll to a section
   goTo(location: string): void {
-
     window.location.hash = location;
 
     //Remove the # and whatever after it from the url
@@ -59,7 +61,7 @@ export class HeaderComponent implements OnInit {
 
   closeNav() {
     this.displayMobileNav = false;
-  }*/
+  }
 
   ngOnInit(): void {
   }

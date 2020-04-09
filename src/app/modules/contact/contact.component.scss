@@ -17,6 +17,9 @@ div {
             }
             .example-full-width {
                 width: 100%;
+                mat-hint {
+                    color: #D8D2D2
+                }
             }
             a {
                 float: right;

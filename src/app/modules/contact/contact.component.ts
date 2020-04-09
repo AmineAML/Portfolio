@@ -21,6 +21,19 @@ export class ContactComponent implements OnInit {
     Validators.email,
   ]);
 
+  nameFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+
+  emailFormControl2 = new FormControl('', [
+    Validators.required,
+    //Validators.email,
+  ]);
+
+  messageFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+
   contactForm = new FormGroup({
     name: new FormControl(''),
     email: this.emailFormControl, //new FormControl(''),
@@ -29,53 +42,72 @@ export class ContactComponent implements OnInit {
 
   durationInSeconds = 5;
 
+  submitFormPressedNotifyErrors = false;
+
+  isRequired = false;
+
   constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
+  //Check if the input are fieled, don't submit if any of the inputs aren't filled
   onSubmit() {
-    const body = new HttpParams()
-      .set('form-name', 'contact')
-      .append('name', this.contactForm.value.name)
-      .append('email', this.contactForm.value.email)
-      .append('message', this.contactForm.value.message)
-    this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
-      res => { },
-      err => {
-        if (err instanceof ErrorEvent) {
-          //client side error
-          //alert("Something went wrong when sending your message.");
-
-          //Display an error popup about submission
-          this._snackBar.openFromComponent(MessageErrorComponent, {
-            duration: this.durationInSeconds * 1000,
-          });
-          console.log(err.error.message);
-        } else {
-          //backend error. If status is 200, then the message successfully sent
-          if (err.status === 200) {
-            //alert("Your message has been sent!");
-
-            //Display a popup that submission was sent
-            this._snackBar.openFromComponent(MessageSentComponent, {
-              duration: this.durationInSeconds * 1000,
-            });
-          } else {
+    if (!this.contactForm.value.name || !this.contactForm.value.email || !this.contactForm.value.message) {
+      //Display an error popup about submission
+      this._snackBar.openFromComponent(InputMandatoryComponent, {
+        duration: this.durationInSeconds * 1000,
+      });
+      this.nameFormControl;
+      this.emailFormControl2;
+      this.messageFormControl;
+      this.submitFormPressedNotifyErrors = true;
+      this.isRequired = true
+    }
+    else {
+      const body = new HttpParams()
+        .set('form-name', 'contact')
+        .append('name', this.contactForm.value.name)
+        .append('email', this.contactForm.value.email)
+        .append('message', this.contactForm.value.message)
+      this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
+        res => { },
+        err => {
+          if (err instanceof ErrorEvent) {
+            //client side error
             //alert("Something went wrong when sending your message.");
 
-            //Display an error popup that about submission
+            //Display an error popup about submission
             this._snackBar.openFromComponent(MessageErrorComponent, {
               duration: this.durationInSeconds * 1000,
             });
-            console.log('Error status:');
-            console.log(err.status);
-            console.log('Error body:');
-            console.log(err.error);
-          };
-        };
-      }
-    );
+            console.log(err.error.message);
+          } else {
+            //backend error. If status is 200, then the message successfully sent
+            if (err.status === 200) {
+              //alert("Your message has been sent!");
 
-    //Reset form after submission
-    this.contactForm.reset();
+              //Display a popup that submission was sent
+              this._snackBar.openFromComponent(MessageSentComponent, {
+                duration: this.durationInSeconds * 1000,
+              });
+              //Reset form after submission
+              this.contactForm.reset();
+              this.submitFormPressedNotifyErrors = false;
+              this.isRequired = true;
+            } else {
+              //alert("Something went wrong when sending your message.");
+
+              //Display an error popup that about submission
+              this._snackBar.openFromComponent(MessageErrorComponent, {
+                duration: this.durationInSeconds * 1000,
+              });
+              console.log('Error status:');
+              console.log(err.status);
+              console.log('Error body:');
+              console.log(err.error);
+            };
+          };
+        }
+      );
+    }
   };
 
   ngOnInit(): void {
@@ -112,3 +144,18 @@ export class MessageSentComponent { }
   `],
 })
 export class MessageErrorComponent { }
+
+@Component({
+  selector: 'snack-bar-input-mandatory-component',
+  template: `
+    <span class="example-pizza-party">
+      All inputs are mandatory.
+    </span>
+  `,
+  styles: [`
+    .example-pizza-party {
+      color: #cc441b;
+    }
+  `],
+})
+export class InputMandatoryComponent { }

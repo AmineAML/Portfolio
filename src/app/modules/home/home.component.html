@@ -1,4 +1,4 @@
-<div>
+<div fxLayoutAlign="center">
     <!--Small devices-->
     <div class="smallDevices" fxHide fxShow.lt-md>
         <div>
@@ -17,10 +17,14 @@
 
             <ul *ngIf="iconHideShow" [@slideInOut]>
                 <li>
+                    <a routerLink="/resume" >
+                        <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
+                    </a>
+                    <!--
                     <a rel="noopener" href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
                     target="_blank">
                     <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
-                    </a>
+                    </a>-->
                 </li>
                 <li>
                     <a rel="noopener" href="https://github.com/AmineAML" target="_blank">
@@ -62,8 +66,7 @@
     
         <ul *ngIf="iconHideShow" [@slideInOut]>
             <li>
-                <a rel="noopener" href="https://drive.google.com/file/d/1Iy04NmqGffrNXZe01C8B8UYQ65TbfgwZ/view?usp=sharing"
-                target="_blank">
+                <a routerLink="/resume" >
                 <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
                 </a>
             </li>

@@ -1,2 +1,51 @@
-<a href="javascript:;" (click)="gotoTop()">AA</a>
-<!--(click)="goTo('home')"-->
+<!--<a href="javascript:;" (click)="gotoTop()">AA</a>
+(click)="goTo('home')"-->
+<mat-toolbar fxLayoutAlign="center" [style.background-color]="ChangeBackgroundColor ? '#262626': 'transparent'">
+  <div>
+    <ul>
+      <li>
+        <a href="/" class="brand">AA</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="goTo('home')">HOME /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+        </li>
+        <!--
+        <li fxHide fxShow.gt-md>
+          href="javascript:; (this is used so a click does only open the languages menu-->
+          <!--
+          <a href="javascript:;" mat-button [matMenuTriggerFor]="menu" style="font-weight: normal;">EN/FR</a>
+        </li>
+        <li fxHide fxShow.gt-md>
+          <mat-slide-toggle mat-button color="accent">
+          </mat-slide-toggle>
+        </li>
+        -->
+        <li fxShow fxHide.gt-sm>
+          <a href="javascript:;" (click)="openNav()"><fa-icon [icon]="faBars"></fa-icon></a>
+  
+          <div id="myNav" class="overlay" *ngIf="displayMobileNav">
+            <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="javascript:;" (click)="goTo('homeShowOnlySmallDevices')">HOME /></a>
+              <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+              <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
+              <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+</mat-toolbar>
