@@ -57,6 +57,7 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Responsive font size: https://www.w3schools.com/howto/howto_css_responsive_text.asp  
 - Angular Flex Layout: https://medium.com/angular-in-depth/angular-flex-layout-the-masquerade-58fb58d0ab45 
 - Background effect animation: https://codepen.io/WebSonick/pen/vjmgu   
+- Angular preload images: https://stackblitz.com/edit/angular-preload-images   
 
 
 ## SEO  
