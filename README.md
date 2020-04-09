@@ -58,6 +58,7 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Angular Flex Layout: https://medium.com/angular-in-depth/angular-flex-layout-the-masquerade-58fb58d0ab45 
 - Background effect animation: https://codepen.io/WebSonick/pen/vjmgu   
 - Angular preload images: https://stackblitz.com/edit/angular-preload-images   
+- DevTools failed to parse SourceMap: chrome-extension: solution is disable Adblocker so this error is normal and https://stackoverflow.com/questions/44267503/devtools-failed-to-parse-sourcemap
 
 
 ## SEO  
