@@ -1,4 +1,4 @@
-<div fxLayoutAlign="center">
+<div fxLayout fxFill fxLayoutAlign="space-around center">
     <!--Small devices-->
     <div class="smallDevices" fxHide fxShow.lt-md>
         <div>
@@ -7,7 +7,7 @@
                 <span class="smallDeviceLastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
                 <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
                 
-                <span class="smallDeviceNameTyping" id="animatioNameTyping">|</span>
+                <span class="smallDeviceNameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span>
             </p>
     
             <p class="smallDevicesTitle">

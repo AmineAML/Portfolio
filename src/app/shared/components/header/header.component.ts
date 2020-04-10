@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
     //Remove the # and whatever after it from the url
     history.replaceState({}, document.title, window.location.hash.split('#')[0]);
 
-    //this.closeNav();
+    this.closeNav();
   }
   
   openNav() {

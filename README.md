@@ -58,7 +58,9 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Angular Flex Layout: https://medium.com/angular-in-depth/angular-flex-layout-the-masquerade-58fb58d0ab45 
 - Background effect animation: https://codepen.io/WebSonick/pen/vjmgu   
 - Angular preload images: https://stackblitz.com/edit/angular-preload-images   
-- DevTools failed to parse SourceMap: chrome-extension: solution is disable Adblocker so this error is normal and https://stackoverflow.com/questions/44267503/devtools-failed-to-parse-sourcemap
+- DevTools failed to parse SourceMap: chrome-extension: solution is disable Adblocker so this error is normal and https://stackoverflow.com/questions/44267503/devtools-failed-to-parse-sourcemap   
+- Increase load performance by using videos rather than gif by this method (note: you can convert mp4 to differents mp4 codecs): https://web.dev/efficient-animated-content/?utm_source=lighthouse&utm_medium=devtools and https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video   
+- Improved load performance: https://www.youtube.com/watch?v=5fLW5Q5ODiE   
 
 
 ## SEO  

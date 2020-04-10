@@ -6,13 +6,14 @@ $font-stack: 'Montserrat', sans-serif;
 div{
 	//position: relative;
     //margin-top: 17%;
-    margin-bottom: auto;
+    margin: auto;
 	//padding-left: 20px;
-	margin-top: 7%;
+	//margin-top: 7%;
 	.smallDevices {
 		width: 70%;
+		height: 50%;
 		div {
-			bottom: 60%;
+			//bottom: 60%;
 			p {
 				color: $color-one; 
 				font-size:30px;
@@ -36,6 +37,7 @@ div{
 	}
 	.otherDevices {
 		width: 70%;
+		height: 50%;
 		.otherDevicesP {
 			font-family: $font-stack;
 			color: $color-one;

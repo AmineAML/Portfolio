@@ -18,9 +18,10 @@ export class AppComponent implements OnInit {
     this.pload(
       "./assets/imgs/clouds3.png",
       "./assets/imgs/Portfolio icon.png",
-      "./assets/imgs/projects-gifs/CubeSolvesTimer.gif",
-      "./assets/imgs/projects-gifs/LocaIT.gif",
-      "./assets/imgs/projects-gifs/NoteTaker.gif");
+      //"./assets/imgs/projects-gifs/CubeSolvesTimer.gif",
+      //"./assets/imgs/projects-gifs/LocaIT.gif",
+      //"./assets/imgs/projects-gifs/NoteTaker.gif"
+      );
   }
 
   pload(...args: any[]):void {
