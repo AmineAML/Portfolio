@@ -59,7 +59,7 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Background effect animation: https://codepen.io/WebSonick/pen/vjmgu   
 - Angular preload images: https://stackblitz.com/edit/angular-preload-images   
 - DevTools failed to parse SourceMap: chrome-extension: solution is disable Adblocker so this error is normal and https://stackoverflow.com/questions/44267503/devtools-failed-to-parse-sourcemap   
-- Increase load performance by using videos rather than gif by this method (note: you can convert mp4 to differents mp4 codecs): https://web.dev/efficient-animated-content/?utm_source=lighthouse&utm_medium=devtools and https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video   
+- Increase load performance by using videos rather than gif by this method (note: you can convert mp4 to differents mp4 codecs): https://web.dev/efficient-animated-content/?utm_source=lighthouse&utm_medium=devtools and https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video and ShareX to record and https://online-video-cutter.com/
 - Improved load performance: https://www.youtube.com/watch?v=5fLW5Q5ODiE   
 
 
@@ -73,3 +73,6 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - https://stackoverflow.com/questions/50975358/nested-interface   
 - Convert JSON to Interface Typescript: https://quicktype.io/   
 - Resume language proficiency: https://zety.com/blog/resume-language-skills   
+
+## Note   
+- Find a way to remove unused css and js like some angular material modules that aren't imported nor used, still they are loaded to the website

@@ -91,7 +91,7 @@ export class ContactComponent implements OnInit {
               //Reset form after submission
               this.contactForm.reset();
               this.submitFormPressedNotifyErrors = false;
-              this.isRequired = true;
+              this.isRequired = false;
             } else {
               //alert("Something went wrong when sending your message.");
 
