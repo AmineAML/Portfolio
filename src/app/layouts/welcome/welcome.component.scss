@@ -35,7 +35,35 @@ div {
             min-height: 100vh;
         }
     }
+    .fullScreenSectionsMozilla {
+        display: table;
+        margin: 0;
+        max-width: none;
 
+        //Don't allow the content to expand outside the screen
+        height:100%;
+        width:100%;
+        overflow:hidden;
+        margin-top: 15%;
+        @include responsiveSectionsHeight(tab-land) {
+            height: 0;
+            min-height: 100vh;
+        }
+        @include responsiveSectionsHeight(tab-port) {
+            height: 0;
+            min-height: 100vh;
+        }
+        @include responsiveSectionsHeight(phone) {
+            height: 0;
+            min-height: 100vh;
+        }
+        @include responsiveSectionsHeight(big-desktop) {
+            //Add height: 0; so Mozilla firefox can work with min-height: 100vh, still doesn't work on mobile devices using mozilla firefox 
+            height: 0;
+            min-height: 100vh;
+        }
+    }
+    /*
     #about, #projects, #contact {
         @include responsiveSectionsHeight(tab-land) {
             margin-top: 5em;
@@ -49,11 +77,11 @@ div {
         @include responsiveSectionsHeight(big-desktop) {
             margin-top: 5em;
         }
-    }
+    }*/
     
     #home, #homeShowOnlySmallDevices {
         //background-image: url("src/assets/imgs/darpan-dodiya-2Wa4T-n2WaU-unsplash.jpg"); 
-        alt: quote($string: "Photo by Darpan Dodiya on Unsplash");
+        //alt: quote($string: "Photo by Darpan Dodiya on Unsplash");
         background-size: cover;
         -moz-background-size:cover;
         -webkit-background-size:cover;
@@ -71,6 +99,7 @@ div {
       -o-animation:move-clouds-back 200s linear infinite;
       -webkit-animation:move-clouds-back 200s linear infinite;
       animation:move-clouds-back 200s linear infinite;
+      //height: 100vh;
     }
 
     #homeShowOnlySmallDevices {

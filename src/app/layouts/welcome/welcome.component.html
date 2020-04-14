@@ -1,7 +1,11 @@
 <div>
     <app-header></app-header>
-    <app-home id="home" class="fullScreenSections" fxHide fxShow.gt-md></app-home>
-    <app-home id="homeShowOnlySmallDevices" class="fullScreenSections" fxShow fxHide.gt-md></app-home>
+    <!--Mozilla firefox specific-->
+    <app-home *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla" fxHide fxShow.gt-md></app-home>
+    <app-home *ngIf="heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSectionsMozilla" fxShow fxHide.gt-md></app-home>
+    <!--Other browser specific-->
+    <app-home *ngIf="!heightDivChange" id="home" class="fullScreenSections" fxHide fxShow.gt-md></app-home>
+    <app-home *ngIf="!heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSections" fxShow fxHide.gt-md></app-home>
     <app-about id="about" class="fullScreenSections" fxLayoutAlign="center center"></app-about>
     <app-projects id="projects" class="fullScreenSections" fxLayoutAlign="center center"></app-projects>
     <app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
