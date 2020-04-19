@@ -1,5 +1,6 @@
 <div>
     <app-header></app-header>
+    <!--Better use ngClass-->
     <!--Mozilla firefox specific-->
     <app-home *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla" fxHide fxShow.gt-md></app-home>
     <app-home *ngIf="heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSectionsMozilla" fxShow fxHide.gt-md></app-home>

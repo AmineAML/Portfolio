@@ -1,12 +1,12 @@
-/*export interface curriculumVitae {
-    basics:        Basics[];
+export interface curriculumVitae {
+    basics:        Basics;
     education:     Cation[];
     skills:        Skills[];
     certification: Cation[];
     languages:     Language[];
     interests:     Interest[];
 }
-*/
+
 
 export interface Basics {
     name:     string;

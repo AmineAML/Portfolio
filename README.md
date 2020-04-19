@@ -78,4 +78,6 @@ Animate On Scroll https://michalsnik.github.io/aos/
 - Find a way to remove unused css and js like some angular material modules that aren't imported nor used, still they are loaded to the website   
 - On Nokia when 1st entering website the background image isn't displayed, by refreshing the page that background image is displayed   
 - On Samsung browser the videos does not display (on hover), Also on Avast secure browser is the same, better solution is acquired   
-- Note: min-height vh to home component doesn't work on Mozilla firefox (works for other div, still not the first div): FIX by https://stackoverflow.com/questions/19521442/min-height-for-a-table-in-firefox-not-working
+- Note: min-height vh to home component doesn't work on Mozilla firefox (works for other div, still not the first div): FIX by https://stackoverflow.com/questions/19521442/min-height-for-a-table-in-firefox-not-working   
+- Header setting the padding from sides doesn't make it center on all screens, better set it center in a way that makes it center to all screens (check marouane's screen picture of this portfolio)   
+- Typescript interface of all json files types   
