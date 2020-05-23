@@ -3,3 +3,4 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://aaml.netlify.app/* https://www.amineamellouk.com/:splat 301!
+http://aaml.netlify.app/* http://www.amineamellouk.com/:splat 301!
