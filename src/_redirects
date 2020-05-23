@@ -1,1 +1,5 @@
+# Handle routing by Angular rather than netlify
 /* /index.html 200
+
+# Redirect default Netlify subdomain to primary domain
+https://aaml.netlify.app/* https://www.amineamellouk.com/:splat 301!
