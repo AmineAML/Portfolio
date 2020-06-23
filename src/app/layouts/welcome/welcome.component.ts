@@ -1,14 +1,13 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent implements OnInit, AfterViewInit {
 
   //SEO
   name = environment.application.name;
@@ -18,41 +17,10 @@ export class WelcomeComponent implements OnInit {
   aos = environment.application.aos;
 
   features: any;
-
-  isShow: boolean;
-  topPosToStartShowing = 100;
-
-  faAngleUp = faAngleUp;
   
   constructor(    
     private meta: Meta,
     private titleService: Title) { }
-
-  
-  //Scroll to the top of the page
-  @HostListener('window:scroll')
-  checkScroll() {
-      
-    // window의 scroll top
-    // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
-
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    
-    if (scrollPosition >= this.topPosToStartShowing) {
-      this.isShow = true;
-    } else {
-      this.isShow = false;
-    }
-  }
-
-  // TODO: Cross browsing
-  gotoTop() {
-    window.scroll({ 
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
-    });
-  }
 
   public getBrowserName() {
     const agent = window.navigator.userAgent.toLowerCase()
@@ -74,6 +42,47 @@ export class WelcomeComponent implements OnInit {
     }
   }
 
+  percentagevisibilityInViewport = 50;
+  //Setting project component's in viewport percentage to 70% that it wouldn't cause any problem with the another component
+  percentagevisibilityInViewportProjects = 70;
+  //Default value is the home component
+  componentInViewport = "h";
+  cHome
+  cAbout
+  cProjects
+  cContact
+  @HostListener("window:scroll", ['$event'])
+  onWebAppScroll(event) {
+    if (this.isElementInViewport(this.cHome, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "h";
+    }
+
+    if (this.isElementInViewport(this.cAbout, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "a";
+    }
+
+    if (this.isElementInViewport(this.cProjects, this.percentagevisibilityInViewportProjects)) {
+      this.componentInViewport = "p";
+    }
+
+    if (this.isElementInViewport(this.cContact, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "c";
+    }
+  }
+
+  isElementInViewport(elem, percentVisible) {
+    let 
+    rect = elem.getBoundingClientRect(),
+
+    windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    var isInViewport = (   
+      Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+      Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible)
+
+    return !(isInViewport)
+  }
+
   heightDivChange = false;
   ngOnInit() {
     this.titleService.setTitle('Amine Amellouk Developer Portfolio | Amine Amellouk');
@@ -88,11 +97,16 @@ export class WelcomeComponent implements OnInit {
           ' apps developer'
       });
 
-    console.log(this.getBrowserName())
+    //console.log(this.getBrowserName())
     if (this.getBrowserName() === 'firefox') {
       this.heightDivChange = true;
     }
   }
 
-
+  ngAfterViewInit() {
+    this.cHome = document.getElementById("home");
+    this.cAbout = document.getElementById("about");
+    this.cProjects = document.getElementById("projects");
+    this.cContact = document.getElementById("contact");
+  }
 }

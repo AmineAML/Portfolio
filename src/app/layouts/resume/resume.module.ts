@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ResumeComponent } from './resume.component';
 import { MaterialModule } from 'src/app/material/material.module';
+import { ResumeRoutingModule } from './resume-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
-    ResumeComponent
+    ResumeRoutingModule.components
   ],
   imports: [
-    CommonModule,
-    MaterialModule
+    MaterialModule,
+    ResumeRoutingModule,
+    SharedModule,
+    CommonModule
   ]
 })
 export class ResumeModule { }

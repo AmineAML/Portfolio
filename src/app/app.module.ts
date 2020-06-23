@@ -1,34 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { WelcomeModule } from './layouts/welcome/welcome.module';
-import { RouterModule } from '@angular/router';
-import { ErrorModule } from './layouts/error/error.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SimplebarAngularModule } from 'simplebar-angular';
 import { HttpClientModule } from "@angular/common/http";
-import { ResumeModule } from './layouts/resume/resume.module';
+import { StorageServiceModule } from 'ngx-webstorage-service';
+import { UiStyleToggleService } from './core/ui-style-toggle.service';
+
+export function themeFactory(themeService: UiStyleToggleService) {
+  return () => themeService.setThemeOnStart();
+}
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    WelcomeModule,
-    ErrorModule,
-    ResumeModule,
-    RouterModule,
+    SharedModule, //SharedModule does import and export QuicklinkStrategy
     BrowserAnimationsModule,
-    SimplebarAngularModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule,
   ],
-  providers: [],
+  providers: [
+    UiStyleToggleService,
+    {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

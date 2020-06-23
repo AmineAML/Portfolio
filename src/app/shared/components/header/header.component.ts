@@ -1,6 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import * as AOS from 'aos';
+import { Component, OnInit, HostListener, Input, Inject } from '@angular/core';
+import { faBars,faTint } from '@fortawesome/free-solid-svg-icons';
+import { UiStyleToggleService } from 'src/app/core/ui-style-toggle.service';
+import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +9,20 @@ import * as AOS from 'aos';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() active: string;
 
   faBars = faBars;
+  faTint = faTint;
 
   public displayMobileNav: boolean = false;
   ChangeBackgroundColor: boolean;
   topPosToStartShowing = 100;
-  
+  themeToChange;
+  checked;
 
-  constructor() { }
+  //HostListener to know user scrolling top or bottom that top use activeT and bottom use activeB and boolean of isScrollTnotB
+
+  constructor(private toggleLightAndDarkMode: UiStyleToggleService, @Inject(LOCAL_STORAGE) private storage: StorageService) { }
 
   
   //Scroll to the top of the page
@@ -63,7 +69,25 @@ export class HeaderComponent implements OnInit {
     this.displayMobileNav = false;
   }
 
+  //Slider toggle color by theme
+  LightAndDarkMODE() {
+    this.toggleLightAndDarkMode.toggle();
+    this.userThemeMode();
+  }
+
+  userThemeMode() {
+    let userTheme = this.storage.get('THEME');
+    if (userTheme == 'DARK') {
+      this.themeToChange = "Light mode";
+      this.checked = false;
+    } else {
+      this.themeToChange = "Dark mode";
+      this.checked = true;
+    }
+  }
+
   ngOnInit(): void {
+    this.userThemeMode();
   }
 
 }

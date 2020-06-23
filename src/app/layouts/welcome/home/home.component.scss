@@ -1,0 +1,175 @@
+//$color-one: #ad8174;
+//$color-two: #a33327;
+//$color-three: #917164;
+$font-stack: 'Montserrat', sans-serif;
+
+div{
+	//position: relative;
+    //margin-top: 17%;
+    margin: auto;
+	//padding-left: 20px;
+	//margin-top: 7%;
+	.otherDevices {
+		width: 70%;
+		height: 50%;
+		line-height: normal;
+		.otherDevicesP {
+			font-family: $font-stack;
+			//color: $color-one;
+			color: var(--text-primary-color);
+			font-size: 6vw;
+			#lastNameColor {
+				//color: $color-two;
+				color: var(--text-secondary-color);
+			}
+			.NameTyping{
+				//color: $color-three;
+				color: var(--text-title-color);
+			}
+		}
+		#title {
+			font-family: $font-stack;
+			//color: $color-three;
+			color: var(--text-title-color);
+			font-size: 4vw;
+			.TitleTyping {
+				//color: $color-three;
+				color: var(--text-title-color);
+			}
+		}
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline;
+			padding-right: 1rem;
+			a {
+				text-decoration: none;
+				//color: $color-three;
+				color: var(--text-title-color);
+			}
+			&:nth-child(1) {
+				a:hover {
+					color: var(--text-secondary-color);
+				}
+			}
+			&:nth-child(2) {
+				a:hover {
+					color: #14191E;
+				}
+			}
+			&:nth-child(3) {
+				a:hover {
+					color: #0075B0;
+				}
+			}
+			&:nth-child(4) {
+				a:hover {
+					color: #EF7C04;
+				}
+			}
+			
+		}
+	}
+    #animatioNameTyping {
+        animation: typingAnim 1s infinite 0s linear;
+    }
+}
+
+.buttonDisplayOnMobile {
+	position: absolute;
+	bottom: 20%;
+	left:0;
+	right:0;
+  	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	button {
+		background-color: var(--text-secondary-color);
+		color: var(--text-button-color);
+		width: fit-content;
+		margin-right: 1rem;
+	}
+}
+
+@keyframes typingAnim {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+}
+
+//Scroll indicator
+
+$indicator-size: 24px;
+
+@mixin scroll-indicator() {
+	//$border-color: #998471;
+	$border-color: var(--scroll-indicator-color);
+	$border-width: 3px;
+	border-radius: 0 0 0 2px;
+	
+	
+	//animation: scroll-indicate 1s linear 0s infinite alternate;
+	position: absolute;
+	width: $indicator-size;
+	height: $indicator-size;
+	
+	transform: rotate(-45deg);
+	
+	border-bottom: $border-width solid $border-color;
+	border-left: $border-width solid $border-color;
+	box-sizing: border-box;
+}
+
+
+@keyframes scroll-indicate {
+	0% {
+		opacity: 1;	
+	}
+	
+	20% {
+		opacity: 0;
+	}
+	
+	40% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.scrollIndicator {
+//	@include scroll-indicator();
+	position: absolute;
+	//width: 100%;
+	bottom: 10%;
+	left: 50%;
+	
+	&:before {
+		@include scroll-indicator();
+		content: "";
+		top: 0px;
+		left: 50%;
+		margin-left: -$indicator-size/2;
+		
+		animation: scroll-indicate 1.5s linear 0s infinite;
+	}
+	
+	&:after {
+		@include scroll-indicator();
+		content: "";
+		top: $indicator-size/2;
+		left: 50%;
+		margin-left: -$indicator-size/2;
+		animation: scroll-indicate 1.5s linear 0.25s infinite;
+	}
+}

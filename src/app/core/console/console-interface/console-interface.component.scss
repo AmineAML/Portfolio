@@ -1,0 +1,89 @@
+button {
+    position: fixed;
+    left: 98%;
+    top: 50%;
+    //make this button with position fixed overlap the header which is also position fixed
+    z-index: 4;
+    display: inline-flex;
+    align-items: flex-start; 
+    justify-content: center;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+    height: 20%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    background-color: var(--text-secondary-color);
+    color: var(--text-button-color);
+    &:hover {
+        left: 95%;
+    }
+}
+
+div {
+    mat-card {
+        box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+        width: 80%;
+        position: fixed;
+        top: 10%;
+        z-index: 700;
+        padding: 0;
+        height: 80%;
+        mat-card-header {
+            background-color: #F5F5F5;
+            mat-card-title {
+                padding: 10px;
+                margin: auto;
+                .settings {
+                    padding-right: 1rem;
+                    .dot {
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 5px;
+                        &:nth-child(1) {
+                            background-color: red;
+                        }
+                        &:nth-child(2) {
+                            background-color: yellow;
+                        }
+                        &:nth-child(3) {
+                            background-color: green;
+                        }
+                    }
+    
+                }
+            }
+        }
+        mat-card-content {
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #020202;
+            height: 100%;
+            overflow: auto;
+            overflow-x: hidden;
+            h5 {
+                width: 100%;
+                margin: 0;
+                color: whitesmoke;
+                input {
+                    background: none;
+                    border: none;
+                    flex-grow: 1;
+                    caret-color: whitesmoke;
+                    color: whitesmoke;
+                }
+                input:focus {
+                    outline: none;
+                }
+                &:nth-child(3) {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

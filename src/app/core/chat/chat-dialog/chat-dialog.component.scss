@@ -1,0 +1,119 @@
+button {
+    position: fixed;
+    right: 99.1%;
+    top: 50%;
+    //make this button with position fixed overlap the header which is also position fixed
+    z-index: 4;
+    display: inline-flex;
+    align-items: flex-start; 
+    justify-content: center;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    height: 20%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    //Make another dynamic
+    color: var(--chat-icon-color);
+    background-color: transparent;
+    &:hover {
+        right: 95%;
+        background-color: var(--text-secondary-color);
+        color: var(--text-button-color);
+    }
+    span {
+        position: absolute;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        transform: rotate(-90deg);
+        height: 100px;
+        width: 100px;
+        left: 10px;
+        //top: 10px;
+        fa-icon {
+            margin-left: 10px;
+        }
+    }
+}
+
+.layout {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    mat-card {
+        mat-card-header {
+            cursor: pointer;
+        }
+        mat-card-content {
+            height: 400px;
+            width: 300px;
+            overflow: auto;
+            overflow-x: hidden;
+            position: relative;
+            mat-chip-list {
+                mat-chip {
+                    height: auto;
+                    width: auto;
+                }
+            }
+            mat-chip-list.from {
+                display: flex;
+                justify-content: flex-start;
+            }
+            mat-chip-list.to {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        mat-card-footer {
+            table {
+                width: 100%;
+                tr {
+                    td {
+                        width: 80%;
+                        mat-form-field {
+                            width: 100%;
+                        }
+                        fa-icon {
+                            cursor: pointer;
+                        }
+                    }
+                    td:nth-child(2) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+    div {
+        background-color: whitesmoke;
+        //max-height: 400px;
+        height: 400px;
+        width: 300px;
+        overflow-y: auto;
+        position: relative;
+        mat-chip-list {
+            mat-chip {
+                height: auto;
+                width: auto;
+            }
+        }
+        .dialog {
+
+        }
+        .from {
+            text-align: left;
+        }
+        .to {
+            text-align: right;
+        }
+        /*.talk {
+            position: absolute;
+            bottom: 0%;
+            input {
+                float: left;
+            }
+        }*/
+    }
+}

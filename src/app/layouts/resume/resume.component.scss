@@ -1,6 +1,8 @@
-.page {
+:host {
     font-family: 'Lato', sans-serif;
     background-color: #FFFFFF;
+    //Display is block to allow the background color to work with :host
+    display: block;
     .header {
         background-color: #F4F6F6;
         margin-bottom: 30px;
@@ -106,5 +108,14 @@
                 }
             }
         }
+    }
+    a.download {
+        position: fixed;
+        right: 3%;
+        bottom: 3%;
+        //make this button with position fixed overlap the header which is also position fixed
+        z-index: 4;
+        text-decoration: none;
+        color: var(--text-secondary-color);
     }
 }

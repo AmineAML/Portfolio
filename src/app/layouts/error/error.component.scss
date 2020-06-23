@@ -3,15 +3,23 @@
     margin: 0;
     max-width: none;
     height: 90vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .fopnf {
     width: 100%;
-    display: table;
     margin: 0;
     max-width: none;
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.JohnTravoltaMeme {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }

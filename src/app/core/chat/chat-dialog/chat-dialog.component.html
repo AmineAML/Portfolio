@@ -1,0 +1,35 @@
+<button mat-flat-button (click)="toggleChat()" *ngIf="!displayChat">
+    <span>Bot<fa-icon [icon]="faRobot" size="2x"></fa-icon></span>
+</button>
+
+<div class="layout">
+    <mat-card *ngIf="displayChat">
+        <mat-card-header fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleChat()">
+            <mat-card-title>ChatBot</mat-card-title>
+            <h1>X</h1>
+        </mat-card-header>
+        <mat-card-content #chatWindow>
+            <mat-chip-list *ngFor="let message of messages | async" #scrollFrame  [ngClass]="{ 'from': message.sentBy === 'bot',
+                                        'to':  message.sentBy === 'user' }">
+                <mat-chip class="dialog" >
+                    {{ message.content }}
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-content>
+        <mat-card-footer>
+            <table cellspacing="0">
+                <tr>
+                    <td style="width: 80%">
+                        <mat-form-field>
+                            <mat-label>Write a message...</mat-label>
+                            <input matInput [(ngModel)]="formValue" (keyup.enter)="sendMessage()" autofocus>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <fa-icon [icon]="faPaperPlane" size="2x" (click)="sendMessage()"></fa-icon>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-footer>
+    </mat-card>
+</div>

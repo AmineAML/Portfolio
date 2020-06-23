@@ -1,34 +1,31 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { WelcomeComponent } from './welcome.component';
-import { HomeComponent } from 'src/app/modules/home/home.component';
-import { AboutComponent } from 'src/app/modules/about/about.component';
-import { ProjectsComponent } from 'src/app/modules/projects/projects.component';
-import { ContactComponent } from 'src/app/modules/contact/contact.component';
-import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ReactiveFormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SeletonLoaderModule } from 'src/app/core/seleton-loader/seleton-loader.module';
+import { ScrollTopModule } from 'src/app/core/scroll-top/scroll-top.module';
+import { ConsoleModule } from 'src/app/core/console/console.module';
+import { ChatModule } from 'src/app/core/chat/chat.module';
+import { WelcomeRoutingModule } from './welcome-routing.module';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
-    WelcomeComponent,
-    HomeComponent,
-    AboutComponent,
-    ProjectsComponent,
-    ContactComponent
+    WelcomeRoutingModule.components
   ],
   entryComponents: [],
   imports: [
-    CommonModule,
-    RouterModule,
     SharedModule,
     MaterialModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    SeletonLoaderModule,
+    ScrollTopModule,
+    ConsoleModule,
+    ChatModule,
+    WelcomeRoutingModule,
+    CommonModule
   ]
 })
 export class WelcomeModule { }

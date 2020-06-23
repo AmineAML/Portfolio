@@ -1,6 +1,6 @@
 <!--<a href="javascript:;" (click)="gotoTop()">AA</a>
 (click)="goTo('home')"-->
-<mat-toolbar fxLayoutAlign="center" [style.background-color]="ChangeBackgroundColor ? '#262626': 'transparent'">
+<mat-toolbar fxLayoutAlign="center" [style.background-color]="ChangeBackgroundColor ? 'var(--background-primay-color)': 'transparent'">
   <div>
     <ul>
       <li>
@@ -11,16 +11,19 @@
   <div>
     <ul>
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('home')">HOME /></a>
+          <a href="javascript:;" (click)="goTo('home')" [class.active]="active=='h'">HOME /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+          <a href="javascript:;" (click)="goTo('about')" [class.active]="active=='a'">ABOUT /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
+          <a href="javascript:;" (click)="goTo('projects')" [class.active]="active=='p'">PROJECTS /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+          <a href="javascript:;" (click)="goTo('contact')" [class.active]="active=='c'">CONTACT /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faTint"></fa-icon></a>
         </li>
         <!--
         <li fxHide fxShow.gt-md>
@@ -43,6 +46,7 @@
               <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
               <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
               <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+              <a href="javascript:;"><mat-slide-toggle (click)="LightAndDarkMODE()" [checked]="checked"></mat-slide-toggle></a>
             </div>
           </div>
         </li>

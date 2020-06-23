@@ -1,0 +1,49 @@
+<div fxLayout fxFill fxLayoutAlign="space-around center">
+
+    <div class="otherDevices">
+        <p class="otherDevicesP">
+            <span>{{typewriter_display | slice:0:highlightStart}}</span>
+            <span id="lastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
+            <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
+
+            <span class="NameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span>
+        </p>
+
+        <p id="title">
+            <span>{{typewriter_display2}}</span>
+            <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span>
+        </p>
+
+        <ul *ngIf="HideShow" [@slideInOut]>
+            <li>
+                <a routerLink="/resume" matTooltip="View Resume">
+                    <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a rel="noopener" href="https://github.com/AmineAML" target="_blank" matTooltip="GitHub">
+                    <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" matTooltip="LinkedIn">
+                    <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank" matTooltip="Stack Overflow">
+                    <fa-icon [icon]="faStackOverflow" size="2x"></fa-icon>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="buttonDisplayOnMobile" *ngIf="HideShow" [@slideInOut] fxHide fxShow.lt-md>
+    <button mat-button (click)="goTo('projects')">Portfolio</button>
+    <button mat-button (click)="goTo('contact')">Contact me</button>
+</div>
+
+<div class="scrollIndicator" *ngIf="HideShow" [@slideInOut]></div>

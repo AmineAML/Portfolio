@@ -1,0 +1,22 @@
+<button mat-flat-button (click)="toggleConsole()">{{consoleButtonText}}</button>
+
+<div fxLayoutAlign="center">
+    <mat-card *ngIf="displayConsole">
+        <mat-card-header>
+            <mat-card-title>
+                <span class="settings">
+                    <span class="dot" (click)="toggleConsole()"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <span>guest@amineamellouk.com: ~</span>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content (click)="userInput.focus()" #consoleWindowScroll>
+            <h5>Welcome to Amine portfolio. Type <b>'help'</b> + ENTER for a list of commands</h5>
+            <h5 [innerHtml]="responseToUser">{{terminalOutput}}</h5>
+            <!--Note that this autofocus also display this: Autofocus processing was blocked because a document already has a focused element.-->
+            <h5>aa:~ guest$ <input [(ngModel)]="inputByUser" type="text" (keyup.enter)="cmdEnter()" autofocus #userInput/></h5>
+        </mat-card-content>
+    </mat-card>
+</div>

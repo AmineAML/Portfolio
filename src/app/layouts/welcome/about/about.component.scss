@@ -1,0 +1,34 @@
+#about {
+    padding-left: 40px;
+    padding-right: 40px;
+    .mat-headline {
+        //color: #D8D2D2;
+        color: var(--text-tertiary-color);
+    }
+    div {
+        //color: #BEBAB9;
+        color: var(--text-content-color);
+    }
+    div {
+        div {
+            @media (min-width: 767px) {
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    li {
+                        display: flex;
+                    }
+                }
+            }
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                ul {
+                    list-style: circle;
+                    margin: 0;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}

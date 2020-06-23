@@ -17,11 +17,9 @@ export class AppComponent implements OnInit {
     //Preload images to increase website user experience
     this.pload(
       "./assets/imgs/clouds3.png",
-      "./assets/imgs/Portfolio icon.png",
-      //"./assets/imgs/projects-gifs/CubeSolvesTimer.gif",
-      //"./assets/imgs/projects-gifs/LocaIT.gif",
-      //"./assets/imgs/projects-gifs/NoteTaker.gif"
-      );
+    );
+    
+    this.consoleGreeting();
   }
 
   pload(...args: any[]):void {
@@ -30,6 +28,19 @@ export class AppComponent implements OnInit {
       this.imgs[i].src = args[i];
       //console.log('loaded: ' + args[i]);
     }
+  }
+
+  constructor() {}
+
+  consoleGreeting() {
+    console.log("    ###         #       #             #       ##     ## ###")
+    console.log("   #   #       # #      #            # #      # #   # # ###")
+    console.log("    #         #   #     #           #   #     #  # #  # ###")
+    console.log("     #       #######    #          #######    #   #   # ###")
+    console.log("      #     #       #   #         #       #   #       # ###")
+    console.log("   #   #   #         #  #        #         #  #       #")
+    console.log("    ###   #           # ####### #           # #       #  #")
+    console.log("This website was built by Amine Amellouk and designed with inspiration from others")
   }
 
   /*

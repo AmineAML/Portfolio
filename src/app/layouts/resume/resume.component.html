@@ -1,140 +1,143 @@
-<div class="page">
-    <div class="header" fxLayoutAlign="center">
-        <div fxLayout="column" fxFlex="20%">
-            <h1 class="name">{{cv.basics.name}}</h1>
-            <h2 class="title">{{cv.basics.label}}</h2>
-        </div>
+<div class="header" fxLayoutAlign="center">
+    <div fxLayout="column">
+        <h1 class="name">{{cv.basics.name}}</h1>
+        <h2 class="title">{{cv.basics.label}}</h2>
     </div>
-    <!--{{basicData.profiles[0].username}}<-->
-
-    <div class="body" fxLayoutAlign="center">
-        <div fxLayout="column">
-    
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Contact</h3>
-                <section fxFlex="40%" >
-                    <div class="data" id="basicsAndProfiles">
-                        <!--style="float: left; padding-right: 7rem;"-->
-                        <strong>Email</strong>
-                        <div>{{cv.basics.email}}</div>
-                    </div>
-                    <div class="data" id="basicsAndProfiles">
-                        <!--Don't display phone number-->
-                        <strong>Phone</strong>
-                        <div>{{cv.basics.phone}}</div>
-                    </div>
-                    <div class="data" id="basicsAndProfiles">
-                        <strong>Website</strong>
-                        <div>
-                            <a rel="noopener" href="aaml.netlify.com" target="_blank">{{cv.basics.website}}</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">About</h3>
-                <section fxFlex="40%">
-                    <p>{{cv.basics.summary}}</p>
-                </section>
-            </div>
-
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Profiles</h3>
-                <section fxFlex="40%" >
-                    <div class="data" id="basicsAndProfiles" *ngFor="let profile of cv.basics.profiles">
-                        <strong>{{profile.network}}</strong>
-                        <div>
-                            <a rel="noopener" href="{{profile.url}}" target="_blank">{{profile.username}}</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Education</h3>
-                <section fxFlex="40%" >
-                    <div class="dataCation" *ngFor="let edu of cv.education">
-                        <div fxLayout="row" fxLayout.xs="column">
-                            <span class="headerAtion" fxFlex="80%">{{edu.institution}}</span>
-                            <!--style="float: left;"-->
-                            <span class="headerAtion" fxFlex="20%">{{edu.endDate}}</span>
-                        </div>
-                        
-                        <div class="secondSectionAtion">
-                            <div class="study">
-                                <fa-icon [icon]="faGraduationCap"></fa-icon>
-                                <span>{{edu.area}}</span>
-                            </div>
-                            <span class="studyType">{{edu.studyType}}</span>
-                        </div>
-                        <div *ngIf="edu.thesis">
-                            <h4>Courses</h4>
-                            <ul>
-                                <li>{{edu.thesis}}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Certification</h3>
-                <section fxFlex="40%" >
-                    <div class="dataCation" *ngFor="let cert of cv.certification">
-                        <div fxLayout="row" fxLayout.xs="column">
-                            <span class="headerAtion" fxFlex="80%">{{cert.institution}}</span>
-                            <!--style="float: left;"-->
-                            <span class="headerAtion" fxFlex="20%">{{cert.endDate}}</span>
-                        </div>
-                        <div class="secondSectionAtion">
-                            <div class="study">
-                                <span>{{cert.area}}</span>
-                            </div>
-                            <span class="studyType">{{cert.studyType}}</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Skills</h3>
-                <section fxFlex="40%" >
-                    <div class="dataCation">
-                        <div>
-                            <h4>Development</h4>
-                            <ul *ngFor="let skl of cv.skills[0].keywords">
-                                <li>{{skl}}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Languages</h3>
-                <section fxFlex="40%">
-                    <div class="data" id="basicsAndProfiles" *ngFor="let lan of cv.languages">
-                        <strong>{{lan.language}}</strong>
-                        <div>{{lan.fluency}}</div>
-                    </div>
-                </section>
-            </div>
-
-            <!--
-            <div class="sections" fxLayout="row" fxLayoutGap="70px">
-                <h3 class="sectionsTitles" fxFlex="35%">Interests</h3>
-                <section fxFlex="40%">
-                    <div class="data" id="basicsAndProfiles" *ngFor="let int of interests">
-                        <div>{{int.name}}</div>
-                    </div>
-                </section>
-            </div>-->
-
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
 </div>
+<!--{{basicData.profiles[0].username}}<-->
+
+<div class="body" fxLayoutAlign="center">
+    <div fxLayout="column">
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Contact</h3>
+            <section fxFlex="40%" >
+                <div class="data" id="basicsAndProfiles">
+                    <!--style="float: left; padding-right: 7rem;"-->
+                    <strong>Email</strong>
+                    <div>{{cv.basics.email}}</div>
+                </div>
+                <div class="data" id="basicsAndProfiles">
+                    <!--Don't display phone number-->
+                    <strong>Phone</strong>
+                    <div>{{cv.basics.phone}}</div>
+                </div>
+                <div class="data" id="basicsAndProfiles">
+                    <strong>Website</strong>
+                    <div>
+                        <a rel="noopener" href="{{cv.basics.website}}" target="_blank">{{cv.basics.website.replace('https://','')}}</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">About</h3>
+            <section fxFlex="40%">
+                <p>{{cv.basics.summary}}</p>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Profiles</h3>
+            <section fxFlex="40%" >
+                <div class="data" id="basicsAndProfiles" *ngFor="let profile of cv.basics.profiles">
+                    <strong>{{profile.network}}</strong>
+                    <div>
+                        <a rel="noopener" href="{{profile.url}}" target="_blank">{{profile.username}}</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Education</h3>
+            <section fxFlex="40%" >
+                <div class="dataCation" *ngFor="let edu of cv.education">
+                    <div fxLayout="row" fxLayout.xs="column">
+                        <span class="headerAtion" fxFlex="80%">{{edu.institution}}</span>
+                        <!--style="float: left;"-->
+                        <span class="headerAtion" fxFlex="20%">{{edu.endDate}}</span>
+                    </div>
+                    
+                    <div class="secondSectionAtion">
+                        <div class="study">
+                            <fa-icon [icon]="faGraduationCap"></fa-icon>
+                            <span>{{edu.area}}</span>
+                        </div>
+                        <span class="studyType">{{edu.studyType}}</span>
+                    </div>
+                    <div *ngIf="edu.thesis">
+                        <h4>Courses</h4>
+                        <ul>
+                            <li>{{edu.thesis}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Certification</h3>
+            <section fxFlex="40%" >
+                <div class="dataCation" *ngFor="let cert of cv.certification">
+                    <div fxLayout="row" fxLayout.xs="column">
+                        <span class="headerAtion" fxFlex="80%">{{cert.institution}}</span>
+                        <!--style="float: left;"-->
+                        <span class="headerAtion" fxFlex="20%">{{cert.endDate}}</span>
+                    </div>
+                    <div class="secondSectionAtion">
+                        <div class="study">
+                            <span>{{cert.area}}</span>
+                        </div>
+                        <span class="studyType">{{cert.studyType}}</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Skills</h3>
+            <section fxFlex="40%" >
+                <div class="dataCation">
+                    <div>
+                        <h4>Development</h4>
+                        <ul *ngFor="let skl of cv.skills[0].keywords">
+                            <li>{{skl}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Languages</h3>
+            <section fxFlex="40%">
+                <div class="data" id="basicsAndProfiles" *ngFor="let lan of cv.languages">
+                    <strong>{{lan.language}}</strong>
+                    <div>{{lan.fluency}}</div>
+                </div>
+            </section>
+        </div>
+
+        <!--
+        <div class="sections" fxLayout="row" fxLayoutGap="70px">
+            <h3 class="sectionsTitles" fxFlex="35%">Interests</h3>
+            <section fxFlex="40%">
+                <div class="data" id="basicsAndProfiles" *ngFor="let int of interests">
+                    <div>{{int.name}}</div>
+                </div>
+            </section>
+        </div>-->
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<!--
+    Download resume either french version or english version
+    <a href="{{cvDownload}}" href="javascript:;" matTooltip="Download" class="download"><fa-icon [icon]="faFileDownload" size="2x"></fa-icon></a>
+-->

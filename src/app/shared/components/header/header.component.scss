@@ -10,9 +10,6 @@
 }
 */
 
-$main-color: #917164;
-$secondary-color: #c7493a;
-
 mat-toolbar {
     //justify-content: space-between;
     animation: navbarAnimation 3s forwards 0s ease;
@@ -36,23 +33,74 @@ mat-toolbar {
                     font-family: 'Bunch Blossoms Personal Use'; 
                     font-size:x-large;
                 }
+                content {
+                    background: whitesmoke;
+                    margin: 0px auto;
+                    display: block;
+                    width: 75%;
+                    text-align: center;
+                    padding: 50px;
+                    font-weight: 300;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    box-shadow: inset -3px -3px 5px 0px rgba(0,0,0,0.75);
+                }
                 a {
                     text-decoration: none;  
-                    color: $main-color;
+                    color: var(--text-title-color);
+                    
+                    //Text underline animation
+                    font-size: 1em;
+                    position: relative;
+                    transition: all 0.6s;
+                    -moz-transition: all 0.6s;
+                    -webkit-transition: all 0.6s;
+                    -o-transition: all 0.6s;
+                    -ms-transition: all 0.6s;
     
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    //Note that with the other theme the hover effect doesn't appear to change color because --text-title-color and --background-secondary-color are similar
                     background-image: linear-gradient(
                           0deg,
-                          $secondary-color,
-                          $secondary-color 50%,
-                          $main-color 50%);
-                          background-size: 100% 200%;
-                          background-position: 0% 0%;
-                }
-                a:hover {
-                    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
-                    background-position: 100% 100%;
+                          var(--background-secondary-color),
+                          var(--background-secondary-color) 50%,
+                          var(--text-title-color) 50%
+                    );
+                    background-size: 100% 200%;
+                    background-position: 0% 0%;
+
+                    &:before {
+                        content: "";
+                        width: 0;
+                        height: 0.1em;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background: var(--text-title-color);
+                        transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                    }
+
+                    &:hover {
+                        transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+                        background-position: 100% 100%;
+                    }
+
+                    &.active {
+                        //text-decoration: underline;
+                        //text-decoration-color: var(--text-title-color);
+                        &:before {
+                            width: 100%;
+                            left: 0;
+                            background: var(--text-title-color);
+                        }
+                    }
                 }
             }
             li .overlay {
@@ -67,11 +115,12 @@ mat-toolbar {
                 max-height: 100vh;
                 
                 position: fixed;
-                z-index: 1;
+                z-index: 10;
                 top: 0;
                 left: 0;
-                background-color: rgb(0,0,0);
-                background-color: rgba(0,0,0, 0.9);
+                //background-color: rgb(0,0,0);
+                //background-color: rgba(0,0,0, 0.9);
+                background-color: var(--background-primay-color);
                 overflow-x: hidden;
                 transition: 0.5s;
             }
@@ -86,19 +135,21 @@ mat-toolbar {
                 padding: 8px;
                 text-decoration: none;
                 font-size: 20px;
-                color: #818181;
+                //color: #818181;
+                color: var(--text-title-color);
                 display: block;
                 transition: 0.3s;
             }
             li .overlay a:hover, .overlay a:focus {
-                color: #f1f1f1;
+                //color: #f1f1f1;
+                color: var(--background-secondary-color);
             }
             li .overlay .closebtn {
                 position: absolute;
                 top: 15px;
                 right: 35px;
                 font-size: 40px;
-            }          
+            }
         }
     }
     @media (max-width: 480px) {

@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WelcomeComponent } from './layouts/welcome/welcome.component';
-import { ErrorComponent } from './layouts/error/error.component';
 import { QuicklinkStrategy } from 'ngx-quicklink';
-import { ResumeComponent } from './layouts/resume/resume.component';
 
 
-const routes: Routes = [
-  //{path: '', redirectTo: '/welcome', pathMatch: 'full'},
-  {path: '', component: WelcomeComponent},
-  {path: 'resume', component: ResumeComponent},
-  {path: '404', component: ErrorComponent},
-  {path: '**', redirectTo: '/404'}
+const app_routes: Routes = [
+  //{path: '', pathMatch: 'full', redirectTo: '/welcome'},
+  {path: '', loadChildren: () => import('./layouts/welcome/welcome.module').then(m => m.WelcomeModule)},
+  {path: 'resume', loadChildren: () => import('./layouts/resume/resume.module').then(m => m.ResumeModule)},
+  {path: '404', loadChildren: () => import('./layouts/error/error.module').then(m => m.ErrorModule)},
+  {path: '**', pathMatch: 'full', redirectTo: '/404'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
+  imports: [RouterModule.forRoot(app_routes, {
     preloadingStrategy: QuicklinkStrategy
   })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

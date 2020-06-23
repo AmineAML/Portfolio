@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PageNotFoundComponent } from 'src/app/modules/page-not-found/page-not-found.component';
-import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
-import { ErrorComponent } from './error.component';
+import { ErrorRoutingModule } from './error-routing.module';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
-    ErrorComponent,
-    PageNotFoundComponent
+    ErrorRoutingModule.components
   ],
   imports: [
-    CommonModule,
-    RouterModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    ErrorRoutingModule,
+    CommonModule
   ]
 })
 export class ErrorModule { }
