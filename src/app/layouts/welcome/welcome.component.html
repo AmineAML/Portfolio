@@ -1,5 +1,5 @@
 
-    <app-header [active]="componentInViewport"></app-header>
+    <app-header [active]="componentInViewport" (toggleCmd)="toggleCmd($event)" (toggleChabot)="toggleChatbot($event)"></app-header>
     <!--Better use ngClass-->
     <!--Mozilla firefox specific-->
     <app-home *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla"></app-home>
@@ -12,8 +12,8 @@
     <app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
     <app-footer></app-footer>
     <app-scroll-top-indicator></app-scroll-top-indicator>
-    <app-console-interface></app-console-interface>
-    <app-chat-dialog></app-chat-dialog>
+    <app-console-interface [openCmd]="toggleCmdOpen"></app-console-interface>
+    <app-chat-dialog [openChatbot]="toggleChatbotOpen"></app-chat-dialog>
 
 
     <!--

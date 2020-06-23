@@ -1,44 +1,24 @@
-@media (min-width: 767px) {
-    button {
-        position: fixed;
-        left: 98%;
-        top: 50%;
-        //make this button with position fixed overlap the header which is also position fixed
-        z-index: 4;
-        display: inline-flex;
-        align-items: flex-start; 
-        justify-content: center;
-        -ms-transform: rotate(-90deg); /* IE 9 */
-        transform: rotate(-90deg);
-        height: 20%;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
-        background-color: var(--text-secondary-color);
-        color: var(--text-button-color);
-        &:hover {
-            left: 95%;
-        }
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    button {
-        position: fixed;
-        right: -90px;
-        top: 50%;
-        //make this button with position fixed overlap the header which is also position fixed
-        z-index: 4;
-        display: inline-flex;
-        align-items: flex-start; 
-        justify-content: center;
-        -ms-transform: rotate(-90deg); /* IE 9 */
-        transform: rotate(-90deg);
-        height: 20%;
-        background-color: var(--text-secondary-color);
-        color: var(--text-button-color);
+button {
+    position: fixed;
+    left: 98%;
+    top: 50%;
+    //make this button with position fixed overlap the header which is also position fixed
+    z-index: 4;
+    display: inline-flex;
+    align-items: flex-start; 
+    justify-content: center;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+    height: 20%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    background-color: var(--text-secondary-color);
+    color: var(--text-button-color);
+    &:hover {
+        left: 95%;
     }
 }
 
@@ -74,7 +54,15 @@ div {
                             background-color: green;
                         }
                     }
-    
+                }
+                @media (min-width: 320px) and (max-width: 767px) {
+                    .dot {
+                        height: 10px;
+                        width: 10px;
+                    }
+                    .title {
+                        font-size: 3vw;
+                    }
                 }
             }
         }

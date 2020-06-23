@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Input, Inject } from '@angular/core';
+import { Component, OnInit, HostListener, Input, Inject, Output, EventEmitter } from '@angular/core';
 import { faBars,faTint } from '@fortawesome/free-solid-svg-icons';
 import { UiStyleToggleService } from 'src/app/core/ui-style-toggle.service';
 import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
@@ -10,6 +10,8 @@ import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 })
 export class HeaderComponent implements OnInit {
   @Input() active: string;
+  @Output() toggleCmd = new EventEmitter();
+  @Output() toggleChabot = new EventEmitter();
 
   faBars = faBars;
   faTint = faTint;
@@ -20,6 +22,9 @@ export class HeaderComponent implements OnInit {
   themeToChange;
   checked;
   userTheme = this.storage.get('THEME');
+  openConsole = true;
+  openChatbot = true;
+
 
   //HostListener to know user scrolling top or bottom that top use activeT and bottom use activeB and boolean of isScrollTnotB
 
@@ -84,6 +89,16 @@ export class HeaderComponent implements OnInit {
       this.themeToChange = "Dark mode";
       this.checked = true;
     }
+  }
+
+  toggleConsole() {
+    this.displayMobileNav = false;
+    this.toggleCmd.emit(this.openConsole);
+  }
+
+  toggleChatbot() {
+    this.displayMobileNav = false;
+    this.toggleChabot.emit(this.openChatbot);
   }
 
   ngOnInit(): void {

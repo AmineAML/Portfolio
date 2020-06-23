@@ -1,7 +1,7 @@
-<button mat-flat-button (click)="toggleConsole()">{{consoleButtonText}}</button>
+<button mat-flat-button (click)="toggleConsole()" fxShow fxHide.lt-lg>{{consoleButtonText}}</button>
 
 <div fxLayoutAlign="center">
-    <mat-card *ngIf="displayConsole">
+    <mat-card *ngIf="displayConsole || openCmd">
         <mat-card-header>
             <mat-card-title>
                 <span class="settings">
@@ -9,7 +9,7 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </span>
-                <span>guest@amineamellouk.com: ~</span>
+                <span class="title">guest@amineamellouk.com: ~</span>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content (click)="userInput.focus()" #consoleWindowScroll>

@@ -83,6 +83,20 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     return !(isInViewport)
   }
 
+  toggleCmdOpen: boolean;
+  toggleCmd(open: boolean) {
+    //alert(open);
+    //this.toggleCmdOpen = open;
+    this.toggleCmdOpen = true;
+  }
+
+  toggleChatbotOpen: boolean;
+  toggleChatbot(open: boolean) {
+    //alert(open);
+    //this.toggleCmdOpen = open;
+    this.toggleChatbotOpen = true;
+  }
+
   heightDivChange = false;
   ngOnInit() {
     this.titleService.setTitle('Amine Amellouk Developer Portfolio | Amine Amellouk');

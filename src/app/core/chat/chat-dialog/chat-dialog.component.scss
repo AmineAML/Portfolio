@@ -1,71 +1,38 @@
-@media (min-width: 767px) {
-    button {
-        position: fixed;
-        right: 99.1%;
-        top: 50%;
-        //make this button with position fixed overlap the header which is also position fixed
-        z-index: 4;
-        display: inline-flex;
-        align-items: flex-start; 
-        justify-content: center;
-        -ms-transform: rotate(90deg); /* IE 9 */
-        transform: rotate(90deg);
-        height: 20%;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
-        //Make another dynamic
-        color: var(--chat-icon-color);
-        background-color: transparent;
-        &:hover {
-            right: 95%;
-            background-color: var(--text-secondary-color);
-            color: var(--text-button-color);
-        }
-        span {
-            position: absolute;
-            -ms-transform: rotate(-90deg); /* IE 9 */
-            transform: rotate(-90deg);
-            height: 100px;
-            width: 100px;
-            left: 10px;
-            //top: 10px;
-            fa-icon {
-                margin-left: 10px;
-            }
-        }
+button {
+    position: fixed;
+    right: 99.1%;
+    top: 50%;
+    //make this button with position fixed overlap the header which is also position fixed
+    z-index: 4;
+    display: inline-flex;
+    align-items: flex-start; 
+    justify-content: center;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    height: 20%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    //Make another dynamic
+    color: var(--chat-icon-color);
+    background-color: transparent;
+    &:hover {
+        right: 95%;
+        background-color: var(--text-secondary-color);
+        color: var(--text-button-color);
     }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    button {
-        position: fixed;
-        left: -50px;
-        top: 50%;
-        //make this button with position fixed overlap the header which is also position fixed
-        z-index: 4;
-        display: inline-flex;
-        align-items: flex-start; 
-        justify-content: center;
-        -ms-transform: rotate(90deg); /* IE 9 */
-        transform: rotate(90deg);
-        height: 20%;
-        //Make another dynamic
-        color: var(--chat-icon-color);
-        background-color: transparent;
-        span {
-            position: absolute;
-            -ms-transform: rotate(-90deg); /* IE 9 */
-            transform: rotate(-90deg);
-            height: 100px;
-            width: 100px;
-            left: 10px;
-            //top: 10px;
-            fa-icon {
-                margin-left: 10px;
-            }
+    span {
+        position: absolute;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        transform: rotate(-90deg);
+        height: 100px;
+        width: 100px;
+        left: 10px;
+        //top: 10px;
+        fa-icon {
+            margin-left: 10px;
         }
     }
 }

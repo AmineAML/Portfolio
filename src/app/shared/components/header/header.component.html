@@ -10,19 +10,19 @@
   </div>
   <div>
     <ul>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('home')" [class.active]="active=='h'">HOME /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('about')" [class.active]="active=='a'">ABOUT /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('projects')" [class.active]="active=='p'">PROJECTS /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('contact')" [class.active]="active=='c'">CONTACT /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faTint"></fa-icon></a>
         </li>
         <!--
@@ -36,7 +36,7 @@
           </mat-slide-toggle>
         </li>
         -->
-        <li fxShow fxHide.gt-sm>
+        <li fxShow fxHide.gt-md>
           <a href="javascript:;" (click)="openNav()"><fa-icon [icon]="faBars"></fa-icon></a>
   
           <div id="myNav" class="overlay" *ngIf="displayMobileNav">
@@ -46,6 +46,8 @@
               <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
               <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
               <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
+              <a href="javascript:;" (click)="toggleConsole()">CONSOLE /></a>
+              <a href="javascript:;" (click)="toggleChatbot()">CHATBOT /></a>
               <a href="javascript:;"><mat-slide-toggle (click)="LightAndDarkMODE()" [checked]="checked"></mat-slide-toggle></a>
             </div>
           </div>

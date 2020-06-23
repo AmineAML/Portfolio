@@ -105,6 +105,7 @@ Google Tag Manager
 - Use html tag like a to use links store from Dialogflow and use sanitize html to improve Illy the bot
 - Good about me and project paragraph by its title from https://robgrimes.uk/
 - Better changing the background animation
+- Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 
 
 ## Domain name   

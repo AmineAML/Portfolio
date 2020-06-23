@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, Input } from '@angular/core';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 
 
@@ -9,6 +9,7 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 })
 export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   @ViewChild('consoleWindowScroll') private windowScroll: ElementRef;
+  @Input() openCmd: boolean;
 
   responseToUser: SafeHtml;
   inputByUser: string = "";
@@ -37,6 +38,9 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
     } else {
       this.displayConsole = false;
       this.consoleButtonText = "Open console";
+      if (this.openCmd = true) {
+        this.openCmd = false;
+      }
     }
   }
 

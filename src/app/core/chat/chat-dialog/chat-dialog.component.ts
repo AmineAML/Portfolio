@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit, AfterViewChecked, Input } from '@angular/core';
 import { ChatService, Message } from '../chat.service';
 import { Observable } from "rxjs";
 import "rxjs/add/operator/scan";
@@ -12,6 +12,7 @@ import { faRobot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 export class ChatDialogComponent implements OnInit, AfterViewChecked {
   @ViewChildren("scrollFrame") scrollFrame: QueryList<ElementRef>;
   @ViewChild("chatWindow", {static: false}) chatWindow: ElementRef;
+  @Input() openChatbot: boolean;
 
   faRobot = faRobot;
   faPaperPlane = faPaperPlane;
@@ -37,6 +38,9 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
       this.displayChat = true;
     } else {
       this.displayChat = false;
+      if (this.openChatbot = true) {
+        this.openChatbot = false;
+      }
     }
   }
 
