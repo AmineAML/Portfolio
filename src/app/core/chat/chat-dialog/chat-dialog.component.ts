@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { ChatService, Message } from '../chat.service';
-import { Observable } from "rxjs/observable";
+import { Observable } from "rxjs";
 import "rxjs/add/operator/scan";
 import { faRobot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
