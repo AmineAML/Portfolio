@@ -7,5 +7,8 @@ export const environment = {
     material: 'Angular Material Design 9.1.0',
     fontawesome: 'Font Awesome 5.12.1',
     aos: '3.0.0-beta.6',
+  },
+  dialogflow: {
+    illyBot: '7ed216b6445f401b93a1cd4b111371a8'
   }
 };
