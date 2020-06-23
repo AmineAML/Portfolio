@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   topPosToStartShowing = 100;
   themeToChange;
   checked;
+  userTheme = this.storage.get('THEME');
 
   //HostListener to know user scrolling top or bottom that top use activeT and bottom use activeB and boolean of isScrollTnotB
 
@@ -76,8 +77,7 @@ export class HeaderComponent implements OnInit {
   }
 
   userThemeMode() {
-    let userTheme = this.storage.get('THEME');
-    if (userTheme == 'DARK') {
+    if (this.userTheme == 'DARK') {
       this.themeToChange = "Light mode";
       this.checked = false;
     } else {

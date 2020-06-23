@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material/material.module';
 import { QuicklinkModule } from 'ngx-quicklink';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -16,7 +17,8 @@ import { QuicklinkModule } from 'ngx-quicklink';
   imports: [
     RouterModule,
     MaterialModule,
-    QuicklinkModule
+    QuicklinkModule,
+    CommonModule
   ],
   exports: [
     HeaderComponent,
