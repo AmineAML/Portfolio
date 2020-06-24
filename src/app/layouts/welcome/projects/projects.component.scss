@@ -94,6 +94,12 @@ div {
           height: 50%;
           top: 25%;
           right: 2%;
+          z-index: 10;
+        }
+        @media (min-width: 320px) and (max-width: 767px) {
+          img, video {
+            width: 45vh;
+          }
         }
         app-seleton-loader {
           object-fit: contain;
@@ -108,6 +114,9 @@ div {
           background-color: var(--text-secondary-color);
           color: var(--text-button-color);
         }
+      }
+      .videoContainer {
+        z-index: 7;
       }
     }
 }
