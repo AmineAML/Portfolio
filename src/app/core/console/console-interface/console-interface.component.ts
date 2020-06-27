@@ -10,6 +10,7 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   @ViewChild('consoleWindowScroll') private windowScroll: ElementRef;
   @Input() openCmd: boolean;
+  @ViewChild('userInput') cmdInput: ElementRef;
 
   responseToUser: SafeHtml;
   inputByUser: string = "";
@@ -35,6 +36,10 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
     if (this.displayConsole == false) {
       this.displayConsole = true;
       this.consoleButtonText = "Close console";
+      //Wait for the template to display and set focus
+      setTimeout(()=>{
+        this.cmdInput.nativeElement.focus();
+   }, 1000);
     } else {
       this.displayConsole = false;
       this.consoleButtonText = "Open console";

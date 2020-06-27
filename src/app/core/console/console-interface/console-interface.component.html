@@ -15,7 +15,7 @@
         <mat-card-content (click)="userInput.focus()" #consoleWindowScroll>
             <h5>Welcome to Amine portfolio. Type <b>'help'</b> + ENTER for a list of commands</h5>
             <h5 [innerHtml]="responseToUser">{{terminalOutput}}</h5>
-            <!--Note that this autofocus also display this: Autofocus processing was blocked because a document already has a focused element.-->
+            <!--Note that this autofocus also display this: Autofocus processing was blocked because a document already has a focused element. As a fix set the focus from the toggleConsole function-->
             <h5>aa:~ guest$ <input [(ngModel)]="inputByUser" type="text" (keyup.enter)="cmdEnter()" autofocus #userInput/></h5>
         </mat-card-content>
     </mat-card>
