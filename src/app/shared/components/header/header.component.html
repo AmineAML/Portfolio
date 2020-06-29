@@ -1,6 +1,6 @@
 <!--<a href="javascript:;" (click)="gotoTop()">AA</a>
 (click)="goTo('home')"-->
-<mat-toolbar fxLayoutAlign="center" [style.background-color]="ChangeBackgroundColor ? 'var(--background-primay-color)': 'transparent'">
+<mat-toolbar fxLayoutAlign="space-between center" [style.background-color]="ChangeBackgroundColor ? 'var(--background-primay-color)': 'transparent'">
   <div>
     <ul>
       <li>
@@ -10,19 +10,20 @@
   </div>
   <div>
     <ul>
-        <li fxHide fxShow.gt-md>
+        <!--<li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('home')" [class.active]="active=='h'">HOME /></a>
         </li>
         <li fxHide fxShow.gt-md>
           <a href="javascript:;" (click)="goTo('about')" [class.active]="active=='a'">ABOUT /></a>
         </li>
-        <li fxHide fxShow.gt-md>
+        -->
+        <li fxHide fxShow.gt-sm>
           <a href="javascript:;" (click)="goTo('projects')" [class.active]="active=='p'">PROJECTS /></a>
         </li>
-        <li fxHide fxShow.gt-md>
+        <li fxHide fxShow.gt-sm>
           <a href="javascript:;" (click)="goTo('contact')" [class.active]="active=='c'">CONTACT /></a>
         </li>
-        <li fxHide fxShow.gt-md>
+        <li fxHide fxShow.gt-sm>
           <a href="javascript:;" (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faTint"></fa-icon></a>
         </li>
         <!--
@@ -36,14 +37,15 @@
           </mat-slide-toggle>
         </li>
         -->
-        <li fxShow fxHide.gt-md>
+        <li fxShow fxHide.gt-sm>
           <a href="javascript:;" (click)="openNav()"><fa-icon [icon]="faBars"></fa-icon></a>
   
           <div id="myNav" class="overlay" *ngIf="displayMobileNav">
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
             <div class="overlay-content">
-              <a href="javascript:;" (click)="goTo('home')">HOME /></a>
+              <!--<a href="javascript:;" (click)="goTo('home')">HOME /></a>
               <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
+              -->
               <a href="javascript:;" (click)="goTo('projects')">PROJECTS /></a>
               <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
               <a href="javascript:;" (click)="toggleConsole()">CONSOLE /></a>

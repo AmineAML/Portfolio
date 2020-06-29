@@ -37,6 +37,7 @@ Google Tag Manager
 - http://findmatthew.com/  
 - https://www.juliacodes.com/   
 - https://journeyneedham.com/   
+- https://stevenjuks.me/   
 
 
 ## Font
@@ -74,6 +75,7 @@ Google Tag Manager
 - Example of command line interface from https://codepen.io/jatinrao/pen/abzRLGj
 - min-height vh to home component doesn't work on Mozilla firefox (works for other div, still not the first div): FIX by https://stackoverflow.com/questions/19521442/min-height-for-a-table-in-firefox-not-working
 - Google Tag Manager from https://www.youtube.com/watch?v=ozWNNNxLW8E and more from https://medium.com/quick-code/set-up-analytics-on-an-angular-app-via-google-tag-manager-5c5b31e6f41 and https://fluin.io/blog/google-analytics-with-tag-manager-and-angular and https://dottedsquirrel.com/everything-else/add-google-analytics-angular/
+- Font Awesome documentation and examples from https://fontawesome.com/v4.7.0/examples/ and https://github.com/FortAwesome/angular-fontawesome/blob/master/docs/usage/features.md
 
 
 ## SEO  
@@ -106,6 +108,7 @@ Google Tag Manager
 - Good about me and project paragraph by its title from https://robgrimes.uk/
 - Better changing the background animation
 - Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
+- Learn from this Medium website article of tips on color for interface design from https://uxdesign.cc/tips-on-colour-interface-design-bccdc691eb72
 
 
 ## Domain name   

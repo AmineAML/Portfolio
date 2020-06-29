@@ -21,10 +21,15 @@ mat-toolbar {
     z-index: 5;
     //padding-right: 10%;
     //padding-left: 10%;
+    //padding: 12rem;
+    //padding-top: 0;
+    //padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
     div {
-        padding: 12rem;
-        padding-top: 0;
-        padding-bottom: 0;
+        //padding: 12rem;
+        //padding-top: 0;
+        //padding-bottom: 0;
         ul {
             li {
                 display: inline;

@@ -1,13 +1,37 @@
 import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
+import { faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { trigger, transition, animate, style, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  styleUrls: ['./welcome.component.scss'],
+  animations: [
+    trigger('flyInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('400ms ease-in', //keyframes([
+          //style({ transform: 'translateX(50%)', opacity: 0, offset: 0 }),
+          //style({ transform: 'translateX(0%)', opacity: 1, offset: 1.0 })
+        //]))
+        style({transform: 'translateY(0%)'}))
+      ]),
+      transition(':leave', [
+        animate('400ms ease-in', //keyframes([
+          //style({ transform: 'translateX(0%)' }),
+          //style({ transform: 'translateX(50%)' })
+        //]))
+        style({transform: 'translateY(-100%)'}))
+      ])
+    ])
+  ]
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
+
+  faRobot = faRobot;
+  faTerminal = faTerminal;
 
   //SEO
   name = environment.application.name;

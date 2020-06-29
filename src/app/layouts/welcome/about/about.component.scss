@@ -1,15 +1,19 @@
 #about {
     padding-left: 40px;
     padding-right: 40px;
-    .mat-headline {
+    color: var(--text-content-color);
+    /*.mat-headline {
         //color: #D8D2D2;
         color: var(--text-tertiary-color);
     }
-    div {
-        //color: #BEBAB9;
-        color: var(--text-content-color);
+    */
+    div:nth-child(1) {
+        span {
+            //color: #BEBAB9;
+            //color: var(--text-content-color);
+        }
     }
-    div {
+    div:nth-child(2) {
         div {
             @media (min-width: 767px) {
                 ul {

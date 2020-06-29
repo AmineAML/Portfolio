@@ -87,10 +87,13 @@ div{
 	//width: 60%;
 	width: fit-content;
 	button {
-		background-color: var(--text-secondary-color);
-		color: var(--text-button-color);
-		width: fit-content;
+		//background-color: var(--text-secondary-color);
+		//color: var(--text-button-color);
+		//width: fit-content;
 		margin-right: 1rem;
+		background: none;
+		color: var(--text-accent-color);
+		border: 1px solid var(--text-secondary-color);
 	}
 }
 
