@@ -23,7 +23,7 @@ export function themeFactory(themeService: UiStyleToggleService) {
     SharedModule, //SharedModule does import and export QuicklinkStrategy
     BrowserAnimationsModule,
     HttpClientModule,
-    StorageServiceModule,
+    StorageServiceModule
   ],
   providers: [
     UiStyleToggleService,

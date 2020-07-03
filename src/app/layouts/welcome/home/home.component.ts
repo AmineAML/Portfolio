@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 
 @Component({
@@ -90,6 +92,14 @@ export class HomeComponent implements OnInit {
     //Remove the # and whatever after it from the url
     history.replaceState({}, document.title, window.location.hash.split('#')[0]);
   }
+
+  options: AnimationOptions = {
+    path: '/assets/Lottiefiles/6509-deploying.json',
+  };
+
+  styles: Partial<CSSStyleDeclaration> = {
+    width: '40vh'
+  };
 
   constructor() { }
 

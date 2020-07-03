@@ -10,6 +10,7 @@ https://github.com/Grsmto/simplebar  (REMOVED: better user experience)
 Animate On Scroll https://michalsnik.github.io/aos/   
 DialogFlow   
 Google Tag Manager   
+LottieFiles and animation from https://lottiefiles.com/6509-deploying   
 
 
 ## Angular projects   

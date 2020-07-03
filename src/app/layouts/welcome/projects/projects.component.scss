@@ -21,6 +21,7 @@ div {
         margin-bottom: 0%;
         span {
           color: var(--text-content-color);
+          //margin-bottom: 0;
         }
         div {
           cursor: pointer;
@@ -81,7 +82,7 @@ div {
         }
         #projectOnHoverEffect:hover {
           opacity: 1;
-          filter: brightness(200%);
+          //filter: brightness(200%);
         }
         img, video {
           //width: 100%;

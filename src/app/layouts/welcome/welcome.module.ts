@@ -8,6 +8,11 @@ import { ConsoleModule } from 'src/app/core/console/console.module';
 import { ChatModule } from 'src/app/core/chat/chat.module';
 import { WelcomeRoutingModule } from './welcome-routing.module';
 import { CommonModule } from '@angular/common';
+import { LottieModule } from 'ngx-lottie';
+
+export function playerFactory() {
+  return import('lottie-web');
+}
 
 
 
@@ -25,7 +30,8 @@ import { CommonModule } from '@angular/common';
     ConsoleModule,
     ChatModule,
     WelcomeRoutingModule,
-    CommonModule
+    CommonModule,
+    LottieModule.forRoot({ player: playerFactory })
   ]
 })
 export class WelcomeModule { }

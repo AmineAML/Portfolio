@@ -1,15 +1,12 @@
-<div fxLayout="column" fxLayoutAlign="center">
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
-        <div fxFlex="40%">
-            <div>
-                <span class="mat-display-1 title" fxFlex="40%">Projects</span>
-            </div>
+<div fxLayout="column" >
+    <div class="container" fxLayout="row" fxLayout.xs="column" >
+        <div>
+            <span class="mat-display-1 title" >Projects</span>
         </div>
-        <div fxFlex="40%"></div>
     </div>
 
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
-        <div fxFlex="80%" fxLayoutAlign="center" fxLayoutGap="2rem">
+    <div class="container" fxLayout="row" fxLayout.xs="column" >
+        <div  fxLayoutAlign="center" fxLayoutGap="2rem">
                 <span class="mat-subheading-2">You can {{isTouch}} on a project for more details</span>
                 <!--<button [class.active]="filterBy==='all'" (click)="filter('all')" mat-raised-button>All</button>
                 <button [class.active]="filterBy==='C#'" (click)="filter('C#')" mat-raised-button>C#</button>
@@ -17,9 +14,9 @@
         </div>
     </div>
 
-    <div class="container" id="secondiv" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center"
+    <div class="container" id="secondiv" fxLayout="row" fxLayout.xs="column"
         *ngFor="let project of projects" data-aos="fade-up-right"> 
-        <div fxFlex.gt-sm="40%"  fxFlex.lt-md="90%">
+        <div fxFlex="50%">
             <div id="projectOnHoverEffect" (mouseenter)="project.displayImg=true"
                 (mouseleave)="project.displayImg=false" (click)="project.displayImg=true">
                 <h1>{{project.name}}</h1>
@@ -37,7 +34,7 @@
                 -->
             </div>
         </div>
-        <div fxFlex.gt-sm="40%" class="videoContainer">
+        <div class="videoContainer">
             <video *ngIf="project.displayImg" [@slideInOut] loop muted autoplay playsinline (suspend)="videoLoadinganimation()" (canplay)="videoLoaded()" oncanplay="this.play()">
                 <source [src]="project.img" type="video/mp4">
             </video>

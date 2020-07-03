@@ -183,3 +183,10 @@ $indicator-size: 24px;
 		animation: scroll-indicate 1.5s linear 0.25s infinite;
 	}
 }
+
+.lottiefiles {
+	position: absolute;
+	bottom: 40%;
+	right: 7%;
+	z-index: 0;
+}
