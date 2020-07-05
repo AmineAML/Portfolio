@@ -9,6 +9,7 @@ div{
     margin: auto;
 	//padding-left: 20px;
 	//margin-top: 7%;
+	z-index: 7;
 	.otherDevices {
 		width: 70%;
 		height: 50%;
@@ -184,9 +185,18 @@ $indicator-size: 24px;
 	}
 }
 
-.lottiefiles {
-	position: absolute;
-	bottom: 40%;
-	right: 7%;
-	z-index: 0;
+@media (min-width: 767px) {
+	.lottiefiles {
+		position: absolute;
+		bottom: 40%;
+		right: 7%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.lottiefiles {
+		position: absolute;
+		bottom: 40%;
+		right: 0px;
+	}
 }
