@@ -9,6 +9,7 @@ export enum ThemeMode {
 @Injectable({
     providedIn: 'root'
 })
+//Detect the user's theme
 export class UiStyleToggleService {
 
     private readonly THEME_KEY = 'THEME';

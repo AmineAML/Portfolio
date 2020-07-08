@@ -18,10 +18,13 @@
         </li>
         -->
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('projects')" [class.active]="active=='p'">PORTFOLIO /></a>
+          <a href="javascript:;" (click)="goTo('projects')" [class.active]="active=='p'">portfolio /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a href="javascript:;" (click)="goTo('contact')" [class.active]="active=='c'">CONTACT /></a>
+          <a href="javascript:;" (click)="goTo('contact')" [class.active]="active=='c'">contact /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a href="javascript:;" (click)="toggleLanguage()">{{languageTranslate}} /></a>
         </li>
         <li fxHide fxShow.gt-sm>
           <a href="javascript:;" (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faTint"></fa-icon></a>
@@ -46,10 +49,11 @@
               <!--<a href="javascript:;" (click)="goTo('home')">HOME /></a>
               <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
               -->
-              <a href="javascript:;" (click)="goTo('projects')">PORTFOLIO /></a>
-              <a href="javascript:;" (click)="goTo('contact')">CONTACT /></a>
-              <a href="javascript:;" (click)="toggleConsole()">CONSOLE /></a>
-              <a href="javascript:;" (click)="toggleChatbot()">CHATBOT /></a>
+              <a href="javascript:;" (click)="goTo('projects')">portfolio /></a>
+              <a href="javascript:;" (click)="goTo('contact')">contact /></a>
+              <a href="javascript:;" (click)="toggleConsole()">console /></a>
+              <a href="javascript:;" (click)="toggleChatbot()">chatbot /></a>
+              <a href="javascript:;" (click)="toggleLanguage()">{{languageTranslate}} /></a>
               <a href="javascript:;"><mat-slide-toggle (click)="LightAndDarkMODE()" [checked]="checked"></mat-slide-toggle></a>
             </div>
           </div>

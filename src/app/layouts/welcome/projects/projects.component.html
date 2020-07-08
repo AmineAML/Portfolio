@@ -1,13 +1,13 @@
 <div fxLayout="column" >
     <div class="container" fxLayout="row" fxLayout.xs="column" >
         <div>
-            <span class="mat-display-1 title" >Projects</span>
+            <span class="mat-display-1 title" >{{lang.welcome.projects.title}}</span>
         </div>
     </div>
 
     <div class="container" fxLayout="row" fxLayout.xs="column" >
         <div  fxLayoutAlign="center" fxLayoutGap="2rem">
-                <span class="mat-subheading-2">You can {{isTouch}} on a project for more details</span>
+                <span class="mat-subheading-2">{{lang.welcome.projects.instructions1stPart}} {{isTouch}} {{lang.welcome.projects.instructions2ndPart}}</span>
                 <!--<button [class.active]="filterBy==='all'" (click)="filter('all')" mat-raised-button>All</button>
                 <button [class.active]="filterBy==='C#'" (click)="filter('C#')" mat-raised-button>C#</button>
                 -->
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="videoContainer">
-            <video *ngIf="project.displayImg" [@slideInOut] loop muted autoplay playsinline (suspend)="videoLoadinganimation()" (canplay)="videoLoaded()" oncanplay="this.play()">
+            <video *ngIf="project.displayImg" [@slideInOut] loop muted autoplay playsinline (suspend)="videoLoadinganimation()" (canplay)="videoLoaded()" oncanplay="this.play()" onloadedmetadata="this.muted=true">
                 <source [src]="project.img" type="video/mp4">
             </video>
             <app-seleton-loader *ngIf="project.displayImg && !loaded"></app-seleton-loader>

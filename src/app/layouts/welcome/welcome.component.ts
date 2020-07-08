@@ -1,8 +1,9 @@
-import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit, Inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
 import { faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style, keyframes } from '@angular/animations';
+import { Translation, TRANSLATION, WebsiteLanguage } from "../../i18n/utils";
 
 @Component({
   selector: 'app-welcome',
@@ -41,10 +42,15 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   aos = environment.application.aos;
 
   features: any;
+
+  //Translations
+  translations = Object.entries(WebsiteLanguage);
   
   constructor(    
     private meta: Meta,
-    private titleService: Title) { }
+    private titleService: Title, @Inject(TRANSLATION) public readonly lang: Translation) {
+      //console.log('Current language is,', lang.language);
+    }
 
   public getBrowserName() {
     const agent = window.navigator.userAgent.toLowerCase()

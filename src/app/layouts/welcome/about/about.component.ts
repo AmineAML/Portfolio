@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(TRANSLATION) public readonly lang: Translation) { }
 
   ngOnInit(): void {
   }

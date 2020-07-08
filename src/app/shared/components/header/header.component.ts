@@ -2,6 +2,9 @@ import { Component, OnInit, HostListener, Input, Inject, Output, EventEmitter } 
 import { faBars,faTint } from '@fortawesome/free-solid-svg-icons';
 import { UiStyleToggleService } from 'src/app/core/ui-style-toggle.service';
 import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
+import { TRANSLATION, Translation, WebsiteLanguage } from 'src/app/i18n/utils';
+import { Router } from '@angular/router';
+import { LanguageToggleService } from 'src/app/core/language-toggle.service';
 
 @Component({
   selector: 'app-header',
@@ -25,10 +28,16 @@ export class HeaderComponent implements OnInit {
   openConsole = true;
   openChatbot = true;
 
+  translations = Object.entries(WebsiteLanguage);
+
 
   //HostListener to know user scrolling top or bottom that top use activeT and bottom use activeB and boolean of isScrollTnotB
 
-  constructor(private toggleLightAndDarkMode: UiStyleToggleService, @Inject(LOCAL_STORAGE) private storage: StorageService) { }
+  constructor(private toggleLightAndDarkMode: UiStyleToggleService, 
+    @Inject(LOCAL_STORAGE) private storage: StorageService, 
+    @Inject(TRANSLATION) public readonly lang: Translation,
+    private _router: Router,
+    private toggleLanguageTranslations: LanguageToggleService) { }
 
   
   //Scroll to the top of the page
@@ -82,11 +91,12 @@ export class HeaderComponent implements OnInit {
   }
 
   userThemeMode() {
+    this.userTheme = this.storage.get('THEME');
     if (this.userTheme == 'DARK') {
-      this.themeToChange = "Light mode";
+      this.themeToChange = this.lang.shared.header.theme.light;
       this.checked = false;
     } else {
-      this.themeToChange = "Dark mode";
+      this.themeToChange = this.lang.shared.header.theme.dark;
       this.checked = true;
     }
   }
@@ -101,8 +111,23 @@ export class HeaderComponent implements OnInit {
     this.toggleChabot.emit(this.openChatbot);
   }
 
+  languageTranslate;
+  languageToTranslate;
+  toggleLanguage() {
+    this.toggleLanguageTranslations.toggle();
+  }
+
+  userLanguage() {
+    if (this.lang.language == 'English') {
+      this.languageTranslate = 'FR';
+    } else {
+      this.languageTranslate = 'EN';
+    }
+  }
+
   ngOnInit(): void {
     this.userThemeMode();
+    this.userLanguage();
   }
 
 }

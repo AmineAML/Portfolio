@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,7 @@ export class FooterComponent implements OnInit {
 
   faCode = faCode;
   
-  constructor() { }
+  constructor(@Inject(TRANSLATION) public readonly lang: Translation) { }
 
   ngOnInit(): void {
   }

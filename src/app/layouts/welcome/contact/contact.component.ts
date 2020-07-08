@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 
 
 
@@ -46,7 +47,7 @@ export class ContactComponent implements OnInit {
 
   isRequired = false;
 
-  constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
+  constructor(private http: HttpClient, private _snackBar: MatSnackBar, @Inject(TRANSLATION) public readonly lang: Translation) { }
 
   //Check if the input are fieled, don't submit if any of the inputs aren't filled
   onSubmit() {

@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Inject } from '@angular/core';
+import { TRANSLATION, Translation, WebsiteLanguage } from 'src/app/i18n/utils';
 
 @Component({
   selector: 'app-error',
@@ -9,8 +10,12 @@ export class ErrorComponent implements OnInit, AfterViewInit {
 
   playErrorVideo = true;
 
-  constructor() { }
+  //Translations
+  translations = Object.entries(WebsiteLanguage);
 
+  constructor(@Inject(TRANSLATION) public readonly lang: Translation) { }
+
+  videoPlayer
   playVideo() {
     this.playErrorVideo = true;
   }

@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { faEye, faCode, faHandPointer } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style, keyframes } from '@angular/animations';
-import pjts from "../../../../assets/data/projects.json";
+import enPjts from "../../../../assets/data/en-projects.json";
+import frPjts from "../../../../assets/data/fr-projects.json";
 import { IProjects } from "../../../core/projects.model";
+import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 
 @Component({
   selector: 'app-projects',
@@ -31,15 +33,16 @@ export class ProjectsComponent implements OnInit {
   faEye = faEye;
   faCode = faCode;
   faHandPointer = faHandPointer;
-  projectsJSON: IProjects[] = pjts.projects;
+  //Make 2 json files of projects with english and french and load per language
+  projectsJSON: IProjects[];
   filterBy = 'all';
   loaded = false;
   projects;
   isTouch;
 
 
-  constructor() {
-    this.projects = this.projectsJSON.slice(0);
+  constructor(@Inject(TRANSLATION) public readonly lang: Translation) {
+    //this.projects = this.projectsJSON.slice(0);
   }
 
   /*filter(x) {
@@ -69,16 +72,32 @@ export class ProjectsComponent implements OnInit {
     this.loaded = false;
   }
 
+  //Check for a touch screen and langauge
   isTouchScreen() {
     if(('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
-      this.isTouch = "tap";
+      if(this.lang.language == 'English') {
+        this.isTouch = "tap";
+      }else {
+        this.isTouch = "appuyer";
+      }
     }else {
-      this.isTouch = "hover your mouse";
+      if(this.lang.language == 'English') {
+        this.isTouch = "hover your mouse";
+      }else {
+        this.isTouch = "passer votre souris";
+      }
     }
   }
 
   ngOnInit(): void {
     this.isTouchScreen();
+    if(this.lang.language == 'English') {
+      this.projectsJSON = enPjts.projects;
+      this.projects = this.projectsJSON.slice(0);
+    } else {
+      this.projectsJSON = frPjts.projects;
+      this.projects = this.projectsJSON.slice(0);
+    }
   }
 
 }

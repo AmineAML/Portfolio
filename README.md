@@ -77,6 +77,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - min-height vh to home component doesn't work on Mozilla firefox (works for other div, still not the first div): FIX by https://stackoverflow.com/questions/19521442/min-height-for-a-table-in-firefox-not-working
 - Google Tag Manager from https://www.youtube.com/watch?v=ozWNNNxLW8E and more from https://medium.com/quick-code/set-up-analytics-on-an-angular-app-via-google-tag-manager-5c5b31e6f41 and https://fluin.io/blog/google-analytics-with-tag-manager-and-angular and https://dottedsquirrel.com/everything-else/add-google-analytics-angular/
 - Font Awesome documentation and examples from https://fontawesome.com/v4.7.0/examples/ and https://github.com/FortAwesome/angular-fontawesome/blob/master/docs/usage/features.md
+- i18n from https://www.youtube.com/watch?v=2pntJ0yzV1Y&t=494s and https://github.com/vmasek/angular-typed-translations-demo and https://stackblitz.com/github/vmasek/angular-typed-translations-demo?file=src%2Fapp%2Fsite%2Fsite-routing.module.ts
 
 
 ## SEO  

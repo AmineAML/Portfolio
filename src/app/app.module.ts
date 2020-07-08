@@ -8,9 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import { StorageServiceModule } from 'ngx-webstorage-service';
 import { UiStyleToggleService } from './core/ui-style-toggle.service';
+import { LanguageToggleService } from './core/language-toggle.service';
 
 export function themeFactory(themeService: UiStyleToggleService) {
   return () => themeService.setThemeOnStart();
+}
+
+export function languageFactory(languageService: LanguageToggleService) {
+  return () => languageService.setLanguageOnStart();
 }
 
 @NgModule({
@@ -27,7 +32,9 @@ export function themeFactory(themeService: UiStyleToggleService) {
   ],
   providers: [
     UiStyleToggleService,
-    {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true}
+    LanguageToggleService,
+    {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true},
+    {provide: APP_INITIALIZER, useFactory: languageFactory, deps: [LanguageToggleService], multi: true}
   ],
   bootstrap: [AppComponent]
 })

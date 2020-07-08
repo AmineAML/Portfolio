@@ -1,9 +1,9 @@
 {
     "basics": {
       "name": "Amine Amellouk",
-      "label": "Junior Developer",
+      "label": "Développeur junior",
       "image": "https://media-exp1.licdn.com/dms/image/C4D03AQGFmEG5nXmTHQ/profile-displayphoto-shrink_200_200/0?e=1591228800&v=beta&t=GI9OCxfOH0toIy66WWNPiCMWDnsyd-2fEdJB5DH-oyo",
-      "summary": "My passion for technology led me to two relational fields. My desire to understand the market, economy is a path that I chose which enables me to understand its functioning and make analyzes to expalin it. Even if time invested on this path, the dedication of the evenings and the weekends to feed my technological passion, IT development is a path that allowed me to learn analysis, design and development of applications and software. These iterrelational paths allow me to develop with asense of budget and market needs to deliver quality solutions. As I do like to learn from different experiences trough adventures and challenges, seeking to enrich my knowledge and skills through internship oppurtunities. ",
+      "summary": "Ma passion pour la technologie m'a conduit dans deux domaines relationnels. Ma volonté de comprendre le marché, l'économie est un chemin que j'ai choisi qui me permet de comprendre son fonctionnement et de faire des analyses pour le développer. Même si du temps investi sur ce chemin, le dévouement des soirées et des week-ends pour nourrir ma passion technologique, le développement informatique est un chemin qui m'a permis d'apprendre l'analyse, la conception et le développement d'applications et de logiciels. Ces parcours itératifs me permettent d'évoluer en fonction du budget et des besoins du marché pour proposer des solutions de qualité. Comme j'aime apprendre de différentes expériences à travers des aventures et des défis, en cherchant à enrichir mes connaissances et mes compétences à travers des opportunités de stage.",
       "phone": "(+212) 623618278",
       "website": "https://www.amineamellouk.com",
       "email": "amin_aml@live.fr",
@@ -33,7 +33,7 @@
     },
     "education": [
       {
-        "endDate": "Present",
+        "endDate": "Présent",
         "area": "Ingénierie des Applications Mobiles",
         "studyType": "Licence Professionnelle",
         "institution": "IT-Learning - Faculté des Sciences et Technique de Settat"
@@ -72,7 +72,7 @@
           "Firebase / JSON"
         ],
         "level": "Junior",
-        "name": "Frontend-Backend"
+        "name": "Full-Stack"
       }
     ],
     "certification": [
@@ -85,30 +85,30 @@
     ],
     "languages": [
         {
-            "language": "English",
-            "fluency": "Limited working proficiency"
+            "language": "Anglais",
+            "fluency": "Intermédiaire"
         },
         {
-            "language": "French",
-            "fluency": "Limited working proficiency"
+            "language": "Français",
+            "fluency": "Intermédiaire"
         },
         {
-            "language": "Arabic",
-            "fluency": "Native Speaker"
+            "language": "Arabe",
+            "fluency": "courant"
         }
     ],
     "interests": [
       {
-        "name": "Technology and Science"
+        "name": "Technologie et science"
       },
       {
-        "name": "Role-playing games"
+        "name": "jeux vidéos"
       },
       {
-        "name": "Languages"
+        "name": "Langues"
       },
       {
-        "name": "History"
+        "name": "L'histoire"
       },      
       {
         "name": "Fitness"

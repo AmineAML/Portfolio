@@ -1,7 +1,7 @@
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlexFill>
 
     <div fxFlex="40%" data-aos="fade-right" fxLayoutAlign="center">
-        <span class="mat-display-1">Contact me</span>
+        <span class="mat-display-1">{{lang.welcome.contact.titleAndButtonText}}</span>
     </div>
 
     <div fxFlex="50%" data-aos="fade-right" data-aos-delay="300">
@@ -11,7 +11,7 @@
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
             <mat-form-field class="example-full-width" >
-                <mat-label>Name</mat-label>
+                <mat-label>{{lang.welcome.contact.name}}</mat-label>
                 <input matInput type="text" name="name" formControlName="name" [required]="isRequired ? 'required' : null">
                 <mat-error *ngIf="nameFormControl.hasError('required') && submitFormPressedNotifyErrors">Please enter your name</mat-error>
             </mat-form-field>
@@ -37,9 +37,9 @@
             </mat-form-field>
             <br>
 
-            <button mat-button type="submit">Contact Me</button>
+            <button mat-button type="submit">{{lang.welcome.contact.titleAndButtonText}}</button>
             
-            <a  rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
+            <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" matTooltip="LinkedIn">
                 <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
             </a>
             <!--<a  rel="noopener" href="https://github.com/AmineAML" target="_blank">

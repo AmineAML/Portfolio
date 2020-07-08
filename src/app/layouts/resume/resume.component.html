@@ -19,11 +19,11 @@
                 </div>
                 <div class="data" id="basicsAndProfiles">
                     <!--Don't display phone number-->
-                    <strong>Phone</strong>
+                    <strong>{{lang.resume.phone}}</strong>
                     <div>{{cv.basics.phone}}</div>
                 </div>
                 <div class="data" id="basicsAndProfiles">
-                    <strong>Website</strong>
+                    <strong>{{lang.resume.website}}</strong>
                     <div>
                         <a rel="noopener" href="{{cv.basics.website}}" target="_blank">{{cv.basics.website.replace('https://','')}}</a>
                     </div>
@@ -32,14 +32,14 @@
         </div>
     
         <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">About</h3>
+            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.about}}</h3>
             <section fxFlex="40%">
                 <p>{{cv.basics.summary}}</p>
             </section>
         </div>
 
         <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Profiles</h3>
+            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.profiles}}</h3>
             <section fxFlex="40%" >
                 <div class="data" id="basicsAndProfiles" *ngFor="let profile of cv.basics.profiles">
                     <strong>{{profile.network}}</strong>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Education</h3>
+            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.education}}</h3>
             <section fxFlex="40%" >
                 <div class="dataCation" *ngFor="let edu of cv.education">
                     <div fxLayout="row" fxLayout.xs="column">
@@ -68,7 +68,7 @@
                         <span class="studyType">{{edu.studyType}}</span>
                     </div>
                     <div *ngIf="edu.thesis">
-                        <h4>Courses</h4>
+                        <h4>{{lang.resume.courses}}</h4>
                         <ul>
                             <li>{{edu.thesis}}</li>
                         </ul>
@@ -101,7 +101,7 @@
             <section fxFlex="40%" >
                 <div class="dataCation">
                     <div>
-                        <h4>Development</h4>
+                        <h4>{{lang.resume.development}}</h4>
                         <ul *ngFor="let skl of cv.skills[0].keywords">
                             <li>{{skl}}</li>
                         </ul>
@@ -111,7 +111,7 @@
         </div>
 
         <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Languages</h3>
+            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.languages}}</h3>
             <section fxFlex="40%">
                 <div class="data" id="basicsAndProfiles" *ngFor="let lan of cv.languages">
                     <strong>{{lan.language}}</strong>

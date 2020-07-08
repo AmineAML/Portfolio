@@ -1,0 +1,68 @@
+{
+    "projects": [
+        {
+          "name": "LocaIT",
+          "technologies": [
+            {
+              "t": "HTML5"
+            },
+            {
+              "t": "CSS3"
+            },
+            {
+              "t": "Bootstrap"
+            }
+          ],
+          "description": "Collaboration avec un collègue pour créer un site web de location de voitures",
+          "demoLink": "https://locait.netlify.com/",
+          "codeLink": "https://github.com/AmineAML/LocaIT",
+          "displayImg": false,
+          "img": "assets/videosBetterPerformance/project-videos/LocaITV.mp4"
+        },
+        {
+          "name": "Cube Solves Timer",
+          "technologies": [
+            {
+              "t": "C#"
+            }
+          ],
+          "description": "Application qui permet aux utilisateurs de suivre leur progression dans la résolution du Rubik's Cube",
+          "demoLink": "",
+          "codeLink": "",
+          "displayImg": false,
+          "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4"
+        },
+        {
+          "name": "NoteTaker",
+          "technologies": [
+            {
+              "t": "C#"
+            }
+          ],
+          "description": "Application pour Windows 10 qui ressemble aux gadgets de Windows 7, qui permettent aux utilisateurs de prendre des notes sur leurs écrans",
+          "demoLink": "",
+          "codeLink": "",
+          "displayImg": false,
+          "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4"
+        },
+        {
+          "name": "UniFace",
+          "technologies": [
+            {
+              "t": "C#"
+            },
+            {
+              "t": "SMTP"
+            },
+            {
+              "t": "SQL Server"
+            }
+          ],
+          "description": "Système de résultats des faculté pour gérer les notes des étudiants qui peuvent être utilisées par l'administration, les professeurs et les étudiants",
+          "demoLink": "",
+          "codeLink": "",
+          "displayImg": false,
+          "img": ""
+        }
+    ]
+}

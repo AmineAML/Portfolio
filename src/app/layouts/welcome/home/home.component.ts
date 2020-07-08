@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
+import { TRANSLATION, Translation } from 'src/app/i18n/utils';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -53,7 +55,8 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public typewriter_text2: string = "Software Engineer";
+  //public typewriter_text2: string = "Software Engineer";
+  public typewriter_text2: string;
   public typewriter_display2: string = "";
 
   typingCallback2(that) {
@@ -101,7 +104,11 @@ export class HomeComponent implements OnInit {
     width: '40vh'
   };
 
-  constructor() { }
+  constructor(@Inject(TRANSLATION) public readonly lang: Translation, 
+    public _router: Router,
+    public _activatedRoute: ActivatedRoute) { 
+    this.typewriter_text2 = lang.welcome.home.title;
+  }
 
 
   ngOnInit(): void {

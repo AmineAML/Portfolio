@@ -1,8 +1,8 @@
 <div>
     <h1>404</h1>
     <br/>
-    <span><strong>Page not found</strong></span>
+    <span><strong>{{lang.error.title}}</strong></span>
     <br>
     <br>
-    <button routerLink="/" mat-flat-button>Home page</button>
+    <button (click)="_router.navigate([wl])" mat-flat-button>{{lang.error.buttonText}}</button>
 </div>
