@@ -6,6 +6,9 @@ import { WebsiteLanguage } from "./i18n/utils";
 
 //Load the code value of the language from the local storage
 let userLanguage = localStorage.getItem('LANGUAGE');
+if (userLanguage == null) {
+  userLanguage = 'en';
+}
 
 const app_routes: Routes = [
   //Redirect the user to English as the default language
