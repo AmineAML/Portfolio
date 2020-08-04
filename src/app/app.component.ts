@@ -1,7 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as AOS from 'aos';
-import { ScullyRoutesService, IdleMonitorService } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +9,6 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   
   imgs = new Array();
-
-  links$: Observable<any> = this.scully.available$;
 
   ngOnInit(): void {
     AOS.init({
@@ -24,8 +20,6 @@ export class AppComponent implements OnInit {
     );
     
     this.consoleGreeting();
-
-    this.links$.subscribe(links => console.log(links))
   }
 
   pload(...args: any[]):void {
@@ -36,7 +30,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  constructor(private scully: ScullyRoutesService, private idle: IdleMonitorService) {}
+  constructor() {}
 
   consoleGreeting() {
     console.log("    ###         #       #             #       ##     ## ###")

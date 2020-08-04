@@ -119,6 +119,11 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Subdomains with netlify link: https://medium.com/free-code-camp/how-to-host-a-git-repository-on-a-subdomain-with-netlify-b8afb5fca96e   
 - Example of custom domain with netlify: https://www.youtube.com/watch?v=qlrCptpwtgs
 
+
 ## Light/dark theme
 - Light theme color palette from https://coolors.co/3f3f44-fb7813-f79227-ffc38b-ff926b-020202-6a6a6a-ffb01e-7c7c7c-ffffff and https://coolors.co/fff3cd-ffffff-fb7813
 - Dark theme color paletter from https://coolors.co/ad8174-a33327-917164-998471-c7493a-d8d2d2-bebab9-fffaf0-a4a4a4-262626
+
+
+## Scully
+- https://github.com/scullyio/scully/blob/main/docs/getting-started.md and serving not using the default serve Scully command, better using https://github.com/http-party/http-server

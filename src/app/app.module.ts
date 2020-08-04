@@ -10,7 +10,6 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
 import { UiStyleToggleService } from './core/ui-style-toggle.service';
 import { LanguageToggleService } from './core/language-toggle.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { RouterModule } from '@angular/router';
 
 export function themeFactory(themeService: UiStyleToggleService) {
   return () => themeService.setThemeOnStart();
@@ -31,8 +30,6 @@ export function languageFactory(languageService: LanguageToggleService) {
     BrowserAnimationsModule,
     HttpClientModule,
     StorageServiceModule,
-    //ScullyLibModule,
-    RouterModule,
     ScullyLibModule.forRoot({ useTransferState: true, alwaysMonitor: true })
   ],
   providers: [
