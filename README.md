@@ -141,4 +141,5 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://www.checkbot.io/
 
 ## Netlify/build run command
-- ng build --prod --subresource-integrity && npm run scully 
+- This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully
+- Testing use this: ng build --prod && npm run scully

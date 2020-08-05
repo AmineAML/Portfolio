@@ -28,7 +28,8 @@
               "src/assets",
               "src/_redirects",
               "src/sitemap.xml",
-              "src/robots.txt"
+              "src/robots.txt",
+              "src/_headers"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
