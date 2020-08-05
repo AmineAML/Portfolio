@@ -4,7 +4,7 @@ export const fr: Translation = {
   language: 'Français',
   welcome: {
     home: {
-      title: 'Développeur Full-Stack',
+      title: 'Développeur Front-End',
       resume: 'Voir CV',
     },
     projects: {

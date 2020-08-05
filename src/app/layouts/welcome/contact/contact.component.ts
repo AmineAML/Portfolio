@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TRANSLATION, Translation } from 'src/app/i18n/utils';
@@ -15,7 +16,7 @@ import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 export class ContactComponent implements OnInit {
 
   faLinkedin = faLinkedin;
-  faGithub = faGithub;
+  faEnvelope = faEnvelope;
 
   emailFormControl = new FormControl('', [
     //Validators.required,

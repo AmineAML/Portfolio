@@ -19,7 +19,7 @@
         <div fxFlex="50%">
             <div id="projectOnHoverEffect" (mouseenter)="project.displayImg=true"
                 (mouseleave)="project.displayImg=false" (click)="project.displayImg=true">
-                <h1>{{project.name}}</h1>
+                <h2>{{project.name}}</h2>
                 <ul *ngIf='project.technologies'>
                     <li *ngFor="let listOfTechnologies of project.technologies; let lastItem=last;">{{listOfTechnologies.t}} <span *ngIf="!lastItem"> | </span></li>
                 </ul>

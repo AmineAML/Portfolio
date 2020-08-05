@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as AOS from 'aos';
+import { CanonicalService } from './core/services/canonical.service';
+import { MetaService } from './core/services/meta.service';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +22,8 @@ export class AppComponent implements OnInit {
     );
     
     this.consoleGreeting();
+
+    this.canonicalService.setCanonicalURL();
   }
 
   pload(...args: any[]):void {
@@ -30,7 +34,9 @@ export class AppComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(private canonicalService: CanonicalService, private metaService: MetaService) {
+    this.metaService.updateMetaData();
+  }
 
   consoleGreeting() {
     console.log("    ###         #       #             #       ##     ## ###")

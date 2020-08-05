@@ -24,6 +24,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Chrome ColorZilla extension   
 - Remove background from image: https://www.remove.bg/
 - Chrome Wappalyzer extension
+- Chrome Checkbot extension
 
 ## Develop better internet application   
 - https://www.w3.org/TR/wai-aria-practices-1.1/   
@@ -106,11 +107,12 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Note change the name of home component to hero component as it's better practical   
 - This is a good resume meaning about me and the background animation from https://fdossena.com/   
 - Searching something like this from https://blurha.sh/ to videos to stimulate loading as an example
-- Use html tag like a to use links store from Dialogflow and use sanitize html to improve Illy the bot
+- Use html tag like a to use links store from Dialogflow and use sanitizehttps://izifortune.com/angular-subresource-integrity/ html to improve Illy the bot
 - Good about me and project paragraph by its title from https://robgrimes.uk/
 - Better changing the background animation
 - Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 - Learn from this Medium website article of tips on color for interface design from https://uxdesign.cc/tips-on-colour-interface-design-bccdc691eb72
+- Cool 404 website pages from https://optinmonster.com/best-404-page-examples/
 
 
 ## Domain name   
@@ -127,3 +129,16 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 
 ## Scully
 - https://github.com/scullyio/scully/blob/main/docs/getting-started.md and serving not using the default serve Scully command, better using https://github.com/http-party/http-server
+
+
+## Performance, Security, SEO
+- https://observatory.mozilla.org/
+- Subresource Integrity from https://izifortune.com/angular-subresource-integrity/
+- https://docs.netlify.com/routing/headers/#syntax-for-the-headers-file
+- HSTS preload from https://tomosm.net/netlify/hsts/ and https://hstspreload.org/
+- Canonical URL from https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/
+- Angular SEO from https://www.tektutorialshub.com/angular/dynamic-meta-tags-in-angular/ and https://www.tektutorialshub.com/angular/dynamic-meta-tags-in-angular/
+- https://www.checkbot.io/
+
+## Netlify/build run command
+- ng build --prod --subresource-integrity && npm run scully 

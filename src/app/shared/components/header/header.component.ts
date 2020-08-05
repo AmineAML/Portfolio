@@ -1,10 +1,10 @@
 import { Component, OnInit, HostListener, Input, Inject, Output, EventEmitter } from '@angular/core';
 import { faBars,faTint } from '@fortawesome/free-solid-svg-icons';
-import { UiStyleToggleService } from 'src/app/core/ui-style-toggle.service';
+import { UiStyleToggleService } from 'src/app/core/services/ui-style-toggle.service';
 import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 import { TRANSLATION, Translation, WebsiteLanguage } from 'src/app/i18n/utils';
 import { Router } from '@angular/router';
-import { LanguageToggleService } from 'src/app/core/language-toggle.service';
+import { LanguageToggleService } from 'src/app/core/services/language-toggle.service';
 
 @Component({
   selector: 'app-header',

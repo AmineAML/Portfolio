@@ -10,6 +10,7 @@ div{
 	//padding-left: 20px;
 	//margin-top: 7%;
 	z-index: 7;
+	line-height: normal;
 	.otherDevices {
 		width: 70%;
 		height: 50%;
@@ -33,6 +34,11 @@ div{
 			//color: $color-three;
 			color: var(--text-title-color);
 			font-size: 4vw;
+			h1 {
+				font-size: 4vw;
+				display: inline-block;
+				font-family: $font-stack;
+			}
 			.TitleTyping {
 				//color: $color-three;
 				color: var(--text-title-color);
@@ -104,17 +110,6 @@ div{
 	}
 }
 
-@keyframes typingAnim {
-    0% {
-        transform: rotate(0);
-        opacity: 1;
-    }
-    50% {
-        transform: rotate(0);
-        opacity: 0;
-    }
-}
-
 //Scroll indicator
 
 $indicator-size: 24px;
@@ -138,6 +133,63 @@ $indicator-size: 24px;
 	box-sizing: border-box;
 }
 
+.scrollIndicator {
+	//	@include scroll-indicator();
+		position: absolute;
+		//width: 100%;
+		bottom: 10%;
+		left: 50%;
+		
+		&:before {
+			@include scroll-indicator();
+			content: "";
+			top: 0px;
+			left: 50%;
+			margin-left: -$indicator-size/2;
+			
+			animation: scroll-indicate 1.5s linear 0s infinite;
+		}
+		
+		&:after {
+			@include scroll-indicator();
+			content: "";
+			top: $indicator-size/2;
+			left: 50%;
+			margin-left: -$indicator-size/2;
+			animation: scroll-indicate 1.5s linear 0.25s infinite;
+		}
+}
+
+.lottiefiles {
+	z-index: 0;
+}
+
+@media (min-width: 767px) {
+	.lottiefiles {
+		position: absolute;
+		bottom: 40%;
+		right: 7%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.lottiefiles {
+		position: absolute;
+		bottom: 40%;
+		right: 0px;
+	}
+}
+
+@keyframes typingAnim {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+}
 
 @keyframes scroll-indicate {
 	0% {
@@ -154,49 +206,5 @@ $indicator-size: 24px;
 	
 	100% {
 		opacity: 1;
-	}
-}
-
-
-.scrollIndicator {
-//	@include scroll-indicator();
-	position: absolute;
-	//width: 100%;
-	bottom: 10%;
-	left: 50%;
-	
-	&:before {
-		@include scroll-indicator();
-		content: "";
-		top: 0px;
-		left: 50%;
-		margin-left: -$indicator-size/2;
-		
-		animation: scroll-indicate 1.5s linear 0s infinite;
-	}
-	
-	&:after {
-		@include scroll-indicator();
-		content: "";
-		top: $indicator-size/2;
-		left: 50%;
-		margin-left: -$indicator-size/2;
-		animation: scroll-indicate 1.5s linear 0.25s infinite;
-	}
-}
-
-@media (min-width: 767px) {
-	.lottiefiles {
-		position: absolute;
-		bottom: 40%;
-		right: 7%;
-	}
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-	.lottiefiles {
-		position: absolute;
-		bottom: 40%;
-		right: 0px;
 	}
 }

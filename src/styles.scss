@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'src/assets/Fonts/scss/modules/_fonts.scss';
 //@import '~simplebar/dist/simplebar.css';
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+//Better imported by link tag from index.html
+//@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import 'src/assets/themes/_animations.scss';
 //@import 'src/assets/themes/_colors.scss';
 @import 'src/assets/themes/_theme.scss';

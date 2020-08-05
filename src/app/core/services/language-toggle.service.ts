@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 import { Router } from '@angular/router';
-import { WebsiteLanguage } from '../i18n/utils';
+import { WebsiteLanguage } from '../../i18n/utils';
 
 export enum LanguageMode {
     FR, EN

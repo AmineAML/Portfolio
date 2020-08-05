@@ -2,7 +2,7 @@ export const en = {
     language: 'English',
     welcome: {
         home: {
-          title: 'Full-Stack developer',
+          title: 'Front-End developer',
           resume: 'View Resume',
         },
         projects: {

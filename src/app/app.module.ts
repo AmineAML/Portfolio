@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,8 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import { StorageServiceModule } from 'ngx-webstorage-service';
-import { UiStyleToggleService } from './core/ui-style-toggle.service';
-import { LanguageToggleService } from './core/language-toggle.service';
+import { UiStyleToggleService } from './core/services/ui-style-toggle.service';
+import { LanguageToggleService } from './core/services/language-toggle.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 
 export function themeFactory(themeService: UiStyleToggleService) {
@@ -35,6 +35,7 @@ export function languageFactory(languageService: LanguageToggleService) {
   providers: [
     UiStyleToggleService,
     LanguageToggleService,
+    Meta,
     {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true},
     {provide: APP_INITIALIZER, useFactory: languageFactory, deps: [LanguageToggleService], multi: true}
   ],
