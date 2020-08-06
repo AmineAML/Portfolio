@@ -68,6 +68,8 @@ export class MetaService {
                                                           développeur web front end, developpeur web front end, SEO, Scully, 
                                                           NPM, Angular Material, Bootstrap, Materialize` })
         }
+
+        //More meta tags of social media from https://moz.com/blog/meta-data-templates-123
  
       })
  

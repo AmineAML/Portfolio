@@ -84,6 +84,9 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 ## SEO  
 - https://www.ganatan.com/tutorials/search-engine-optimization-with-angular   
 - https://www.youtube.com/watch?v=_bZDjQOMf4U   
+- https://medium.com/@seo4ajax/14-technical-seo-tips-cc20a46211e8
+- With SPAs like Angular generate sitemap.xml file using a sitemap generator and also manually
+- https://support.google.com/webmasters/answer/189077?hl=fr&ref_topic=2370587
 
 
 ## CV-Resume
@@ -113,6 +116,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 - Learn from this Medium website article of tips on color for interface design from https://uxdesign.cc/tips-on-colour-interface-design-bccdc691eb72
 - Cool 404 website pages from https://optinmonster.com/best-404-page-examples/
+- Better use netlify.toml file which more useful rather than the _redirects and _headers
 
 
 ## Domain name   
@@ -139,7 +143,15 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Canonical URL from https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/
 - Angular SEO from https://www.tektutorialshub.com/angular/dynamic-meta-tags-in-angular/ and https://www.tektutorialshub.com/angular/dynamic-meta-tags-in-angular/
 - https://www.checkbot.io/
+- https://www.ssllabs.com/ssltest/index.html
+- https://securityheaders.com/
+- https://www.freecodecamp.org/news/secure-your-web-application-with-these-http-headers-fd66e0367628/
+- https://developers.google.com/tag-manager/web/csp
 
 ## Netlify/build run command
-- This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully
+- This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully ALSO IT'S AND IT'S NOT WORKING
 - Testing use this: ng build --prod && npm run scully
+
+
+## Netlify installed plugins
+- Submit Sitemap

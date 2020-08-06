@@ -47,8 +47,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   translations = Object.entries(WebsiteLanguage);
   
   constructor(    
-    private meta: Meta,
-    private titleService: Title, @Inject(TRANSLATION) public readonly lang: Translation) {
+    @Inject(TRANSLATION) public readonly lang: Translation) {
       //console.log('Current language is,', lang.language);
     }
 
@@ -129,18 +128,6 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   heightDivChange = false;
   ngOnInit() {
-    /*this.titleService.setTitle('Amine Amellouk Developer Portfolio | Amine Amellouk');
-    this.meta.addTag({
-      name: 'amine amellouk portfolio',
-      content: 'amine amellouk'
-    });
-    this.meta.updateTag(
-      {
-        name: 'description',
-        content: 'Full-Stack developer, Licence Fondamentale en Sciences Économiques and Technicien Spécialisé en Développement Informatique'
-      });
-    */
-
     //console.log(this.getBrowserName())
     if (this.getBrowserName() === 'firefox') {
       this.heightDivChange = true;

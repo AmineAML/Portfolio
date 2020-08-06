@@ -51,7 +51,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'Resume | Amine Amellouk',
-            description: 'Amine Amellouk\'s curricul vitae'
+            description: 'Amine Amellouk\'s curriculum vitae'
           }
         } 
       },
