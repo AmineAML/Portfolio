@@ -121,6 +121,39 @@
             color: var(--chat-icon-color);
             text-decoration: none;
             padding: 2rem;
+            cursor: pointer;
+            span {
+                visibility: hidden;
+            }
+        }
+        a:hover {
+            fa-icon {
+                visibility: hidden;
+            }
+            span {
+                visibility: visible;
+                position: absolute;
+                left: 2.5rem;
+            }
+        }
+    }
+
+    .translation {
+        //display: flex;
+        display: inline-block;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        filter: brightness(1.20);
+        padding: 1.5rem;
+        cursor: pointer;
+        a {
+            color: var(--chat-icon-color);
+            text-decoration: none;
+            //padding-right: 2rem;
+            font-size: x-large;
+            font-weight: 500;
             span {
                 visibility: hidden;
             }

@@ -1,7 +1,5 @@
-<button mat-flat-button (click)="toggleConsole()" fxHide>{{consoleButtonText}}</button>
-
 <div fxLayoutAlign="center">
-    <mat-card *ngIf="displayConsole || openCmd">
+    <mat-card *ngIf="openConsole">
         <mat-card-header>
             <mat-card-title>
                 <span class="settings">

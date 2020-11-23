@@ -1,23 +1,45 @@
 {
     "projects": [
         {
-          "name": "LocaIT",
+          "name": "Discord Bot",
           "technologies": [
             {
-              "t": "HTML5"
+              "t": "Node.js"
             },
             {
-              "t": "CSS3"
+              "t": "TypeScript"
             },
             {
-              "t": "Bootstrap"
+              "t": "Docker"
+            },
+            {
+              "t": "MongoDB"
             }
           ],
-          "description": "Worked with a collegue to make a rental car landing page website",
-          "demoLink": "https://locait.netlify.com/",
-          "codeLink": "https://github.com/AmineAML/LocaIT",
+          "description": "Personnal Discord bot for YouTube and Twitch live streaming notification of channels you follow, basic chatbot and moderator",
+          "demoLink": "",
+          "codeLink": "https://github.com/AmineAML/DiscordBot",
           "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/LocaITV.mp4"
+          "img": ""
+        },
+        {
+          "name": "Portfolio",
+          "technologies": [
+            {
+              "t": "Angular"
+            },
+            {
+              "t": "DialogFlow"
+            },
+            {
+              "t": "Scully"
+            }
+          ],
+          "description": "This website you're currently at, a portfolio site to give an introduction of myself",
+          "demoLink": "https://www.amineamellouk.com/en",
+          "codeLink": "",
+          "displayImg": false,
+          "img": ""
         },
         {
           "name": "Cube Solves Timer",

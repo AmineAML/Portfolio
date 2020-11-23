@@ -78,6 +78,7 @@ mat-toolbar {
                     );
                     background-size: 100% 200%;
                     background-position: 0% 0%;
+                    cursor: pointer;
 
                     &:before {
                         content: "";

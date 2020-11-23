@@ -15,12 +15,14 @@
                 <div class="data" id="basicsAndProfiles">
                     <!--style="float: left; padding-right: 7rem;"-->
                     <strong>Email</strong>
-                    <div>{{cv.basics.email}}</div>
+                    <div><a rel="noopener" target="_blank" href="{{'mailto:'+cv.basics.email}}">{{cv.basics.email}}</a></div>
                 </div>
                 <div class="data" id="basicsAndProfiles">
                     <!--Don't display phone number-->
                     <strong>{{lang.resume.phone}}</strong>
-                    <div>{{cv.basics.phone}}</div>
+                    <div>
+                        <a rel="noopener" target="_blank" href="{{'tel:'+cv.basics.phone}}">{{cv.basics.phone}}</a>
+                    </div>
                 </div>
                 <div class="data" id="basicsAndProfiles">
                     <strong>{{lang.resume.website}}</strong>
@@ -57,7 +59,7 @@
                     <div fxLayout="row" fxLayout.xs="column">
                         <span class="headerAtion" fxFlex="80%">{{edu.institution}}</span>
                         <!--style="float: left;"-->
-                        <span class="headerAtion" fxFlex="20%">{{edu.endDate}}</span>
+                        <span class="headerAtion" fxFlex="20%">{{edu.startDate}} - {{edu.endDate}}</span>
                     </div>
                     
                     <div class="secondSectionAtion">
@@ -70,7 +72,9 @@
                     <div *ngIf="edu.thesis">
                         <h4>{{lang.resume.courses}}</h4>
                         <ul>
-                            <li>{{edu.thesis}}</li>
+                            <li>
+                                <a routerLink="{{'../../'+edu.thesis.url}}" target="_blank">{{edu.thesis.title}}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -88,6 +92,7 @@
                     </div>
                     <div class="secondSectionAtion">
                         <div class="study">
+                            <fa-icon [icon]="faAward"></fa-icon>
                             <span>{{cert.area}}</span>
                         </div>
                         <span class="studyType">{{cert.studyType}}</span>
@@ -100,11 +105,20 @@
             <h3 class="sectionsTitles" fxFlex="35%">Skills</h3>
             <section fxFlex="40%" >
                 <div class="dataCation">
-                    <div>
-                        <h4>{{lang.resume.development}}</h4>
-                        <ul *ngFor="let skl of cv.skills[0].keywords">
+                    <div fxLayout="column">
+                        <!--<h4>{{lang.resume.development}}</h4>
+                        <ul *ngFor="let skl of cv.skills.keywords">
                             <li>{{skl}}</li>
                         </ul>
+                        -->
+                        <div>
+                            <h4 class="sectionSkills">{{lang.resume.experienceWith}}:</h4>
+                            <span> {{ cv.skills.experiencedWith }}</span>
+                        </div>
+                        <div>
+                            <h4 class="sectionSkills">{{lang.resume.familiarWith}}:</h4>
+                            <span> {{ cv.skills.familiarWith }}</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -120,15 +134,14 @@
             </section>
         </div>
 
-        <!--
         <div class="sections" fxLayout="row" fxLayoutGap="70px">
             <h3 class="sectionsTitles" fxFlex="35%">Interests</h3>
             <section fxFlex="40%">
-                <div class="data" id="basicsAndProfiles" *ngFor="let int of interests">
+                <div class="data" id="basicsAndProfiles" *ngFor="let int of cv.interests">
                     <div>{{int.name}}</div>
                 </div>
             </section>
-        </div>-->
+        </div>
 
     </div>
 </div>

@@ -11,16 +11,20 @@
     <app-about id="about" class="fullScreenSections" fxLayoutAlign="center center"></app-about>
     <app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
     <app-footer></app-footer>
-    <app-scroll-top-indicator></app-scroll-top-indicator>
-    <app-console-interface [openCmd]="toggleCmdOpen"></app-console-interface>
-    <app-chat-dialog [openChatbot]="toggleChatbotOpen"></app-chat-dialog>
+    <app-console-interface [openCmd]="toggleCmdOpen" (closeCmd)="toggleCmd($event)"></app-console-interface>
+    <app-chat-dialog [openChatbot]="toggleChatbotOpen" (closeChatbot)="toggleChatbot($event)"></app-chat-dialog>
 
     <div class="cool-tools" fxShow fxHide.lt-md>
         <!--<a href="javascript:;" (mouseenter)="showText = true" (mouseleave)="showText = false"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span *ngIf="showText" [@slideInOut]>Chatbot</span></a>
         -->
         <!--1st click it does work and close and another click it doesn't work-->
-        <a href="javascript:;" (click)="toggleChatbotOpen = true"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span>Chatbot</span></a>
-        <a href="javascript:;" (click)="toggleCmd(true)"><fa-icon [icon]="faTerminal" size="lg"></fa-icon><span>Console</span></a>
+        <a (click)="toggleChatbot(true)"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span>Chatbot</span></a>
+        <a (click)="toggleCmd(true)"><fa-icon [icon]="faTerminal" size="lg"></fa-icon><span>Console</span></a>
+    </div>
+
+    <div class="translation" fxShow fxHide.lt-md>
+        <a (click)="toggleLanguage()">{{languageTranslate}}</a>
+        <app-scroll-top-indicator></app-scroll-top-indicator>
     </div>
 
     <!--

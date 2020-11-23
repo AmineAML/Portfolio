@@ -41,7 +41,7 @@ const app_routes: Routes = [
           loadChildren: () => import('./layouts/welcome/welcome.en.module').then(m => m.WelcomeEnModule), 
           data: {
             metadata: {
-              title: 'Amine Amellouk | Front-End Developer',
+              title: 'Amine Amellouk | Full-Stack Developer',
               description: 'Full-Stack developer, Licence Fondamentale en Sciences Économiques and Technicien Spécialisé en Développement Informatique'
             }
           } 
@@ -55,6 +55,15 @@ const app_routes: Routes = [
           }
         } 
       },
+      { path: 'pdf', 
+        loadChildren: () => import('./layouts/pdf/pdf.languages.module').then(m => m.PdfEnModule),
+        data: {
+          metadata: {
+            title: "Thesis",
+            description: "Thesis list"
+          }
+        }
+      },
       { path: '404', 
         loadChildren: () => import('./layouts/error/error.en.module').then(m => m.ErrorEnModule),
         data: {
@@ -63,7 +72,8 @@ const app_routes: Routes = [
             description: 'Page not found',
             robots: 'noindex, nofollow'
           }
-        }  },
+        }  
+      },
       //This route doesn't work with npm scully:serve, it does work the http-server
       { path: '**', redirectTo: '404' }
     ]},
@@ -72,7 +82,7 @@ const app_routes: Routes = [
         loadChildren: () => import('./layouts/welcome/welcome.en.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
-            title: 'Amine Amellouk | Développeur Front-End',
+            title: 'Amine Amellouk | Développeur Full-Stack',
             description: 'Développeur Full-Stack, Licence Fondamentale en Sciences Économiques and Technicien Spécialisé en Développement Informatique'
           }
         } 
@@ -83,6 +93,15 @@ const app_routes: Routes = [
           metadata: {
             title: 'CV | Amine Amellouk',
             description: 'Le CV de Amine Amellouk'
+          }
+        }
+      },
+      { path: 'pdf', 
+        loadChildren: () => import('./layouts/pdf/pdf.languages.module').then(m => m.PdfFrModule),
+        data: {
+          metadata: {
+            title: "PFE",
+            description: "Liste des projet de fin d'études"
           }
         }
       },

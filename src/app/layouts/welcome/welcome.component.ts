@@ -4,6 +4,8 @@ import { environment } from '../../../environments/environment';
 import { faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style, keyframes } from '@angular/animations';
 import { Translation, TRANSLATION, WebsiteLanguage } from "../../i18n/utils";
+import { Subject } from 'rxjs';
+import { LanguageToggleService } from 'src/app/core/services/language-toggle.service';
 
 @Component({
   selector: 'app-welcome',
@@ -47,7 +49,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   translations = Object.entries(WebsiteLanguage);
   
   constructor(    
-    @Inject(TRANSLATION) public readonly lang: Translation) {
+    @Inject(TRANSLATION) public readonly lang: Translation,
+    private toggleLanguageTranslations: LanguageToggleService) {
       //console.log('Current language is,', lang.language);
     }
 
@@ -112,18 +115,56 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     return !(isInViewport)
   }
 
-  toggleCmdOpen: boolean;
-  toggleCmd(open: boolean) {
-    //alert(open);
-    //this.toggleCmdOpen = open;
-    this.toggleCmdOpen = true;
+  //toggleCmdOpen: boolean;
+  toggleCmdOpen: Subject<boolean> = new Subject();
+  togCmdOpen = false
+  toggleCmd(open: boolean | string) {
+    if (this.togCmdOpen === false) {
+      this.togCmdOpen = true
+
+      this.toggleCmdOpen.next(true)
+    } else {
+      this.togCmdOpen = false
+
+      this.toggleCmdOpen.next(false)
+    }
+
+    if (open === 'Nein') {
+      this.toggleCmdOpen.next(false)
+    }
   }
 
-  toggleChatbotOpen: boolean;
-  toggleChatbot(open: boolean) {
-    //alert(open);
-    //this.toggleCmdOpen = open;
-    this.toggleChatbotOpen = true;
+  //toggleChatbotOpen: boolean;
+  toggleChatbotOpen: Subject<boolean> = new Subject();
+  togChatbotOpen = false
+  toggleChatbot(open: boolean | string) {
+    if (this.togChatbotOpen === false) {
+      this.togChatbotOpen = true
+
+      this.toggleChatbotOpen.next(true)
+    } else {
+      this.togChatbotOpen = false
+
+      this.toggleChatbotOpen.next(false)
+    }
+
+    if (open === 'Nein') {
+      this.toggleChatbotOpen.next(false)
+    }
+  }
+
+  languageTranslate;
+  languageToTranslate;
+  toggleLanguage() {
+    this.toggleLanguageTranslations.toggle();
+  }
+
+  userLanguage() {
+    if (this.lang.language == 'English') {
+      this.languageTranslate = 'FR';
+    } else {
+      this.languageTranslate = 'EN';
+    }
   }
 
   heightDivChange = false;
@@ -132,6 +173,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     if (this.getBrowserName() === 'firefox') {
       this.heightDivChange = true;
     }
+
+    this.userLanguage();
   }
 
   ngAfterViewInit() {

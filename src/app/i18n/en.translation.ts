@@ -2,7 +2,7 @@ export const en = {
     language: 'English',
     welcome: {
         home: {
-          title: 'Front-End developer',
+          title: 'Full-Stack Developer',
           resume: 'View Resume',
         },
         projects: {
@@ -12,11 +12,30 @@ export const en = {
         },
         about: {
             title: 'Let me tell you about myself',
-            parOne1stPart: "Hello, I'm Amine, a software enginner from",
-            parOne2ndPart: 'Rabat, Morocco',
-            parOne3rdPart: 'who enjoys building things, I develop web apps and mobile apps',
-            parTwo: "I'm currently majoring as a mobile apps enginner from IT Learning Campus of University of Hassan I",
-            parThree: "Here are a few technologies and tools I've been working with recently:",
+            partOne1stPart: "Hello, I'm Amine, a",
+            partOne2ndPart: "full-stack developer",
+            partOne3rdPart: "from",
+            partOne4thPart: 'Rabat',
+            partOne5thPart: ',',
+            partOne6thPart: 'Morocco',
+            partOne7thPart: "who enjoys building things, I develop web and mobile applications. I'm an",
+            partOne8thPart: "active learner",
+            partOne9thPart: "who values",
+            partOne10thPart: "logical and critical thinking",
+            partOne11thPart: ",",
+            partOne12thPart: "problem solving",
+            partOne13thPart: "and",
+            partOne14thPart: "attention to detail",
+            partTwo1stPart: "I graduated from",
+            partTwo2ndPart: "Mohammed V University",
+            partTwo3rdPart: "and",
+            partTwo4thPart: "Hassan I University",
+            partTwo5thPart: "with a",
+            partTwo6thPart: "BSc in Economics",
+            partTwo7thPart: "and a",
+            partTwo8thPart: "BSc in Mobile Applications Engineering",
+            partTwo9thPart: "and am now looking to work on intersting projects",
+            partThree: "Here are a few technologies and tools I've been working with recently:",
         },
         contact: {
             titleAndButtonText: 'Contact me',
@@ -48,6 +67,8 @@ export const en = {
         courses: 'Courses',
         skills: 'Skills',
         development: 'Development',
+        experienceWith: 'Experienced with',
+        familiarWith: "Familiar with",
         languages: 'Languages'
     }
   

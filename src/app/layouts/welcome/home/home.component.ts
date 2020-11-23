@@ -72,20 +72,20 @@ export class HomeComponent implements OnInit {
   public async run(): Promise<void> {
     this.typingCallback(this);
 
-    await new Promise<void>(resolve => {
-      setTimeout(resolve, 1750);
-    });
+    this.sleep(2700).then(() => {
+      this.typingSign = false;
+      this.typingSign2 = true;
+    
+      this.typingCallback2(this);
+  
+      this.sleep(2700).then(() => {
+        this.HideShow = true;
+      })
+    })
+  }
 
-    this.typingSign = false;
-    this.typingSign2 = true;
-
-    this.typingCallback2(this);
-
-    await new Promise<void>(resolve => {
-      setTimeout(resolve, 2000);
-    });
-
-    this.HideShow = true;
+  sleep = (ms: number) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
   }
 
   //Scroll to a section

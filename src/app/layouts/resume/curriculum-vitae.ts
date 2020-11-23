@@ -1,7 +1,7 @@
 export interface curriculumVitae {
     basics:        Basics;
     education:     Cation[];
-    skills:        Skills[];
+    skills:        Skills;
     certification: Cation[];
     languages:     Language[];
     interests:     Interest[];
@@ -33,16 +33,24 @@ export interface Profile {
 
 export interface Cation {
     endDate:     string;
+    startDate:   string;
     area:        string;
     studyType:   string;
     institution: string;
-    thesis?:      string;
+    thesis?:     Thesis;
+}
+
+export interface Thesis {
+    title: string;
+    url:   string;
 }
 
 export interface Skills {
-    keywords: string[];
-    level:    string;
-    name:     string;
+    experiencedWith: string;
+    familiarWith:    string;
+    keywords:        string[];
+    level:           string;
+    name:            string;
 }
 
 

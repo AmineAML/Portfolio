@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { curriculumVitae } from "./curriculum-vitae";
 import enResume from "../../../assets/data/en-resume.json";
 import frResume from "../../../assets/data/fr-resume.json";
-import { faGraduationCap, faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faFileDownload, faAward } from '@fortawesome/free-solid-svg-icons';
 import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { TRANSLATION, Translation, WebsiteLanguage } from 'src/app/i18n/utils';
 
@@ -17,6 +17,7 @@ export class ResumeComponent implements OnInit {
 
   faGraduationCap = faGraduationCap;
   faFileDownload = faFileDownload;
+  faAward = faAward;
 
   cvDownload;
   downloadText;

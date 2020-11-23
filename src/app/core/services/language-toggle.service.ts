@@ -19,7 +19,7 @@ export class LanguageToggleService {
     private readonly DARK_THEME_CLASS_NAME = 'theme-dark';
     private readonly LIGHT_THEME_CLASS_NAME = 'theme-light';
 
-    private englishLanguageSelected = false;
+    private englishLanguageSelected: boolean //= false;
     public language$ = new BehaviorSubject<LanguageMode>(LanguageMode.FR);
 
     /*, private analyticsService: AnalyticsService*/
@@ -36,7 +36,7 @@ export class LanguageToggleService {
     }
 
     public toggle() {
-        if (this.englishLanguageSelected) {
+        if (this.isEnglishLanguageSelected()) {
             this.setFrenchLanguage();
             this._router.navigate(['/' + WebsiteLanguage.French]);
         } else {
@@ -44,11 +44,11 @@ export class LanguageToggleService {
             this._router.navigate(['/' + WebsiteLanguage.English]);
         }
     }
-    /*private isEnglishLanguageSelected(): boolean {
+    
+    private isEnglishLanguageSelected(): boolean {
         this.englishLanguageSelected = this.storage.get(this.LANGUAGE_KEY) === this.ENGLISH_LANGUAGE_VALUE;
         return this.englishLanguageSelected;
     }
-    */
 
     private setFrenchLanguage() {
         this.storage.set(this.LANGUAGE_KEY, this.FRENCH_LANGUAGE_VALUE);

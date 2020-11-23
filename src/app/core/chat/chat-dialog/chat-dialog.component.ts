@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit, AfterViewChecked, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewChecked, Input, Output, EventEmitter } from '@angular/core';
 import { ChatService, Message } from '../chat.service';
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import "rxjs/add/operator/scan";
 import { faRobot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,10 +12,14 @@ import { faRobot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 export class ChatDialogComponent implements OnInit, AfterViewChecked {
   @ViewChildren("scrollFrame") scrollFrame: QueryList<ElementRef>;
   @ViewChild("chatWindow", {static: false}) chatWindow: ElementRef;
-  @Input() openChatbot: boolean;
+  @Input() openChatbot: Subject<boolean>;
+  @Output() closeChatbot = new EventEmitter();
+  @ViewChild('userInput') chatbotInput: ElementRef;
 
   faRobot = faRobot;
   faPaperPlane = faPaperPlane;
+
+  openChat = false
 
   constructor(private chat: ChatService) { }
 
@@ -32,16 +36,10 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   }
 
   //Display and hide the chatbot box messaging
-  displayChat = false;
   toggleChat() {
-    if (this.displayChat == false) {
-      this.displayChat = true;
-    } else {
-      this.displayChat = false;
-      if (this.openChatbot = true) {
-        this.openChatbot = false;
-      }
-    }
+    this.closeChatbot.emit('Nein')
+
+    this.openChat = false
   }
 
   ngOnInit(): void {
@@ -50,6 +48,20 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val));
     //this.chat.talk();
+
+    this.openChatbot.subscribe(v => {
+      //console.log(v)
+
+      if (v === true) {
+        this.openChat = true
+
+        setTimeout(()=>{
+          this.chatbotInput.nativeElement.focus();
+        }, 1000);
+      } else {
+        this.openChat = false
+      }
+    })
   }
 
   //Auto scroll to the bottom of the chat

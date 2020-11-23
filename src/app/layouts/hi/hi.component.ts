@@ -23,6 +23,7 @@ export class HiComponent implements OnInit {
       }
       this.hiByLanguage = this.hiInLanguages[i];
       this.metaServiceSendHiByLanguages.getHiByLanguages(this.hiByLanguage);
+      history.replaceState(null, "", "/" + this.hiByLanguage)
       await this.delay(300);
     }
   }

@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, Input, Output, EventEmitter } from '@angular/core';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -9,14 +10,15 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 })
 export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   @ViewChild('consoleWindowScroll') private windowScroll: ElementRef;
-  @Input() openCmd: boolean;
   @ViewChild('userInput') cmdInput: ElementRef;
+  @Input() openCmd: Subject<boolean>;
+  @Output() closeCmd = new EventEmitter();
 
   responseToUser: SafeHtml;
   inputByUser: string = "";
   currentAge = Math.floor((Math.abs(Date.now() - new Date("1998-01-13T00:00:00.000Z").getTime()) / (1000 * 3600 * 24))/365.25);
   terminalOutput: string = "";
-  displayConsole = false;
+  //displayConsole = false;
   consoleButtonText = " Open console";
   commands = {
     help: `Available commands: <span style="color: #209CEE">about</span>,
@@ -29,24 +31,14 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
     contact: `You use the contact form bellow or connect with me at <a  rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" style="color: #209CEE">LinkedIn</a>`,
     resume: `You can read my CV from <a rel="noopener" href="https://www.amineamellouk.com/resume" target="_blank" style="color: #209CEE">here</a>`
   };
+  openConsole = false
 
   constructor(private sanitizer: DomSanitizer) { }
 
   toggleConsole() {
-    if (this.displayConsole == false) {
-      this.displayConsole = true;
-      this.consoleButtonText = "Close console";
-      //Wait for the template to display and set focus
-      setTimeout(()=>{
-        this.cmdInput.nativeElement.focus();
-   }, 1000);
-    } else {
-      this.displayConsole = false;
-      this.consoleButtonText = "Open console";
-      if (this.openCmd = true) {
-        this.openCmd = false;
-      }
-    }
+    this.closeCmd.emit('Nein')
+
+    this.openConsole = false
   }
 
   cmdEnter() {
@@ -74,6 +66,19 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
+    this.openCmd.subscribe(v => {
+      //console.log(v)
+
+      if (v === true) {
+        this.openConsole = true
+
+        setTimeout(()=>{
+          this.cmdInput.nativeElement.focus();
+        }, 1000);
+      } else {
+        this.openConsole = false
+      }
+    })
   }
 
   //This works with (keyup.enter)="cmdEnter()"

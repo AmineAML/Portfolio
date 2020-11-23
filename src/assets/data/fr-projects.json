@@ -1,25 +1,47 @@
 {
     "projects": [
-        {
-          "name": "LocaIT",
-          "technologies": [
-            {
-              "t": "HTML5"
-            },
-            {
-              "t": "CSS3"
-            },
-            {
-              "t": "Bootstrap"
-            }
-          ],
-          "description": "Collaboration avec un collègue pour créer un site web de location de voitures",
-          "demoLink": "https://locait.netlify.com/",
-          "codeLink": "https://github.com/AmineAML/LocaIT",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/LocaITV.mp4"
-        },
-        {
+      {
+        "name": "Discord Bot",
+        "technologies": [
+          {
+            "t": "Node.js"
+          },
+          {
+            "t": "TypeScript"
+          },
+          {
+            "t": "Docker"
+          },
+          {
+            "t": "MongoDB"
+          }
+        ],
+        "description": "Bot personnel de Discord pour YouTube et Twitch, notification de diffusion en direct des chaînes que vous suivez, chatbot de base et modérateur",
+        "demoLink": "",
+        "codeLink": "https://github.com/AmineAML/DiscordBot",
+        "displayImg": false,
+        "img": ""
+      },
+      {
+        "name": "Portfolio",
+        "technologies": [
+          {
+            "t": "Angular"
+          },
+          {
+            "t": "DialogFlow"
+          },
+          {
+            "t": "Scully"
+          }
+        ],
+        "description": "Le site web sur lequel vous êtes actuellement, un site de portfolio pour me présenter",
+        "demoLink": "https://www.amineamellouk.com/en",
+        "codeLink": "",
+        "displayImg": false,
+        "img": ""
+      },
+      {
           "name": "Cube Solves Timer",
           "technologies": [
             {

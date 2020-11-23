@@ -3,8 +3,8 @@
       "name": "Amine Amellouk",
       "label": "Junior Developer",
       "image": "https://media-exp1.licdn.com/dms/image/C4D03AQGFmEG5nXmTHQ/profile-displayphoto-shrink_200_200/0?e=1591228800&v=beta&t=GI9OCxfOH0toIy66WWNPiCMWDnsyd-2fEdJB5DH-oyo",
-      "summary": "My passion for technology led me to two relational fields. My desire to understand the market, economy is a path that I chose which enables me to understand its functioning and make analyzes to expalin it. Even if time invested on this path, the dedication of the evenings and the weekends to feed my technological passion, IT development is a path that allowed me to learn analysis, design and development of applications and software. These iterrelational paths allow me to develop with asense of budget and market needs to deliver quality solutions. As I do like to learn from different experiences trough adventures and challenges, seeking to enrich my knowledge and skills through internship oppurtunities. ",
-      "phone": "(+212) 623618278",
+      "summary": "My passion for technology led me to two relational fields. My desire to understand the market, economy is a path that I chose which enables me to understand its functioning and make analyzes to expalin it. Even if time invested on this path, the dedication of the evenings and the weekends to feed my technological passion, IT development is a path that allowed me to learn analysis, design and development of applications and software. These iterrelational paths allow me to develop with asense of budget and market needs to deliver quality solutions. Admiring to learn from different experiences trough adventures and challenges",
+      "phone": "(+212) 674180641",
       "website": "https://www.amineamellouk.com",
       "email": "mail@amineamellouk.com",
       "location": [
@@ -33,51 +33,67 @@
     },
     "education": [
       {
-        "endDate": "Present",
+        "endDate": "2020",
+        "startDate": "2019",
         "area": "Ingénierie des Applications Mobiles",
-        "studyType": "Licence Professionnelle",
-        "institution": "IT-Learning - Faculté des Sciences et Technique de Settat"
+        "studyType": "Bachelor's degree",
+        "institution": "IT-Learning - Faculté des Sciences et Technique de Settat",
+        "thesis": {
+          "title": "Étude et réalisation d'une plateforme de guide touristique",
+          "url": "pdf/pfe_licence_en_ingenierie_des_applications_mobiles"
+        }
       },
       {
         "endDate": "2019",
+        "startDate": "2017",
         "area": "Développement Informatique",
         "studyType": "Technicien Spécialisé",
-        "institution": "École MIAGE",
-        "thesis": "Conception et réalisation d'une application de gestion de notes"
+        "institution": "MIAGE",
+        "thesis": {
+          "title": "Conception et réalisation d'une application de gestion de notes",
+          "url": "pdf/pfe_technicien_specialise_en_developpement_informatique"
+        }
       },
       {
-        "endDate": "2019",
+        "endDate": "2020",
+        "startDate": "2016",
         "area": "Sciences Économiques",
-        "studyType": "Licence Fondamentale",
+        "studyType": "Bachelor's degree",
         "institution": "Unversité Mohammed V",
-        "thesis": "L'impact de l'investissement public et privé sur la croissance économique"
+        "thesis": {
+          "title": "L'impact de l'investissement public et privé sur la croissance économique",
+          "url": "pdf/pfe_licence_sciences_economiques"
+        }
       },
       {
         "endDate": "2016",
+        "startDate": "2015",
         "area": "Sciences Économiques",
         "studyType": "Baccalauréat",
-        "institution": "Lycée Lalla Aicha"
+        "institution": "Lalla Aicha High School"
       }
     ],
-    "skills": [
-      {
-        "keywords": [
-          "HTML5",
-          "CSS3 / SCSS",
-          "Javascript / Typescript",
-          "Angular",
-          "C# / Blazor",
-          "PHP / Node.js",
-          "SQL Server / MySQL",
-          "Firebase / JSON"
-        ],
-        "level": "Junior",
-        "name": "Full-Stack"
-      }
-    ],
+    "skills": {
+      "experiencedWith": "Angular, Git, TypeScript, Javascript, Node.JS, MongoDB, Firebase, SASS",
+      "familiarWith": "Docker, Redis, Vue, Redis, C#, Microsoft SQL Server, MySQL",
+      "keywords": [
+        "HTML5",
+        "CSS3 / SCSS",
+        "Javascript / Typescript",
+        "Angular",
+        "C# / Blazor",
+        "PHP / Node.js",
+        "SQL Server / MySQL",
+        "Firebase / JSON",
+        "MongoDB / Docker"
+      ],
+      "level": "Junior",
+      "name": "Full-Stack"
+    },
     "certification": [
         {
           "endDate": "2018",
+          "startDate": "",
           "area": "Comptabilité des opérations Courantes",
           "studyType": "MOOC",
           "institution": "Université Mohammed V"
@@ -99,17 +115,14 @@
     ],
     "interests": [
       {
-        "name": "Technology and Science"
+        "name": "Podcasts"
       },
       {
         "name": "video games"
       },
       {
         "name": "Languages"
-      },
-      {
-        "name": "History"
-      },      
+      },    
       {
         "name": "Fitness"
       }

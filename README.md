@@ -110,13 +110,17 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Note change the name of home component to hero component as it's better practical   
 - This is a good resume meaning about me and the background animation from https://fdossena.com/   
 - Searching something like this from https://blurha.sh/ to videos to stimulate loading as an example
-- Use html tag like a to use links store from Dialogflow and use sanitizehttps://izifortune.com/angular-subresource-integrity/ html to improve Illy the bot
+- Use html tag like a to use links store from Dialogflow and use sanitize https://izifortune.com/angular-subresource-integrity/ html to improve Illy the bot
 - Good about me and project paragraph by its title from https://robgrimes.uk/
 - Better changing the background animation
 - Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 - Learn from this Medium website article of tips on color for interface design from https://uxdesign.cc/tips-on-colour-interface-design-bccdc691eb72
 - Cool 404 website pages from https://optinmonster.com/best-404-page-examples/
 - Better use netlify.toml file which more useful rather than the _redirects and _headers
+- Use the web app logo with the name favicon.ico from the src directory rather the Angular icon, it's the best practice
+- Convert images to icon and generate an icon from text from https://favicon.io/
+- The web app better run also as a PWA
+- Use this https://www.youtube.com/results?search_query=history+api
 
 
 ## Domain name   
@@ -147,6 +151,8 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://securityheaders.com/
 - https://www.freecodecamp.org/news/secure-your-web-application-with-these-http-headers-fd66e0367628/
 - https://developers.google.com/tag-manager/web/csp
+- https://csp-evaluator.withgoogle.com/
+- https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 
 ## Netlify/build run command
 - This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully ALSO IT'S AND IT'S NOT WORKING
@@ -155,3 +161,10 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 
 ## Netlify installed plugins
 - Submit Sitemap
+
+## Custom domain email
+- Fix email email landing in spam (this doesn't work with email forwarding) https://www.mailgenius.com/
+- DKIM from https://www.youtube.com/watch?v=4peLLm-4Rq8&ab_channel=RAZR and https://community.netlify.com/t/how-to-create-dkim-and-dmarc-records/11486 and https://www.sparkpost.com/resources/tools/dkim-wizard/
+- DMARC and DKIM from https://www.youtube.com/watch?v=qbBGQuYUIpk&ab_channel=RackspaceCloudOffice
+- DMARC from https://dmarc.org/overview/ and https://sendgrid.com/blog/what-is-dmarc/
+- SPF from https://www.youtube.com/watch?v=BCtGCgAGCDM&ab_channel=SeoSiteCheckup and https://tools.wordtothewise.com/spf and https://help.returnpath.com/hc/en-us/articles/222480268-Including-IP-addresses-in-your-SPF-record
