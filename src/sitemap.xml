@@ -3,7 +3,7 @@
 <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://www.amineamellouk.com/en</loc>
-<lastmod>2020-08-05T18:09:38+00:00</lastmod>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>1.00</priority>
 <xhtml:link 
             rel="alternate"
@@ -16,7 +16,7 @@
 </url>
 <url>
 <loc>https://www.amineamellouk.com/fr</loc>
-<lastmod>2020-08-05T18:09:38+00:00</lastmod>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>0.80</priority>
 <xhtml:link 
             rel="alternate"
@@ -29,7 +29,7 @@
 </url>
 <url>
 <loc>https://www.amineamellouk.com/en/resume</loc>
-<lastmod>2020-08-05T18:09:38+00:00</lastmod>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>0.80</priority>
 <xhtml:link 
             rel="alternate"
@@ -40,10 +40,9 @@
             hreflang="fr"
             href="https://www.amineamellouk.com/fr/resume"/>
 </url>
-
 <url>
 <loc>https://www.amineamellouk.com/fr/resume</loc>
-<lastmod>2020-08-05T18:09:38+00:00</lastmod>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>0.80</priority>
 <xhtml:link 
             rel="alternate"
@@ -53,10 +52,114 @@
             rel="alternate"
             hreflang="fr"
             href="https://www.amineamellouk.com/fr/resume"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/en/pdf</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/fr/pdf</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/en/pdf/pfe_licence_sciences_economiques</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_licence_sciences_economiques"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_licence_sciences_economiques"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/fr/pdf/pfe_licence_sciences_economiques</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_licence_sciences_economiques"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_licence_sciences_economiques"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/en/pdf/pfe_technicien_specialise_en_developpement_informatique</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_technicien_specialise_en_developpement_informatique"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_technicien_specialise_en_developpement_informatique"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/fr/pdf/pfe_technicien_specialise_en_developpement_informatique</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_technicien_specialise_en_developpement_informatique"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_technicien_specialise_en_developpement_informatique"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/en/pdf/pfe_licence_en_ingenierie_des_applications_mobiles</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_licence_en_ingenierie_des_applications_mobiles"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_licence_en_ingenierie_des_applications_mobiles"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/fr/pdf/pfe_licence_en_ingenierie_des_applications_mobiles</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/pdf/pfe_licence_en_ingenierie_des_applications_mobiles"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/pdf/pfe_licence_en_ingenierie_des_applications_mobiles"/>
 </url>
 <url>
 <loc>https://www.amineamellouk.com/hi</loc>
-<lastmod>2020-08-05T18:09:38+00:00</lastmod>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 </urlset>

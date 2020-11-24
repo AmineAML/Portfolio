@@ -57,14 +57,57 @@ export class HomeComponent implements OnInit {
 
   //public typewriter_text2: string = "Software Engineer";
   public typewriter_text2: string;
+  public typewriter_text2_pretitle: string;
+  public typewriter_text2_anotherpretitle: string;
   public typewriter_display2: string = "";
 
-  typingCallback2(that) {
-    let total_length = that.typewriter_text2.length;
+  typingCallback2(that, title) {
+    let total_length = that.typewriter_text2_pretitle.length;
     let current_length = that.typewriter_display2.length;
-    if (current_length < total_length) {
-      that.typewriter_display2 += that.typewriter_text2[current_length];
-      setTimeout(that.typingCallback2, 100, that);
+    if (title === 'p') {
+      if (current_length < total_length) {
+        that.typewriter_display2 += that.typewriter_text2_pretitle[current_length];
+        setTimeout(that.typingCallback2, 100, that, title);
+      } else {
+        title = 'rem_p'
+        setTimeout(that.typingCallback2, 100, that, title)
+      }
+    } else if (title === 'rem_p') {
+      current_length = that.typewriter_display2.length;
+      if (current_length !== 0) {
+        that.typewriter_display2 = that.typewriter_display2.slice(0, -1);
+        //title = 'rem_p'
+        setTimeout(that.typingCallback2, 100, that, title);
+      } else {
+        title = 'a'
+        setTimeout(that.typingCallback2, 100, that, title);
+      }
+    } else if (title === 'a') {
+      total_length = that.typewriter_text2_anotherpretitle.length;
+      current_length = that.typewriter_display2.length;
+      if (current_length < total_length) {
+        that.typewriter_display2 += that.typewriter_text2_anotherpretitle[current_length];
+        setTimeout(that.typingCallback2, 100, that, title);
+      } else {
+        title = 'rem_t'
+        setTimeout(that.typingCallback2, 100, that, title)
+      }
+    } else if (title === 'rem_t') {
+      current_length = that.typewriter_display2.length;
+      if (current_length !== 0) {
+        that.typewriter_display2 = that.typewriter_display2.slice(0, -1);
+        setTimeout(that.typingCallback2, 100, that, title);
+      } else {
+        title = 't'
+        setTimeout(that.typingCallback2, 100, that, title);
+      }
+    } else if (title === 't') {
+      total_length = that.typewriter_text2.length;
+      current_length = that.typewriter_display2.length;
+      if (current_length < total_length) {
+        that.typewriter_display2 += that.typewriter_text2[current_length];
+        setTimeout(that.typingCallback2, 100, that, title);
+      }
     }
   }
 
@@ -76,9 +119,9 @@ export class HomeComponent implements OnInit {
       this.typingSign = false;
       this.typingSign2 = true;
     
-      this.typingCallback2(this);
+      this.typingCallback2(this, 'p');
   
-      this.sleep(2700).then(() => {
+      this.sleep(10000).then(() => {
         this.HideShow = true;
       })
     })
@@ -108,6 +151,8 @@ export class HomeComponent implements OnInit {
     public _router: Router,
     public _activatedRoute: ActivatedRoute) { 
     this.typewriter_text2 = lang.welcome.home.title;
+    this.typewriter_text2_pretitle = lang.welcome.home.preTitle;
+    this.typewriter_text2_anotherpretitle = lang.welcome.home.anotherPreTitle;
   }
 
 

@@ -7,6 +7,9 @@
             "t": "Node.js"
           },
           {
+            "t": "Express"
+          },
+          {
             "t": "TypeScript"
           },
           {
@@ -14,6 +17,18 @@
           },
           {
             "t": "MongoDB"
+          },
+          {
+            "t": "Twitch API"
+          },
+          {
+            "t": "YouTube Data API"
+          },
+          {
+            "t": "Reddit API"
+          },
+          {
+            "t": "Axios"
           }
         ],
         "description": "Bot personnel de Discord pour YouTube et Twitch, notification de diffusion en direct des chaînes que vous suivez, chatbot de base et modérateur",
@@ -33,10 +48,36 @@
           },
           {
             "t": "Scully"
+          },
+          {
+            "t": "Netlify"
           }
         ],
         "description": "Le site web sur lequel vous êtes actuellement, un site de portfolio pour me présenter",
-        "demoLink": "https://www.amineamellouk.com/en",
+        "demoLink": "https://www.amineamellouk.com",
+        "codeLink": "",
+        "displayImg": false,
+        "img": ""
+      },
+      {
+        "name": "Traveliva",
+        "technologies": [
+          {
+            "t": "Java"
+          },
+          {
+            "t": "Angular"
+          },
+          {
+            "t": "Firebase"
+          },
+          {
+            "t": "Google Maps API"
+          }
+
+        ],
+        "description": "Application mobile conçue pour les touristes, elle propose diverses informations sur l'hébergement, la restauration, les monuments historiques et les événements touristiques. Et permet également la modération des données avec un panneau d'administration",
+        "demoLink": "",
         "codeLink": "",
         "displayImg": false,
         "img": ""
@@ -50,7 +91,7 @@
           ],
           "description": "Application qui permet aux utilisateurs de suivre leur progression dans la résolution du Rubik's Cube",
           "demoLink": "",
-          "codeLink": "",
+          "codeLink": "https://github.com/AmineAML/CubeSolvesTimer",
           "displayImg": false,
           "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4"
         },
@@ -63,7 +104,7 @@
           ],
           "description": "Application pour Windows 10 qui ressemble aux gadgets de Windows 7, qui permettent aux utilisateurs de prendre des notes sur leurs écrans",
           "demoLink": "",
-          "codeLink": "",
+          "codeLink": "https://github.com/AmineAML/NoteTaker",
           "displayImg": false,
           "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4"
         },

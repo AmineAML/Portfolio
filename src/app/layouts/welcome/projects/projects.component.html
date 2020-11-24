@@ -23,18 +23,21 @@
                 <ul *ngIf='project.technologies'>
                     <li *ngFor="let listOfTechnologies of project.technologies; let lastItem=last;">{{listOfTechnologies.t}} <span *ngIf="!lastItem"> | </span></li>
                 </ul>
-                <p>{{project.description}}</p>
+                <p>
+                    {{project.description}}
+                    <br />
+                    <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> Code </a>
+                </p>
                 <!--
                 <button mat-button>
                     <a href="{{project.demoLink}}" target="_blank" style="text-decoration: none;"><fa-icon [icon]="faEye"></fa-icon> Demo</a>
                 </button>
-                <button mat-button>
-                    <a href="{{project.codeLink}}" target="_blank" style="text-decoration: none;"><fa-icon [icon]="faCode"></fa-icon> Code </a>
-                </button>
                 -->
+                <button mat-button>
+                </button>
             </div>
         </div>
-        <div class="videoContainer">
+        <div class="videoContainer" *ngIf="project.img">
             <video *ngIf="project.displayImg" [@slideInOut] loop muted autoplay playsinline (suspend)="videoLoadinganimation()" (canplay)="videoLoaded()" oncanplay="this.play()" onloadedmetadata="this.muted=true">
                 <source [src]="project.img" type="video/mp4">
             </video>

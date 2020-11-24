@@ -13,7 +13,7 @@ export enum LanguageMode {
 })
 export class LanguageToggleService {
 
-    private readonly LANGUAGE_KEY = 'LANGUAGE';
+    private readonly LANGUAGE_KEY = 'AA_PORTFOLIO_LANGUAGE';
     private readonly FRENCH_LANGUAGE_VALUE = 'fr';
     private readonly ENGLISH_LANGUAGE_VALUE = 'en';
     private readonly DARK_THEME_CLASS_NAME = 'theme-dark';

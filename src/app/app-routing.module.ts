@@ -38,16 +38,16 @@ const app_routes: Routes = [
   { path: '', redirectTo: WebsiteLanguage.English, pathMatch: 'full'},
   { path: WebsiteLanguage.English, children: [
       { path: '', 
-          loadChildren: () => import('./layouts/welcome/welcome.en.module').then(m => m.WelcomeEnModule), 
+          loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule), 
           data: {
             metadata: {
               title: 'Amine Amellouk | Full-Stack Developer',
-              description: 'Full-Stack developer, Licence Fondamentale en Sciences Économiques and Technicien Spécialisé en Développement Informatique'
+              description: 'Full-Stack developer from Morocco who enjoys building things, I develop web and mobile applications.'
             }
           } 
       },
       { path: 'resume', 
-        loadChildren: () => import('./layouts/resume/resume.en.module').then(m => m.ResumeEnModule),
+        loadChildren: () => import('./layouts/resume/resume.languages.module').then(m => m.ResumeEnModule),
         data: {
           metadata: {
             title: 'Resume | Amine Amellouk',
@@ -65,7 +65,7 @@ const app_routes: Routes = [
         }
       },
       { path: '404', 
-        loadChildren: () => import('./layouts/error/error.en.module').then(m => m.ErrorEnModule),
+        loadChildren: () => import('./layouts/error/error.languages.module').then(m => m.ErrorEnModule),
         data: {
           metadata: {
             title: '404',
@@ -79,16 +79,16 @@ const app_routes: Routes = [
     ]},
   { path: WebsiteLanguage.French, children: [
       { path: '', 
-        loadChildren: () => import('./layouts/welcome/welcome.en.module').then(m => m.WelcomeFrModule),
+        loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
             title: 'Amine Amellouk | Développeur Full-Stack',
-            description: 'Développeur Full-Stack, Licence Fondamentale en Sciences Économiques and Technicien Spécialisé en Développement Informatique'
+            description: 'Développeur Full-Stack de Maroc qui aime construire des choses, je développe des applications web et des applications mobiles.'
           }
         } 
       },
       { path: 'resume', 
-        loadChildren: () => import('./layouts/resume/resume.en.module').then(m => m.ResumeFrModule),
+        loadChildren: () => import('./layouts/resume/resume.languages.module').then(m => m.ResumeFrModule),
         data: {
           metadata: {
             title: 'CV | Amine Amellouk',
@@ -106,7 +106,7 @@ const app_routes: Routes = [
         }
       },
       { path: '404', 
-        loadChildren: () => import('./layouts/error/error.en.module').then(m => m.ErrorFrModule),
+        loadChildren: () => import('./layouts/error/error.languages.module').then(m => m.ErrorFrModule),
         data: {
           metadata: {
             title: '404',

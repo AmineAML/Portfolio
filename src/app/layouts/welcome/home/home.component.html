@@ -17,7 +17,7 @@
         <ul *ngIf="HideShow" [@slideInOut]>
             <li>
                 <!--routerLink="/resume"-->
-                <a (click)="_router.navigate(['resume'], {relativeTo: _activatedRoute})" href="javascript:;" matTooltip={{lang.welcome.home.resume}}>
+                <a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
                     <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
                 </a>
             </li>

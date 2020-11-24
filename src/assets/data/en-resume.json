@@ -74,8 +74,8 @@
       }
     ],
     "skills": {
-      "experiencedWith": "Angular, Git, TypeScript, Javascript, Node.JS, MongoDB, Firebase, SASS",
-      "familiarWith": "Docker, Redis, Vue, Redis, C#, Microsoft SQL Server, MySQL",
+      "experiencedWith": "Angular, Git, TypeScript, Javascript, Node.JS, Express, MongoDB, Firebase, SCSS, Netlify",
+      "familiarWith": "Docker, Redis, Vue, Redis, C#, Microsoft SQL Server, MySQL, Heroku",
       "keywords": [
         "HTML5",
         "CSS3 / SCSS",

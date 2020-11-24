@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { faEye, faCode, faHandPointer } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faHandPointer } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { trigger, transition, animate, style, keyframes } from '@angular/animations';
 import enPjts from "../../../../assets/data/en-projects.json";
 import frPjts from "../../../../assets/data/fr-projects.json";
@@ -31,7 +32,7 @@ import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 export class ProjectsComponent implements OnInit {
 
   faEye = faEye;
-  faCode = faCode;
+  faGithub = faGithub;
   faHandPointer = faHandPointer;
   //Make 2 json files of projects with english and french and load per language
   projectsJSON: IProjects[];
