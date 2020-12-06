@@ -9,9 +9,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-hero',
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.scss'],
   animations: [
     trigger('slideInOut', [
       transition(':enter', [
@@ -24,7 +24,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HeroComponent implements OnInit {
 
   faLinkedin = faLinkedin;
   faGithub = faGithub;

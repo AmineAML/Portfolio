@@ -31,11 +31,11 @@
             "t": "Axios"
           }
         ],
-        "description": "Bot personnel de Discord pour YouTube et Twitch, notification de diffusion en direct des chaînes que vous suivez, chatbot de base et modérateur",
+        "description": "Bot personnel de Discord pour YouTube et Twitch, notification de diffusion en direct des chaînes que vous suivez, chat conversation et modération et autres",
         "demoLink": "",
         "codeLink": "https://github.com/AmineAML/DiscordBot",
         "displayImg": false,
-        "img": ""
+        "img": "assets/videosBetterPerformance/project-videos/DiscordBot.mp4"
       },
       {
         "name": "Portfolio",
@@ -80,7 +80,7 @@
         "demoLink": "",
         "codeLink": "",
         "displayImg": false,
-        "img": ""
+        "img": "assets/videosBetterPerformance/project-videos/Traveliva.mp4"
       },
       {
           "name": "Cube Solves Timer",
@@ -125,7 +125,7 @@
           "demoLink": "",
           "codeLink": "",
           "displayImg": false,
-          "img": ""
+          "img": "assets/videosBetterPerformance/project-videos/UniFace.mp4"
         }
     ]
 }

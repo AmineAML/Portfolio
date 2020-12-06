@@ -40,6 +40,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://www.juliacodes.com/   
 - https://journeyneedham.com/   
 - https://stevenjuks.me/   
+- https://robgrimes.uk/   
 
 
 ## Font
@@ -111,7 +112,6 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - This is a good resume meaning about me and the background animation from https://fdossena.com/   
 - Searching something like this from https://blurha.sh/ to videos to stimulate loading as an example
 - Use html tag like a to use links store from Dialogflow and use sanitize https://izifortune.com/angular-subresource-integrity/ html to improve Illy the bot
-- Good about me and project paragraph by its title from https://robgrimes.uk/
 - Better changing the background animation
 - Improvements from https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 - Learn from this Medium website article of tips on color for interface design from https://uxdesign.cc/tips-on-colour-interface-design-bccdc691eb72
@@ -121,6 +121,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - Convert images to icon and generate an icon from text from https://favicon.io/
 - The web app better run also as a PWA
 - Use this https://www.youtube.com/results?search_query=history+api
+- FFmpeg video conversion example: ffmpeg -i final_5fbd7d9e32234c0028816028_677555.mp4 -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p traveliva.mp4
 
 
 ## Domain name   
@@ -155,7 +156,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://www.reddit.com/r/webdev/comments/hdaljc/scan_your_sites/
 
 ## Netlify/build run command
-- This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully ALSO IT'S AND IT'S NOT WORKING
+- This works with an actual server/CDN: ng build --prod --subresource-integrity && npm run scully
 - Testing use this: ng build --prod && npm run scully
 
 
