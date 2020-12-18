@@ -147,8 +147,8 @@ const app_routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(app_routes, {
     preloadingStrategy: QuicklinkStrategy,
-    //enableTracing: true
-  })],
+    relativeLinkResolution: 'legacy'
+})],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
