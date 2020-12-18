@@ -2,15 +2,16 @@ export const en = {
     language: 'English',
     welcome: {
         home: {
-          title: 'Full-Stack Developer',
-          preTitle: 'Front-End Developer',
-          anotherPreTitle: 'Back-End Developer',
-          resume: 'View Resume',
+            name: 'Amine AMELLOUK',
+            title: 'Full-Stack Developer',
+            preTitle: 'Front-End Developer',
+            anotherPreTitle: 'Back-End Developer',
+            resume: 'Resume',
         },
         projects: {
-          title: 'Projects',
-          instructions1stPart: 'You can',
-          instructions2ndPart: 'on a project for more details'
+            title: 'Projects',
+            instructions1stPart: 'You can',
+            instructions2ndPart: 'on a project for a demo'
         },
         about: {
             title: 'Let me tell you about myself',
@@ -71,9 +72,9 @@ export const en = {
         familiarWith: "Familiar with",
         languages: 'Languages'
     }
-  
+
     /*// simple function using string literal and interpolation
     // see the cs.translation.ts for another example
     langsSupported: (n: number) => `This demo supports ${n} language${n === 1 ? '' : 's'}.`,
     */
-  };
+};

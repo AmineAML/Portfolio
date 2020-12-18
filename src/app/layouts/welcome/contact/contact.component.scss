@@ -2,6 +2,7 @@ div {
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 15px;
+    font-family: 'futura-lt-w01-light', sans-serif;
     div:nth-child(1) {
         //padding-bottom: 0;
         //margin-bottom: 0;
@@ -10,6 +11,7 @@ div {
             //color: #D8D2D2;
             color: var(--text-tertiary-color);
             margin-bottom: 0;
+            font-family: 'futura-lt-w01-light', sans-serif;
         }
     }
     div {
@@ -38,10 +40,7 @@ div {
                 //color: #D8D2D2;
                 //color: var(--text-tertiary-color);
                 margin-left: 10px;
-                color: var(--text-title-color);
-                &:hover {
-					color: #0075B0;
-				}
+                color: var(--chat-icon-color);
             }
         }
     }

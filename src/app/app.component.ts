@@ -1,12 +1,126 @@
+import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, HostListener } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
 import { CanonicalService } from './core/services/canonical.service';
 import { MetaService } from './core/services/meta.service';
 
+const resetRoute = [
+  style({ position: 'relative' }),
+  query(
+      ':enter, :leave',
+    [
+        style({
+              position: 'fixed', // using absolute makes the scroll get stuck in the previous page's scroll position on the new page
+              top: 0, // adjust this if you have a header so it factors in the height and not cause the router outlet to jump as it animates
+              left: 0,
+              width: '100%',
+              opacity: 0,
+          }),
+    ],
+    { optional: true }
+  ),
+];
+
+const slideLeft = [
+  query(':leave', style({ position: 'absolute', left: 0, right: 0 ,transform: 'translate3d(0%,0,0)' }), {optional:true}),
+  query(':enter', style({ position: 'absolute', left: 0, right: 0, transform: 'translate3d(-100%,0,0)' }), {optional:true}),
+  group([
+    query(':leave', group([
+      animate('500ms cubic-bezier(.35,0,.25,1)', style({ transform: 'translate3d(100%,0,0)' })), // y: '-100%'
+    ]), {optional:true}),
+    query(':enter', group([
+      animate('500ms cubic-bezier(.35,0,.25,1)', style({ transform: 'translate3d(0%,0,0)' })),
+    ]), {optional:true})
+  ])
+]
+
+const slideInAnimation =
+  trigger('routeAnimation', [
+    transition('welcome <=> resume', [
+      style({ position: 'relative' }),
+      query(':enter, :leave', [
+        style({
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%'
+        })
+      ]),
+      query(':enter', [
+        style({ left: '-100%' })
+      ]),
+      query(':leave', animateChild()),
+      group([
+        query(':leave', [
+          animate('1000ms ease-out', style({ left: '100%' }))
+        ]),
+        query(':enter', [
+          animate('1000ms ease-out', style({ left: '0%' }))
+        ])
+      ]),
+      query(':enter', animateChild()),
+    ]),
+    transition('* <=> FilterPage', [
+      style({ position: 'relative' }),
+      query(':enter, :leave', [
+        style({
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%'
+        })
+      ]),
+      query(':enter', [
+        style({ left: '-100%' })
+      ]),
+      query(':leave', animateChild()),
+      group([
+      query(':leave', [
+        animate('20000ms ease-out', style({ left: '100%' }))
+      ]),
+      query(':enter', [
+        animate('21000ms ease-out', style({ left: '0%' }))
+      ])
+    ]),
+    query(':enter', animateChild()),
+  ])
+]);
+
+const slideAnimation =
+  trigger('routeAnimation', [
+    transition("welcome <=> resume", [
+      query(
+        ":enter, :leave",
+        style({ position: "fixed", left: 8, right: 0, top: 72, bottom: 0 }),
+      { optional: true }
+    ),
+    query(":leave", style({ transform: "Y(0%)" }), { optional: true }),
+    query(":enter", style({ transform: "translateY(100%)" }), {
+      optional: true
+    }),
+    group([
+      query(
+        ":leave",
+        [animate(".5s ease-in-out", style({ transform: "translateY(-100%)" }))],
+        { optional: true }
+      ),
+      query(
+        ":enter",
+        [animate(".5s ease-in-out", style({ transform: "translateY(0%)" }))],
+        { optional: true }
+      )
+    ])
+  ])
+]);
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    slideAnimation
+  ]
 })
 export class AppComponent implements OnInit {
   
@@ -17,9 +131,10 @@ export class AppComponent implements OnInit {
       //disable: 'mobile'
     });
     //Preload images to increase website user experience
-    this.pload(
+    /*this.pload(
       "./assets/imgs/clouds3.png",
     );
+    */
     
     this.consoleGreeting();
 
@@ -47,6 +162,16 @@ export class AppComponent implements OnInit {
     console.log("   #   #   #         #  #        #         #  #       #")
     console.log("    ###   #           # ####### #           # #       #  #")
     console.log("This website was built by Amine Amellouk and designed with inspiration from others")
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    /*return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animation']
+    );
+    */
+   return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
   /*

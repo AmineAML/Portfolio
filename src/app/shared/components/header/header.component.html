@@ -28,7 +28,10 @@
           <a href="javascript:;" (click)="toggleLanguage()">{{languageTranslate}} /></a>
         </li>-->
         <li fxHide fxShow.gt-sm>
-          <a (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faTint"></fa-icon></a>
+          <a (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}" *ngIf="checked; else otherTheme"><fa-icon [icon]="faSun"></fa-icon></a>
+          <ng-template #otherTheme>
+            <a (click)="LightAndDarkMODE()" matTooltip="{{themeToChange}}"><fa-icon [icon]="faCloudMoon"></fa-icon></a>
+          </ng-template>
         </li>
         <!--
         <li fxHide fxShow.gt-md>

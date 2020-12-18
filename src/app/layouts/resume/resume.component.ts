@@ -22,10 +22,10 @@ export class ResumeComponent implements OnInit {
   cvDownload;
   downloadText;
 
-    //Translations
-    translations = Object.entries(WebsiteLanguage);
+  //Translations
+  translations = Object.entries(WebsiteLanguage);
 
-  constructor(@Inject(LOCAL_STORAGE) private storage: StorageService, @Inject(TRANSLATION) public readonly lang: Translation) { 
+  constructor(@Inject(LOCAL_STORAGE) private storage: StorageService, @Inject(TRANSLATION) public readonly lang: Translation) {
     //console.log(resume.basics.name, resume.basics.label, resume.basics.profiles[0].username)
   }
 
@@ -45,7 +45,7 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit(): void {
     //this.userIsLanguage();
-    if(this.lang.language == 'English') {
+    if (this.lang.language == 'English') {
       this.cv = enResume;
     } else {
       this.cv = frResume;

@@ -15,6 +15,7 @@
 
 //:host mean full component rather than component div to style the Angular component
 :host {
+    font-family: 'futura-lt-w01-light', sans-serif;
     .fullScreenSections {
         display: table;
         margin: 0;
@@ -122,18 +123,42 @@
             text-decoration: none;
             padding: 2rem;
             cursor: pointer;
-            span {
-                visibility: hidden;
+            position: relative;
+            pointer-events: auto;
+            fa-icon {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                transition: all 0.2s ease 0s;
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+            fa-icon::after {
+                content: attr(data-label);
+                left: 2.5rem;
+                position: absolute;
+                transition: all 0.2s ease 0s;
+                opacity: 0;
+                pointer-events: none;
+            }
+            fa-icon:hover {
+                transform: matrix(1, 0, 0, 1, -48, -8);
+                transition: all 0.2s ease 0s;
             }
         }
         a:hover {
             fa-icon {
+                transform: matrix(1, 0, 0, 1, -48, -8);
+                transition: all 0.2s ease 0s;
                 visibility: hidden;
             }
-            span {
+            fa-icon::after {
+                opacity: 1;
                 visibility: visible;
-                position: absolute;
-                left: 2.5rem;
             }
         }
     }

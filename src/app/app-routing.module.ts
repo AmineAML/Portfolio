@@ -43,7 +43,8 @@ const app_routes: Routes = [
             metadata: {
               title: 'Amine Amellouk | Full-Stack Developer',
               description: 'Full-Stack developer from Morocco who enjoys building things, I develop web and mobile applications.'
-            }
+            },
+            animation: 'welcome'
           } 
       },
       { path: 'resume', 
@@ -52,7 +53,8 @@ const app_routes: Routes = [
           metadata: {
             title: 'Resume | Amine Amellouk',
             description: 'Amine Amellouk\'s curriculum vitae'
-          }
+          },
+          animation: 'resume'
         } 
       },
       { path: 'pdf', 
@@ -61,7 +63,8 @@ const app_routes: Routes = [
           metadata: {
             title: "Thesis",
             description: "Thesis list"
-          }
+          },
+          animation: 'pdf'
         }
       },
       { path: '404', 
@@ -84,7 +87,8 @@ const app_routes: Routes = [
           metadata: {
             title: 'Amine Amellouk | Développeur Full-Stack',
             description: 'Développeur Full-Stack de Maroc qui aime construire des choses, je développe des applications web et des applications mobiles.'
-          }
+          },
+          animation: 'welcome'
         } 
       },
       { path: 'resume', 
@@ -93,7 +97,8 @@ const app_routes: Routes = [
           metadata: {
             title: 'CV | Amine Amellouk',
             description: 'Le CV de Amine Amellouk'
-          }
+          },
+          animation: 'resume'
         }
       },
       { path: 'pdf', 
@@ -102,7 +107,8 @@ const app_routes: Routes = [
           metadata: {
             title: "PFE",
             description: "Liste des projet de fin d'études"
-          }
+          },
+          animation: 'pdf'
         }
       },
       { path: '404', 

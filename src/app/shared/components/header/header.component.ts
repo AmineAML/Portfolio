@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, Input, Inject, Output, EventEmitter } from '@angular/core';
-import { faBars,faTint } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCloudMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { UiStyleToggleService } from 'src/app/core/services/ui-style-toggle.service';
 import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 import { TRANSLATION, Translation, WebsiteLanguage } from 'src/app/i18n/utils';
@@ -17,13 +17,14 @@ export class HeaderComponent implements OnInit {
   @Output() toggleChabot = new EventEmitter();
 
   faBars = faBars;
-  faTint = faTint;
+  faCloudMoon = faCloudMoon;
+  faSun = faSun;
 
   public displayMobileNav: boolean = false;
   ChangeBackgroundColor: boolean;
   topPosToStartShowing = 100;
   themeToChange;
-  checked;
+  checked = true;
   userTheme = this.storage.get('THEME');
   openConsole = true;
   openChatbot = true;

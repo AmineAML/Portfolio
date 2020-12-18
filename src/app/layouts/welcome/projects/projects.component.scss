@@ -1,4 +1,6 @@
-div {
+:host {
+  font-family: 'futura-lt-w01-light', sans-serif;
+  div {
     padding-left: 40px;
     padding-right: 40px;
     position: relative;
@@ -24,7 +26,7 @@ div {
           //margin-bottom: 0;
         }
         div {
-          cursor: pointer;
+          //cursor: pointer;
           margin-bottom: 5%;
           max-width: 50vw;
           button {
@@ -125,4 +127,5 @@ div {
         z-index: 7;
       }
     }
+  }
 }

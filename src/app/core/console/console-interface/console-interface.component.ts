@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, Input, Output, EventEmitter } from '@angular/core';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { Subject } from 'rxjs';
+import { curriculumVitae } from '../../../layouts/resume/curriculum-vitae'
+import enResume from '../../../../assets/data/en-resume.json'
 
 
 @Component({
@@ -14,6 +16,8 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   @Input() openCmd: Subject<boolean>;
   @Output() closeCmd = new EventEmitter();
 
+  cv: curriculumVitae = enResume
+
   responseToUser: SafeHtml;
   inputByUser: string = "";
   currentAge = Math.floor((Math.abs(Date.now() - new Date("1998-01-13T00:00:00.000Z").getTime()) / (1000 * 3600 * 24))/365.25);
@@ -26,8 +30,11 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
             <span style="color: #209CEE">skills</span>,
             <span style="color: #209CEE">contact</span>,`,
     about: `I'm Amine AMELLOUK, I'm ${this.currentAge} years of age and I like history and technology`,
-    skills: `I've worked with html5, css3, scss, bootstrap, materialize css, javascript, typescript, php, python, java, c#, sql server, mysql, firebase, angular, git, blazor <br />
+    /*skills: `I've worked with html5, css3, scss, bootstrap, materialize css, javascript, typescript, php, python, java, c#, sql server, mysql, firebase, angular, git, blazor <br />
                 Prefer using Angular and C#`,
+    */
+    skills: `I'm comfortable with the following technologies: ${this.cv.skills.experiencedWith} <br />
+              Familiar with: ${this.cv.skills.familiarWith}`,
     contact: `You use the contact form bellow or connect with me at <a  rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" style="color: #209CEE">LinkedIn</a>`,
     resume: `You can read my CV from <a rel="noopener" href="https://www.amineamellouk.com/resume" target="_blank" style="color: #209CEE">here</a>`
   };

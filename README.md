@@ -41,6 +41,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://journeyneedham.com/   
 - https://stevenjuks.me/   
 - https://robgrimes.uk/   
+- https://www.nandika.design/  
 
 
 ## Font
@@ -169,3 +170,10 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - DMARC and DKIM from https://www.youtube.com/watch?v=qbBGQuYUIpk&ab_channel=RackspaceCloudOffice
 - DMARC from https://dmarc.org/overview/ and https://sendgrid.com/blog/what-is-dmarc/
 - SPF from https://www.youtube.com/watch?v=BCtGCgAGCDM&ab_channel=SeoSiteCheckup and https://tools.wordtothewise.com/spf and https://help.returnpath.com/hc/en-us/articles/222480268-Including-IP-addresses-in-your-SPF-record
+
+## Angular animations
+- https://angular.io/guide/animations
+- https://stackoverflow.com/questions/43950573/angular-animate-using-transform-but-dont-apply-position-absolute-when-the-ani
+- https://stackblitz.com/edit/angular-ivy-routeanimations
+- https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular#animation-sequences and https://williamjuan027.github.io/angular-animations-explorer/home
+- https://medium.com/ngconf/animating-angular-route-transitions-ef02b871cc30

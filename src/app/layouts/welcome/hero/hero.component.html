@@ -15,23 +15,23 @@
         </div>
 
         <ul *ngIf="HideShow" [@slideInOut]>
-            <li>
+            <li *ngIf="isShow" [@slideOutIn]>
                 <!--routerLink="/resume"-->
                 <a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
                     <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
                 </a>
             </li>
-            <li>
+            <li *ngIf="isShow && g" [@slideOutInG]>
                 <a rel="noopener" href="https://github.com/AmineAML" target="_blank" matTooltip="GitHub">
                     <fa-icon [icon]="faGithub" size="2x"></fa-icon>
                 </a>
             </li>
-            <li>
+            <li *ngIf="isShow && l" [@slideOutInL]>
                 <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" matTooltip="LinkedIn">
                     <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
                 </a>
             </li>
-            <li>
+            <li *ngIf="isShow && s" [@slideOutInS]>
                 <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank" matTooltip="Stack Overflow">
                     <fa-icon [icon]="faStackOverflow" size="2x"></fa-icon>
                 </a>

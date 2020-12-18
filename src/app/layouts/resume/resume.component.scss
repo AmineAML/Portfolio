@@ -3,6 +3,7 @@
     background-color: #FFFFFF;
     //Display is block to allow the background color to work with :host
     display: block;
+    z-index: 1000;
     .header {
         background-color: #F4F6F6;
         margin-bottom: 30px;

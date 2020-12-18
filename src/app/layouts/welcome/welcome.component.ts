@@ -1,11 +1,12 @@
 import { Component, OnInit, HostListener, AfterViewInit, Inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
-import { faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
-import { trigger, transition, animate, style, keyframes } from '@angular/animations';
+import { faFileAlt, faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { trigger, transition, animate, style, keyframes, state } from '@angular/animations';
 import { Translation, TRANSLATION, WebsiteLanguage } from "../../i18n/utils";
 import { Subject } from 'rxjs';
 import { LanguageToggleService } from 'src/app/core/services/language-toggle.service';
+import { faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-welcome',
@@ -28,6 +29,42 @@ import { LanguageToggleService } from 'src/app/core/services/language-toggle.ser
         //]))
         style({transform: 'translateY(-100%)'}))
       ])
+    ]),
+    trigger('slideOutIn', [
+      state('reeeee', style({position: 'relative'}) ),
+      transition(':enter', [
+        animate('700ms 800ms ease-in', keyframes([
+          style({ opacity: 0, transform: 'translate3d(100%, -100%, 0)', position: 'absolute', offset: 0 }),
+          style({ opacity: 1, transform: 'translate3d(0, 0, 0)', position: 'absolute', offset: 1 }),
+        ]))
+      ]),
+    ]),
+    trigger('slideOutInG', [
+      state('reeee', style({position: 'relative'}) ),
+      transition(':enter', [
+        animate('700ms 400ms ease-in', keyframes([
+          style({ opacity: 0, transform: 'translate3d(100%, -100%, 0)', position: 'absolute', offset: 0 }),
+          style({ opacity: 1, transform: 'translate3d(0, 0, 0)', position: 'absolute', offset: 1 }),
+        ]))
+      ]),
+    ]),
+    trigger('slideOutInL', [
+      state('reee', style({position: 'relative'}) ),
+      transition(':enter', [
+        animate('700ms 200ms ease-in', keyframes([
+          style({ opacity: 0, transform: 'translate3d(100%, -100%, 0)', position: 'absolute', offset: 0 }),
+          style({ opacity: 1, transform: 'translate3d(0, 0, 0)', position: 'absolute', offset: 1 }),
+        ]))
+      ]),
+    ]),
+    trigger('slideOutInS', [
+      state('ree', style({position: 'relative'}) ),
+      transition(':enter', [
+        animate('700ms ease-in', keyframes([
+          style({ opacity: 0, transform: 'translate3d(100%, -100%, 0)', position: 'absolute', offset: 0 }),
+          style({ opacity: 1, transform: 'translate3d(0, 0, 0)', position: 'absolute', offset: 1 }),
+        ]))
+      ]),
     ])
   ]
 })
@@ -35,6 +72,14 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   faRobot = faRobot;
   faTerminal = faTerminal;
+  faLinkedin = faLinkedin;
+  faGithub = faGithub;
+  faFileAlt = faFileAlt;
+  faStackOverflow = faStackOverflow;
+
+  isShow: boolean = false;
+
+  topPosToStartShowing = 100;
 
   //SEO
   name = environment.application.name;
@@ -164,6 +209,22 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       this.languageTranslate = 'FR';
     } else {
       this.languageTranslate = 'EN';
+    }
+  }
+
+  //Scroll to the top of the page
+  @HostListener('window:scroll')
+  checkScroll() {
+
+    // window의 scroll top
+    // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
+
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
     }
   }
 

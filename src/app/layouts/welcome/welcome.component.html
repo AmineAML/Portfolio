@@ -1,33 +1,50 @@
+<app-header [active]="componentInViewport" (toggleCmd)="toggleCmd($event)" (toggleChabot)="toggleChatbot($event)">
+</app-header>
+<!--Better use ngClass-->
+<!--Mozilla firefox specific-->
+<app-hero *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla"></app-hero>
+<!--<app-home *ngIf="heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSectionsMozilla" fxShow fxHide.gt-md></app-home>-->
+<!--Other browser specific-->
+<app-hero *ngIf="!heightDivChange" id="home" class="fullScreenSections"></app-hero>
+<!--<app-home *ngIf="!heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSections" fxShow fxHide.gt-md></app-home>-->
+<app-projects id="projects" class="fullScreenSections" fxLayoutAlign="space-around center"></app-projects>
+<app-about id="about" class="fullScreenSections" fxLayoutAlign="center center"></app-about>
+<app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
+<app-footer></app-footer>
+<app-console-interface [openCmd]="toggleCmdOpen" (closeCmd)="toggleCmd($event)"></app-console-interface>
+<app-chat-dialog [openChatbot]="toggleChatbotOpen" (closeChatbot)="toggleChatbot($event)"></app-chat-dialog>
 
-    <app-header [active]="componentInViewport" (toggleCmd)="toggleCmd($event)" (toggleChabot)="toggleChatbot($event)"></app-header>
-    <!--Better use ngClass-->
-    <!--Mozilla firefox specific-->
-    <app-hero *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla"></app-hero>
-    <!--<app-home *ngIf="heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSectionsMozilla" fxShow fxHide.gt-md></app-home>-->
-    <!--Other browser specific-->
-    <app-hero *ngIf="!heightDivChange" id="home" class="fullScreenSections"></app-hero>
-    <!--<app-home *ngIf="!heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSections" fxShow fxHide.gt-md></app-home>-->
-    <app-projects id="projects" class="fullScreenSections" fxLayoutAlign="space-around center"></app-projects>
-    <app-about id="about" class="fullScreenSections" fxLayoutAlign="center center"></app-about>
-    <app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
-    <app-footer></app-footer>
-    <app-console-interface [openCmd]="toggleCmdOpen" (closeCmd)="toggleCmd($event)"></app-console-interface>
-    <app-chat-dialog [openChatbot]="toggleChatbotOpen" (closeChatbot)="toggleChatbot($event)"></app-chat-dialog>
-
-    <div class="cool-tools" fxShow fxHide.lt-md>
-        <!--<a href="javascript:;" (mouseenter)="showText = true" (mouseleave)="showText = false"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span *ngIf="showText" [@slideInOut]>Chatbot</span></a>
+<div class="cool-tools" fxShow fxHide.lt-md>
+    <!--<a href="javascript:;" (mouseenter)="showText = true" (mouseleave)="showText = false"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span *ngIf="showText" [@slideInOut]>Chatbot</span></a>
         -->
-        <!--1st click it does work and close and another click it doesn't work-->
-        <a (click)="toggleChatbot(true)"><fa-icon [icon]="faRobot" size="lg"></fa-icon><span>Chatbot</span></a>
-        <a (click)="toggleCmd(true)"><fa-icon [icon]="faTerminal" size="lg"></fa-icon><span>Console</span></a>
-    </div>
+    <!--1st click it does work and close and another click it doesn't work-->
+    <!--routerLink="/resume"-->
+    <a routerLink="./resume" *ngIf="isShow" [@slideOutIn]>
+        <fa-icon [icon]="faFileAlt" size="lg" [attr.data-label]="lang.welcome.home.resume"></fa-icon>
+    </a>
+    <a rel="noopener" href="https://github.com/AmineAML" target="_blank" *ngIf="isShow" [@slideOutInG]>
+        <fa-icon [icon]="faGithub" size="lg" data-label="GitHub"></fa-icon>
+    </a>
+    <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" *ngIf="isShow" [@slideOutInL]>
+        <fa-icon [icon]="faLinkedin" size="lg" data-label="LinkedIn"></fa-icon>
+    </a>
+    <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank" *ngIf="isShow" [@slideOutInS]>
+        <fa-icon [icon]="faStackOverflow" size="lg" data-label="Stack Overflow"></fa-icon>
+    </a>
+    <a (click)="toggleChatbot(true)">
+        <fa-icon [icon]="faRobot" size="lg" data-label="Chatbot"></fa-icon>
+    </a>
+    <a (click)="toggleCmd(true)">
+        <fa-icon [icon]="faTerminal" size="lg" data-label="Console"></fa-icon>
+    </a>
+</div>
 
-    <div class="translation" fxShow fxHide.lt-md>
-        <a (click)="toggleLanguage()">{{languageTranslate}}</a>
-        <app-scroll-top-indicator></app-scroll-top-indicator>
-    </div>
+<div class="translation" fxShow fxHide.lt-md>
+    <a (click)="toggleLanguage()">{{languageTranslate}}</a>
+    <app-scroll-top-indicator></app-scroll-top-indicator>
+</div>
 
-    <!--
+<!--
         <app-home *ngIf="heightDivChange" id="home" class="fullScreenSectionsMozilla" fxHide fxShow.gt-md></app-home>
         <app-home *ngIf="!heightDivChange" id="home" class="fullScreenSections" fxHide fxShow.gt-md></app-home>
     -->
