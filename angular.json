@@ -44,6 +44,10 @@
             ],
             "scripts": [
               "./node_modules/aos/dist/aos.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "lottie-web",
+              "rxjs/add/operator/scan"
             ]
           },
           "configurations": {

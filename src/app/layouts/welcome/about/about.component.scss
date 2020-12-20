@@ -1,46 +1,47 @@
-#about {
-    padding-left: 40px;
-    padding-right: 40px;
-    color: var(--text-content-color);
-    //font-family: 'Montserrat', sans-serif;//futura-lt-w01-light, sans-serif;
-    /*.mat-headline {
-        //color: #D8D2D2;
-        color: var(--text-tertiary-color);
-    }
-    */
-    div:nth-child(1) {
-        span {
-            //color: #BEBAB9;
-            //color: var(--text-content-color);
-            margin-bottom: 0;
-            font-family: 'futura-lt-w01-light', sans-serif;
+:host {
+    //font-family: 'futura-lt-w01-light', sans-serif;
+    #about {
+        padding-left: 40px;
+        padding-right: 40px;
+        color: var(--text-content-color);
+        /*.mat-headline {
+            //color: #D8D2D2;
+            color: var(--text-tertiary-color);
         }
-    }
-    div:nth-child(2) {
-        p {
-            font-family: 'futura-lt-w01-light', sans-serif;
+        */
+        div:nth-child(1) {
+            span {
+                //color: #BEBAB9;
+                //color: var(--text-content-color);
+                margin-bottom: 0;
+            }
         }
-        div {
-            @media (min-width: 767px) {
-                ul {
-                    padding: 0;
-                    margin: 0;
-                    list-style-type: none;
-                    li {
-                        display: flex;
-                        font-family: 'Montserrat', sans-serif;//futura-lt-w01-light, sans-serif;
+        div:nth-child(2) {
+            p {
+            }
+            div {
+                @media (min-width: 767px) {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+                        li {
+                            display: flex;
+                        }
+                    }
+                }
+    
+                @media (min-width: 320px) and (max-width: 767px) {
+                    ul {
+                        list-style: circle;
+                        margin: 0;
+                        padding-left: 20px;
                     }
                 }
             }
-
-            @media (min-width: 320px) and (max-width: 767px) {
-                ul {
-                    list-style: circle;
-                    margin: 0;
-                    padding-left: 20px;
-                    font-family: 'Montserrat', sans-serif;//futura-lt-w01-light, sans-serif;
-                }
-            }
+        }
+        .mat-subheading-2 {
+            font-family: 'futura-lt-w01-light', sans-serif;
         }
     }
 }

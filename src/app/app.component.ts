@@ -139,6 +139,8 @@ export class AppComponent implements OnInit {
     this.consoleGreeting();
 
     this.canonicalService.setCanonicalURL();
+
+    //this.localError()
   }
 
   pload(...args: any[]):void {
@@ -172,6 +174,10 @@ export class AppComponent implements OnInit {
     );
     */
    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
+
+  localError() {
+    throw Error("The app component has thrown an error!");
   }
 
   /*

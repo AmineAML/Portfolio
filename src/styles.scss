@@ -20,7 +20,7 @@ html, body {
     scroll-behavior: smooth; 
 }
 body { 
-    margin: 0; font-family: 'futura-lt-w01-light', sans-serif;//font-family: Roboto, "Helvetica Neue", sans-serif
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif
     //No smooth scroll from here as it's set into the function of gotoTop from the header component
     //.simplebar-content-wrapper {
         //scroll-behavior: smooth; 

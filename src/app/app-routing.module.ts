@@ -35,19 +35,22 @@ if (userLanguage == null) {
 //This works with Scully
 const app_routes: Routes = [
   //Redirect the user to English as the default language
-  { path: '', redirectTo: WebsiteLanguage.English, pathMatch: 'full'},
-  { path: WebsiteLanguage.English, children: [
-      { path: '', 
-          loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule), 
-          data: {
-            metadata: {
-              title: 'Amine Amellouk | Full-Stack Developer',
-              description: 'Full-Stack developer from Morocco who enjoys building things, I develop web and mobile applications.'
-            },
-            animation: 'welcome'
-          } 
+  { path: '', redirectTo: WebsiteLanguage.English, pathMatch: 'full' },
+  {
+    path: WebsiteLanguage.English, children: [
+      {
+        path: '',
+        loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule),
+        data: {
+          metadata: {
+            title: 'Amine Amellouk | Full-Stack Developer',
+            description: 'Full-Stack developer from Morocco who enjoys building things, I develop web and mobile applications.'
+          },
+          animation: 'welcome'
+        }
       },
-      { path: 'resume', 
+      {
+        path: 'resume',
         loadChildren: () => import('./layouts/resume/resume.languages.module').then(m => m.ResumeEnModule),
         data: {
           metadata: {
@@ -55,9 +58,10 @@ const app_routes: Routes = [
             description: 'Amine Amellouk\'s curriculum vitae'
           },
           animation: 'resume'
-        } 
+        }
       },
-      { path: 'pdf', 
+      {
+        path: 'pdf',
         loadChildren: () => import('./layouts/pdf/pdf.languages.module').then(m => m.PdfEnModule),
         data: {
           metadata: {
@@ -67,7 +71,19 @@ const app_routes: Routes = [
           animation: 'pdf'
         }
       },
-      { path: '404', 
+      {
+        path: 'unavailable',
+        loadChildren: () => import('./layouts/not-available/not-available.languages.module').then(m => m.NotAvailableEnModule),
+        data: {
+          metadata: {
+            title: 'Unavailable',
+            description: 'An error occured',
+            robots: 'noindex, nofollow'
+          }
+        }
+      },
+      {
+        path: '404',
         loadChildren: () => import('./layouts/error/error.languages.module').then(m => m.ErrorEnModule),
         data: {
           metadata: {
@@ -75,13 +91,16 @@ const app_routes: Routes = [
             description: 'Page not found',
             robots: 'noindex, nofollow'
           }
-        }  
+        }
       },
       //This route doesn't work with npm scully:serve, it does work the http-server
       { path: '**', redirectTo: '404' }
-    ]},
-  { path: WebsiteLanguage.French, children: [
-      { path: '', 
+    ]
+  },
+  {
+    path: WebsiteLanguage.French, children: [
+      {
+        path: '',
         loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
@@ -89,9 +108,10 @@ const app_routes: Routes = [
             description: 'Développeur Full-Stack de Maroc qui aime construire des choses, je développe des applications web et des applications mobiles.'
           },
           animation: 'welcome'
-        } 
+        }
       },
-      { path: 'resume', 
+      {
+        path: 'resume',
         loadChildren: () => import('./layouts/resume/resume.languages.module').then(m => m.ResumeFrModule),
         data: {
           metadata: {
@@ -101,7 +121,8 @@ const app_routes: Routes = [
           animation: 'resume'
         }
       },
-      { path: 'pdf', 
+      {
+        path: 'pdf',
         loadChildren: () => import('./layouts/pdf/pdf.languages.module').then(m => m.PdfFrModule),
         data: {
           metadata: {
@@ -111,7 +132,19 @@ const app_routes: Routes = [
           animation: 'pdf'
         }
       },
-      { path: '404', 
+      {
+        path: 'unavailable',
+        loadChildren: () => import('./layouts/not-available/not-available.languages.module').then(m => m.NotAvailableEnModule),
+        data: {
+          metadata: {
+            title: 'Indisponible',
+            description: 'Un erreur est sourvenu',
+            robots: 'noindex, nofollow'
+          }
+        }
+      },
+      {
+        path: '404',
         loadChildren: () => import('./layouts/error/error.languages.module').then(m => m.ErrorFrModule),
         data: {
           metadata: {
@@ -125,7 +158,8 @@ const app_routes: Routes = [
       { path: '**', redirectTo: '404' }
     ]
   },
-  { path: 'hi', 
+  {
+    path: 'hi',
     loadChildren: () => import('./layouts/hi/hi.module').then(m => m.HiModule),
     data: {
       metadata: {
@@ -135,7 +169,7 @@ const app_routes: Routes = [
       }
     }
   },
-  
+
   //Tried different ways to implement a redirect to 404, still it doesn't work with Scully
   /*//Use the local storage to detect which language the user's using and remove this " from 1st character and this " from last character
   { path: '**', redirectTo: userLanguage.substr(1).slice(0, -1) + '/404' }
@@ -148,7 +182,7 @@ const app_routes: Routes = [
   imports: [RouterModule.forRoot(app_routes, {
     preloadingStrategy: QuicklinkStrategy,
     relativeLinkResolution: 'legacy'
-})],
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

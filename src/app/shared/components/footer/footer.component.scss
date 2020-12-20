@@ -2,4 +2,12 @@ p {
     color: var(--text-title-color);
     text-align: center;
     z-index: 1;
+    a {
+        text-decoration: none;
+        color: var(--text-title-color);
+        font-size: smaller;
+        &:hover {
+            filter: brightness(200%);
+        }
+    }
 }

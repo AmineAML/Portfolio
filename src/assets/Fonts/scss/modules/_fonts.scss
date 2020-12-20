@@ -7,4 +7,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'futura-lt-w01-light';
+    src: url('../../Regular/FuturaLtW01Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 //Removed url('src/assets/Fonts/Regular/BunchBlossomsPersonalUse.woff2') format('woff2'), and also its file BunchBlossomsPersonalUse.woff2 to optimize the website as it's not used

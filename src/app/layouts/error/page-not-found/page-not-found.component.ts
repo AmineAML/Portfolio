@@ -11,8 +11,19 @@ export class PageNotFoundComponent implements OnInit {
 
   wl;
 
+  playErrorVideo = true;
+
   constructor(@Inject(TRANSLATION) public readonly lang: Translation,
   public _router: Router) { }
+
+  videoPlayer
+  playVideo() {
+    this.playErrorVideo = true;
+  }
+
+  ngAfterViewInit() {
+    this.playVideo();
+  }
 
   ngOnInit(): void {
     if (this.lang.language == 'English') {
@@ -20,6 +31,8 @@ export class PageNotFoundComponent implements OnInit {
     } else {
       this.wl = 'fr';
     }
+
+    this.playVideo();
   }
 
 }

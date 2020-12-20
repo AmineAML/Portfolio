@@ -49,6 +49,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://www.fontspace.com/bunch-blossoms-font-f30021
 - How to use it: https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551   
 - https://fonts.google.com/   
+- https://www.onlinewebfonts.com/download/9a7e574c3eda05d71d03345d3f9e268e   
 
 
 ## Intersting blog about Angular   
@@ -177,3 +178,8 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - https://stackblitz.com/edit/angular-ivy-routeanimations
 - https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular#animation-sequences and https://williamjuan027.github.io/angular-animations-explorer/home
 - https://medium.com/ngconf/animating-angular-route-transitions-ef02b871cc30
+
+## Angular global error handling
+- https://medium.com/angular-in-depth/expecting-the-unexpected-best-practices-for-error-handling-in-angular-21c3662ef9e4
+- https://indepth.dev/posts/1074/expecting-the-unexpected-best-practices-for-error-handling-in-angular
+- https://medium.com/@PhilippKief/global-error-handling-in-angular-ea395ce174b1

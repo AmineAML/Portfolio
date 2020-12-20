@@ -1,5 +1,5 @@
 import { BrowserModule, Meta } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, ErrorHandler } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,8 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
 import { UiStyleToggleService } from './core/services/ui-style-toggle.service';
 import { LanguageToggleService } from './core/services/language-toggle.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ErrorModule } from './layouts/error/error.module';
+import { GlobalErrorHandler } from './core/errors/global-error-handler';
 
 export function themeFactory(themeService: UiStyleToggleService) {
   return () => themeService.setThemeOnStart();
@@ -30,14 +32,20 @@ export function languageFactory(languageService: LanguageToggleService) {
     BrowserAnimationsModule,
     HttpClientModule,
     StorageServiceModule,
-    ScullyLibModule.forRoot({ useTransferState: true, alwaysMonitor: true })
+    ScullyLibModule.forRoot({ useTransferState: true, alwaysMonitor: true }),
+    ErrorModule
   ],
   providers: [
     UiStyleToggleService,
     LanguageToggleService,
     Meta,
     {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true},
-    {provide: APP_INITIALIZER, useFactory: languageFactory, deps: [LanguageToggleService], multi: true}
+    {provide: APP_INITIALIZER, useFactory: languageFactory, deps: [LanguageToggleService], multi: true},
+    {
+      // proccess all errors
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler
+    }
   ],
   bootstrap: [AppComponent]
 })

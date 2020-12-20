@@ -11,7 +11,6 @@ div {
             //color: #D8D2D2;
             color: var(--text-tertiary-color);
             margin-bottom: 0;
-            font-family: 'futura-lt-w01-light', sans-serif;
         }
     }
     div {
@@ -27,6 +26,9 @@ div {
                 mat-hint {
                     //color: #D8D2D2;
                     color: var(--text-tertiary-color);
+                }
+                mat-label {
+                    font-family: 'futura-lt-w01-light', sans-serif;
                 }
             }
             button {
