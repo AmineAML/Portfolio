@@ -163,7 +163,7 @@ export class AppComponent implements OnInit {
     console.log("      #     #       #   #         #       #   #       # ###")
     console.log("   #   #   #         #  #        #         #  #       #")
     console.log("    ###   #           # ####### #           # #       #  #")
-    console.log("This website was built by Amine Amellouk and designed with inspiration from others")
+    console.log("This website was designed and build by Amine Amellouk")
   }
 
   prepareRoute(outlet: RouterOutlet) {
