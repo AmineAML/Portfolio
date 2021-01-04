@@ -171,6 +171,7 @@ LottieFiles and animation from https://lottiefiles.com/6509-deploying
 - DMARC and DKIM from https://www.youtube.com/watch?v=qbBGQuYUIpk&ab_channel=RackspaceCloudOffice
 - DMARC from https://dmarc.org/overview/ and https://sendgrid.com/blog/what-is-dmarc/
 - SPF from https://www.youtube.com/watch?v=BCtGCgAGCDM&ab_channel=SeoSiteCheckup and https://tools.wordtothewise.com/spf and https://help.returnpath.com/hc/en-us/articles/222480268-Including-IP-addresses-in-your-SPF-record
+- https://community.netlify.com/t/support-guide-how-can-i-receive-emails-on-my-domain/178
 
 ## Angular animations
 - https://angular.io/guide/animations

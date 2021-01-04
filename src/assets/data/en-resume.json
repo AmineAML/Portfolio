@@ -74,8 +74,8 @@
       }
     ],
     "skills": {
-      "experiencedWith": "Angular, Git, TypeScript, Javascript, Node.JS, Express, MongoDB, Firebase, SCSS, Netlify, Scully, Postman",
-      "familiarWith": "Docker, Redis, Vue, Redis, C#, Microsoft SQL Server, MySQL, Heroku, Selenium",
+      "experiencedWith": "Angular, Git, TypeScript, Javascript, Node.JS, Express, MongoDB, Firebase, SCSS, Netlify, Scully, Postman, NestJS",
+      "familiarWith": "Docker, Redis, Vue, Redis, C#, Microsoft SQL Server, MySQL, Heroku, Selenium, Ubuntu Server",
       "keywords": [
         "HTML5",
         "CSS3 / SCSS",
