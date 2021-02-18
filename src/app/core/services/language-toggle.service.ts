@@ -16,8 +16,6 @@ export class LanguageToggleService {
     private readonly LANGUAGE_KEY = 'AA_PORTFOLIO_LANGUAGE';
     private readonly FRENCH_LANGUAGE_VALUE = 'fr';
     private readonly ENGLISH_LANGUAGE_VALUE = 'en';
-    private readonly DARK_THEME_CLASS_NAME = 'theme-dark';
-    private readonly LIGHT_THEME_CLASS_NAME = 'theme-light';
 
     private englishLanguageSelected: boolean //= false;
     public language$ = new BehaviorSubject<LanguageMode>(LanguageMode.FR);

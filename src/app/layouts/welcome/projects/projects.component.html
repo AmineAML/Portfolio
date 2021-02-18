@@ -27,6 +27,7 @@
                     {{project.description}}
                     <br />
                     <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> Code </a>
+                    <a *ngIf="project.demoLink" href="{{project.demoLink}}" target="_blank"><fa-icon [icon]="faEye"></fa-icon> Demo</a>
                 </p>
                 <!--
                 <button mat-button>

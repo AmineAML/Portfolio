@@ -65,7 +65,7 @@ export const en = {
         about: 'About',
         profiles: 'Profiles',
         education: 'Education',
-        courses: 'Courses',
+        courses: 'Thesis',
         skills: 'Skills',
         development: 'Development',
         experienceWith: 'Experienced with',

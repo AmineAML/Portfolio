@@ -67,7 +67,7 @@ export const fr: Translation = {
     about: 'À propos',
     profiles: 'Profils',
     education: 'Éducation',
-    courses: 'Cours',
+    courses: 'Projet de fin d\'étude',
     skills: 'Compétences',
     development: 'Développement',
     experienceWith: 'Expérimenté avec',

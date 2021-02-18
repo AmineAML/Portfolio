@@ -1,131 +1,176 @@
 {
-    "projects": [
+  "projects": [
+    {
+      "name": "The Social Network",
+      "technologies": [
         {
-          "name": "Discord Bot",
-          "technologies": [
-            {
-              "t": "Node.js"
-            },
-            {
-              "t": "Express"
-            },
-            {
-              "t": "TypeScript"
-            },
-            {
-              "t": "Docker"
-            },
-            {
-              "t": "MongoDB"
-            },
-            {
-              "t": "Twitch API"
-            },
-            {
-              "t": "YouTube Data API"
-            },
-            {
-              "t": "Reddit API"
-            },
-            {
-              "t": "Axios"
-            }
-          ],
-          "description": "Personnal Discord bot for YouTube and Twitch live streaming notification of channels you follow, chat conversations and moderation and others",
-          "demoLink": "",
-          "codeLink": "https://github.com/AmineAML/DiscordBot",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/DiscordBot.mp4"
+          "t": "Angular"
         },
         {
-          "name": "Portfolio",
-          "technologies": [
-            {
-              "t": "Angular"
-            },
-            {
-              "t": "DialogFlow"
-            },
-            {
-              "t": "Scully"
-            },
-            {
-              "t": "Netlify"
-            }
-          ],
-          "description": "This website you're currently at, a portfolio site to give an introduction of myself",
-          "demoLink": "https://www.amineamellouk.com",
-          "codeLink": "",
-          "displayImg": false,
-          "img": ""
+          "t": "Tailwind CSS"
         },
         {
-          "name": "Traveliva",
-          "technologies": [
-            {
-              "t": "Java"
-            },
-            {
-              "t": "Angular"
-            },
-            {
-              "t": "Firebase"
-            },
-            {
-              "t": "Google Maps API"
-            }
-
-          ],
-          "description": "Mobile application built for tourists, it offers various informations about accommondation, catering, historic mounuments and tourist events. And also allows the moderation of data with an admin panel",
-          "demoLink": "",
-          "codeLink": "",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/Traveliva.mp4"
+          "t": "NestJS"
         },
         {
-          "name": "Cube Solves Timer",
-          "technologies": [
-            {
-              "t": "C#"
-            }
-          ],
-          "description": "Application that allows the users to keep track on their progress of solving the Rubik's Cube",
-          "demoLink": "",
-          "codeLink": "https://github.com/AmineAML/CubeSolvesTimer",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4"
+          "t": "Docker"
         },
         {
-          "name": "NoteTaker",
-          "technologies": [
-            {
-              "t": "C#"
-            }
-          ],
-          "description": "Application for Windows 10 that resembles to the Windows 7 gadgets, which allow the users to take notes on their screens",
-          "demoLink": "",
-          "codeLink": "https://github.com/AmineAML/NoteTaker",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4"
+          "t": "MongoDB"
         },
         {
-          "name": "UniFace",
-          "technologies": [
-            {
-              "t": "C#"
-            },
-            {
-              "t": "SMTP"
-            },
-            {
-              "t": "SQL Server"
-            }
-          ],
-          "description": "College grading system to manage the students grades which can be used by the administration, professors and students",
-          "demoLink": "",
-          "codeLink": "",
-          "displayImg": false,
-          "img": "assets/videosBetterPerformance/project-videos/UniFace.mp4"
+          "t": "Sendgrid"
+        },
+        {
+          "t": "Imagekit CDN"
+        },
+        {
+          "t": "JWT"
+        },
+        {
+          "t": "Redis"
+        },
+        {
+          "t": "Nginx"
+        },
+        {
+          "t": "RxJs"
         }
-      ]
+      ],
+      "description": "A social network aimed to connect people with similar hobbies",
+      "demoLink": "https://thesocialnetwork.amineamellouk.com/",
+      "codeLink": "https://github.com/AmineAML/TheSocialNetwork",
+      "displayImg": false,
+      "img": ""
+    },
+    {
+      "name": "Discord Bot",
+      "technologies": [
+        {
+          "t": "Node.js"
+        },
+        {
+          "t": "Express"
+        },
+        {
+          "t": "TypeScript"
+        },
+        {
+          "t": "Docker"
+        },
+        {
+          "t": "MongoDB"
+        },
+        {
+          "t": "Twitch API"
+        },
+        {
+          "t": "YouTube Data API"
+        },
+        {
+          "t": "Reddit API"
+        },
+        {
+          "t": "Axios"
+        }
+      ],
+      "description": "Personnal Discord bot for YouTube and Twitch live streaming notification of channels you follow, chat conversations and moderation and others",
+      "demoLink": "",
+      "codeLink": "https://github.com/AmineAML/DiscordBot",
+      "displayImg": false,
+      "img": "assets/videosBetterPerformance/project-videos/DiscordBot.mp4"
+    },
+    {
+      "name": "Portfolio",
+      "technologies": [
+        {
+          "t": "Angular"
+        },
+        {
+          "t": "DialogFlow"
+        },
+        {
+          "t": "Scully"
+        },
+        {
+          "t": "Netlify"
+        },
+        {
+          "t": "PWA"
+        }
+      ],
+      "description": "This website you're currently at, a portfolio site to give an introduction of myself",
+      "demoLink": "https://www.amineamellouk.com",
+      "codeLink": "https://github.com/AmineAML/Portfolio",
+      "displayImg": false,
+      "img": ""
+    },
+    {
+      "name": "Traveliva",
+      "technologies": [
+        {
+          "t": "Java"
+        },
+        {
+          "t": "Angular"
+        },
+        {
+          "t": "Firebase"
+        },
+        {
+          "t": "Google Maps API"
+        }
+      ],
+      "description": "Mobile application built for tourists, it offers various informations about accommondation, catering, historic mounuments and tourist events. And also allows the moderation of data with an admin panel",
+      "demoLink": "",
+      "codeLink": "",
+      "displayImg": false,
+      "img": "assets/videosBetterPerformance/project-videos/Traveliva.mp4"
+    },
+    {
+      "name": "Cube Solves Timer",
+      "technologies": [
+        {
+          "t": "C#"
+        }
+      ],
+      "description": "Application that allows the users to keep track on their progress of solving the Rubik's Cube",
+      "demoLink": "",
+      "codeLink": "https://github.com/AmineAML/CubeSolvesTimer",
+      "displayImg": false,
+      "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4"
+    },
+    {
+      "name": "NoteTaker",
+      "technologies": [
+        {
+          "t": "C#"
+        }
+      ],
+      "description": "Application for Windows 10 that resembles to the Windows 7 gadgets, which allow the users to take notes on their screens",
+      "demoLink": "",
+      "codeLink": "https://github.com/AmineAML/NoteTaker",
+      "displayImg": false,
+      "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4"
+    },
+    {
+      "name": "UniFace",
+      "technologies": [
+        {
+          "t": "C#"
+        },
+        {
+          "t": "SMTP"
+        },
+        {
+          "t": "SQL Server"
+        }
+      ],
+      "description": "College grading system to manage the students grades which can be used by the administration, professors and students",
+      "demoLink": "",
+      "codeLink": "",
+      "displayImg": false,
+      "img": "assets/videosBetterPerformance/project-videos/UniFace.mp4"
+    }
+  ]
 }

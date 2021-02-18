@@ -50,23 +50,7 @@ export class MetaService {
         if (data.metadata.keywords) {
           this.metaService.updateTag({ name: 'robots', content: data.metadata.keywords })
         } else {
-          this.metaService.updateTag({ name: 'keywords', content: `Angular, TypeScript, C#, .NET Core, Économétrie, 
-                                                          économétrie, Économetrics, econometrics, HTML, HTML5, CSS, SASS, 
-                                                          SCSS, Comptabilité, Finance, Micro économie, Macro écnomie, 
-                                                          Micro economics, Macro economics, JavaScript, SQL Server, MySQL, 
-                                                          SQL, NoSQL, Firebase, JSON, CSS3, Hire, Embauche, Front-End, 
-                                                          Front-End developer, front end developer, développeur, software, 
-                                                          engineer, emploi, emplois, CV, Dabatabase, Databases, 
-                                                          Software engineer, Développement informatique, Économie, économie, 
-                                                          écoomiste, Git, GitHub, Back-End, back end, Back-End developer, 
-                                                          front-end, front end, développeur front-end, développeur front end, 
-                                                          développeur back end, développeur back-end, Computer Science, 
-                                                          computer science, web development, développeur web, front office, 
-                                                          développeur front office, développeur back office, Intégrateur Web, 
-                                                          Full-Stack, Full Stack, full stack, Full-Stack developper, full-stack 
-                                                          developper, développeur full-stack, développeur full stack, 
-                                                          développeur web front end, developpeur web front end, SEO, Scully, 
-                                                          NPM, Angular Material, Bootstrap, Materialize` })
+          this.metaService.updateTag({ name: 'keywords', content: `Front-End developer, front end developer, développeur, software, engineer, Software engineer, Développement informatique, Économie, économie, écoomiste, Back-End, back end, Back-End developer, front-end, front end, développeur front-end, développeur front end, développeur back end, développeur back-end, Computer Science, computer science, web development, développeur web, front office, développeur front office, développeur back office, Intégrateur Web, Full-Stack, Full Stack, full stack, Full-Stack developper, full-stack developper, développeur full-stack, développeur full stack, développeur web front end, developpeur web front end` })
         }
 
         //More meta tags of social media from https://moz.com/blog/meta-data-templates-123
@@ -89,6 +73,6 @@ export class MetaService {
     //this.hiByLanguage = this.myMethodSubject;
     //console.log(data);
     this.hiByLanguage = data;
-    this.titleService.setTitle('Amine says ' + this.hiByLanguage)
+    this.titleService.setTitle(this.hiByLanguage)
   }
 }

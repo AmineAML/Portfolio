@@ -12,6 +12,8 @@ import { LanguageToggleService } from './core/services/language-toggle.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ErrorModule } from './layouts/error/error.module';
 import { GlobalErrorHandler } from './core/errors/global-error-handler';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function themeFactory(themeService: UiStyleToggleService) {
   return () => themeService.setThemeOnStart();
@@ -33,7 +35,8 @@ export function languageFactory(languageService: LanguageToggleService) {
     HttpClientModule,
     StorageServiceModule,
     ScullyLibModule.forRoot({ useTransferState: true, alwaysMonitor: true }),
-    ErrorModule
+    ErrorModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     UiStyleToggleService,
