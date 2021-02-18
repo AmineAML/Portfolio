@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { trigger, transition, animate, style, keyframes } from '@angular/animations';
 import enPjts from "../../../../assets/data/en-projects.json";
 import frPjts from "../../../../assets/data/fr-projects.json";
-import { IProjects } from "../../../core/services/projects.model";
+import { IProjects } from "../../../core/interfaces/projects.interface";
 import { TRANSLATION, Translation } from 'src/app/i18n/utils';
 
 @Component({

@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, AfterViewInit, Inject } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
 import { faFileAlt, faRobot, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, animate, style, keyframes, state } from '@angular/animations';

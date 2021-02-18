@@ -33,7 +33,6 @@
     "@scullyio/init": "^1.0.0-beta.0",
     "@scullyio/ng-lib": "^1.0.0-beta.0",
     "@scullyio/scully": "^1.0.0-beta.0",
-    "angular-google-tag-manager": "^1.3.0",
     "aos": "^3.0.0-beta.6",
     "classlist.js": "^1.1.20150312",
     "lottie-web": "^5.7.1",
@@ -44,7 +43,6 @@
     "ngx-webstorage-service": "^4.1.0",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.6.2",
-    "simplebar-angular": "^2.2.1",
     "tslib": "^1.13.0",
     "web-animations-js": "^2.3.2",
     "zone.js": "^0.10.3"
