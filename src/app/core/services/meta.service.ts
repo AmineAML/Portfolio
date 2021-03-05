@@ -50,7 +50,7 @@ export class MetaService {
         if (data.metadata.keywords) {
           this.metaService.updateTag({ name: 'robots', content: data.metadata.keywords })
         } else {
-          this.metaService.updateTag({ name: 'keywords', content: `Front-End developer, front end developer, développeur, software, engineer, Software engineer, Développement informatique, Économie, économie, écoomiste, Back-End, back end, Back-End developer, front-end, front end, développeur front-end, développeur front end, développeur back end, développeur back-end, Computer Science, computer science, web development, développeur web, front office, développeur front office, développeur back office, Intégrateur Web, Full-Stack, Full Stack, full stack, Full-Stack developper, full-stack developper, développeur full-stack, développeur full stack, développeur web front end, developpeur web front end` })
+          this.metaService.updateTag({ name: 'keywords', content: `Front-End developer, front end developer, développeur, software, engineer, Software engineer, Développement informatique, Économie, économie, écoomiste, Back-End, back end, Back-End developer, front-end, front end, développeur front-end, développeur front end, développeur back end, développeur back-end, Computer Science, computer science, web development, développeur web, front office, développeur front office, développeur back office, Intégrateur Web, Full-Stack, Full Stack, full stack, Full-Stack developper, full-stack developper, développeur full-stack, développeur full stack, développeur web front end, developpeur web front end, amine, Amine, amellouk, Amellouk, Amine Amellouk, amine amellouk` })
         }
 
         //More meta tags of social media from https://moz.com/blog/meta-data-templates-123

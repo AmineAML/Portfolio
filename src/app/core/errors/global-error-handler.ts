@@ -5,8 +5,7 @@ import { LOCAL_STORAGE, StorageService } from "ngx-webstorage-service";
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
     constructor(public _router: Router,
-                public route: ActivatedRoute,
-                @Inject(LOCAL_STORAGE) private storage: StorageService) {
+                public route: ActivatedRoute) {
         
     }
     handleError(error: Error) {
@@ -17,7 +16,6 @@ export class GlobalErrorHandler implements ErrorHandler {
         } else {
             this._router.navigateByUrl("/fr/unavailable")
         }
-       //this._router.navigateByUrl("/en/404")
         console.error("Error from global error handler", error)
     }
 }

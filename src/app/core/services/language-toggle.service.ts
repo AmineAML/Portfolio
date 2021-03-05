@@ -20,7 +20,6 @@ export class LanguageToggleService {
     private englishLanguageSelected: boolean //= false;
     public language$ = new BehaviorSubject<LanguageMode>(LanguageMode.FR);
 
-    /*, private analyticsService: AnalyticsService*/
     constructor(@Inject(LOCAL_STORAGE) private storage: StorageService, private _router: Router) {
 
     }
@@ -53,7 +52,6 @@ export class LanguageToggleService {
         document.documentElement.lang = WebsiteLanguage.French;
         this.englishLanguageSelected = false;
         this.language$.next(LanguageMode.FR);
-        //this.analyticsService.pushEvent({action: 'ThemeChanged', value: this.DARK_THEME_VALUE});
     }
 
     private setEnglishLanguage() {
@@ -61,7 +59,6 @@ export class LanguageToggleService {
         document.documentElement.lang = WebsiteLanguage.English;
         this.englishLanguageSelected = true;
         this.language$.next(LanguageMode.EN);
-        //this.analyticsService.pushEvent({action: 'ThemeChanged', value: this.LIGHT_THEME_VALUE});
     }
     
 }

@@ -29,7 +29,7 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
             <span style="color: #209CEE">resume</span>,
             <span style="color: #209CEE">skills</span>,
             <span style="color: #209CEE">contact</span>,`,
-    about: `I'm Amine AMELLOUK, I'm ${this.currentAge} years of age and I like history and technology`,
+    about: `I'm Amine AMELLOUK, I'm ${this.currentAge} years of age, I'm a software developer, if you're into tech, economics, philosophy and history then I'm your guy! and I like history and technology`,
     /*skills: `I've worked with html5, css3, scss, bootstrap, materialize css, javascript, typescript, php, python, java, c#, sql server, mysql, firebase, angular, git, blazor <br />
                 Prefer using Angular and C#`,
     */

@@ -9,13 +9,14 @@
 <div class="body" fxLayoutAlign="center">
     <div fxLayout="column">
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Contact</h3>
-            <section fxFlex="40%" >
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">Contact</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="data" id="basicsAndProfiles">
                     <!--style="float: left; padding-right: 7rem;"-->
                     <strong>Email</strong>
-                    <div><a rel="noopener" target="_blank" href="{{'mailto:'+cv.basics.email}}">{{cv.basics.email}}</a></div>
+                    <div><a rel="noopener" target="_blank" href="{{'mailto:'+cv.basics.email}}">{{cv.basics.email}}</a>
+                    </div>
                 </div>
                 <div class="data" id="basicsAndProfiles">
                     <!--Don't display phone number-->
@@ -27,22 +28,23 @@
                 <div class="data" id="basicsAndProfiles">
                     <strong>{{lang.resume.website}}</strong>
                     <div>
-                        <a rel="noopener" href="{{cv.basics.website}}" target="_blank">{{cv.basics.website.replace('https://','')}}</a>
+                        <a rel="noopener" href="{{cv.basics.website}}"
+                            target="_blank">{{cv.basics.website.replace('https://','')}}</a>
                     </div>
                 </div>
             </section>
         </div>
-    
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.about}}</h3>
-            <section fxFlex="40%">
+
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.about}}</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <p>{{cv.basics.summary}}</p>
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.profiles}}</h3>
-            <section fxFlex="40%" >
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.profiles}}</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="data" id="basicsAndProfiles" *ngFor="let profile of cv.basics.profiles">
                     <strong>{{profile.network}}</strong>
                     <div>
@@ -52,16 +54,16 @@
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.education}}</h3>
-            <section fxFlex="40%" >
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.education}}</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="dataCation" *ngFor="let edu of cv.education">
                     <div fxLayout="row" fxLayout.xs="column">
                         <span class="headerAtion" fxFlex="80%">{{edu.institution}}</span>
                         <!--style="float: left;"-->
                         <span class="headerAtion" fxFlex="20%">{{edu.startDate}} - {{edu.endDate}}</span>
                     </div>
-                    
+
                     <div class="secondSectionAtion">
                         <div class="study">
                             <fa-icon [icon]="faGraduationCap"></fa-icon>
@@ -81,9 +83,9 @@
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Certification</h3>
-            <section fxFlex="40%" >
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">Certification</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="dataCation" *ngFor="let cert of cv.certification">
                     <div fxLayout="row" fxLayout.xs="column">
                         <span class="headerAtion" fxFlex="80%">{{cert.institution}}</span>
@@ -101,9 +103,9 @@
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Skills</h3>
-            <section fxFlex="40%" >
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">Skills</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="dataCation">
                     <div fxLayout="column">
                         <!--<h4>{{lang.resume.development}}</h4>
@@ -124,9 +126,9 @@
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">{{lang.resume.languages}}</h3>
-            <section fxFlex="40%">
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.languages}}</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="data" id="basicsAndProfiles" *ngFor="let lan of cv.languages">
                     <strong>{{lan.language}}</strong>
                     <div>{{lan.fluency}}</div>
@@ -134,9 +136,9 @@
             </section>
         </div>
 
-        <div class="sections" fxLayout="row" fxLayoutGap="70px">
-            <h3 class="sectionsTitles" fxFlex="35%">Interests</h3>
-            <section fxFlex="40%">
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">Interests</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="data" id="basicsAndProfiles" *ngFor="let int of cv.interests">
                     <div>{{int.name}}</div>
                 </div>
@@ -150,7 +152,8 @@
 <br>
 <br>
 
-<!--
-    Download resume either french version or english version
-    <a href="{{cvDownload}}" href="javascript:;" matTooltip="Download" class="download"><fa-icon [icon]="faFileDownload" size="2x"></fa-icon></a>
--->
+
+<!-- Download resume either french version or english version -->
+<a download="Amellouk, Amine - CV" href="../../../assets/pdf/Amellouk, Amine - CV.pdf" matTooltip="Download" class="download">
+    <fa-icon [icon]="faFileDownload" size="2x"></fa-icon>
+</a>

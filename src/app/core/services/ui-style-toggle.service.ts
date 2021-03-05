@@ -21,7 +21,6 @@ export class UiStyleToggleService {
     private lightThemeSelected = false;
     public theme$ = new BehaviorSubject<ThemeMode>(ThemeMode.DARK);
 
-    /*, private analyticsService: AnalyticsService*/
     constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) {
 
     }
@@ -55,7 +54,6 @@ export class UiStyleToggleService {
         document.body.classList.add(this.DARK_THEME_CLASS_NAME);
         this.lightThemeSelected = false;
         this.theme$.next(ThemeMode.DARK);
-        //this.analyticsService.pushEvent({action: 'ThemeChanged', value: this.DARK_THEME_VALUE});
     }
 
     private setLightTheme() {
@@ -64,7 +62,6 @@ export class UiStyleToggleService {
         document.body.classList.add(this.LIGHT_THEME_CLASS_NAME);
         this.lightThemeSelected = true;
         this.theme$.next(ThemeMode.LIGHT);
-        //this.analyticsService.pushEvent({action: 'ThemeChanged', value: this.LIGHT_THEME_VALUE});
     }
     
 }
