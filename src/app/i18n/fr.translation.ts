@@ -66,6 +66,7 @@ export const fr: Translation = {
     website: 'Site web',
     about: 'À propos',
     profiles: 'Profils',
+    work: 'Expérience',
     education: 'Éducation',
     courses: 'Projet de fin d\'étude',
     skills: 'Compétences',

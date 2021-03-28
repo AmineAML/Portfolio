@@ -55,13 +55,36 @@
         </div>
 
         <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
+            <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.work}}</h3>
+            <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
+                <div class="dataCation" *ngFor="let work of cv.work">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <span class="headerAtion">{{work.company}}</span>
+                        <!--style="float: left;"-->
+                        <span class="headerAtion">{{work.startDate}} - {{work.endDate}}</span>
+                    </div>
+
+                    <div class="work">
+                        <div class="study" fxLayout="row" fxLayoutAlign="space-between center">
+                            <span>{{work.position}}</span>
+                            <span>
+                                <a rel="noopener" href="{{work.website}}"
+                                target="_blank">{{work.website.replace('https://','')}}</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="sections" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="70px">
             <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">{{lang.resume.education}}</h3>
             <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="dataCation" *ngFor="let edu of cv.education">
-                    <div fxLayout="row" fxLayout.xs="column">
-                        <span class="headerAtion" fxFlex="80%">{{edu.institution}}</span>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <span class="headerAtion">{{edu.institution}}</span>
                         <!--style="float: left;"-->
-                        <span class="headerAtion" fxFlex="20%">{{edu.startDate}} - {{edu.endDate}}</span>
+                        <span class="headerAtion">{{edu.startDate}} - {{edu.endDate}}</span>
                     </div>
 
                     <div class="secondSectionAtion">
@@ -87,10 +110,10 @@
             <h3 class="sectionsTitles" fxFlex.gt-sm="35%" fxLayoutAlign.lt-md="center">Certification</h3>
             <section fxFlex.gt-sm="40%" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
                 <div class="dataCation" *ngFor="let cert of cv.certification">
-                    <div fxLayout="row" fxLayout.xs="column">
-                        <span class="headerAtion" fxFlex="80%">{{cert.institution}}</span>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <span class="headerAtion">{{cert.institution}}</span>
                         <!--style="float: left;"-->
-                        <span class="headerAtion" fxFlex="20%">{{cert.endDate}}</span>
+                        <span class="headerAtion">{{cert.endDate}}</span>
                     </div>
                     <div class="secondSectionAtion">
                         <div class="study">
@@ -154,6 +177,6 @@
 
 
 <!-- Download resume either french version or english version -->
-<a download="Amellouk, Amine - CV" href="../../../assets/pdf/Amellouk, Amine - CV.pdf" matTooltip="Download" class="download">
+<a download="Amellouk, Amine - CV" [href]="cvDownload" [matTooltip]="downloadText" class="download">
     <fa-icon [icon]="faFileDownload" size="2x"></fa-icon>
 </a>

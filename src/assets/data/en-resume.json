@@ -31,6 +31,15 @@
         }
       ]
     },
+    "work": [
+      {
+        "endDate": "Present",
+        "startDate": "22-03-2021",
+        "website": "https://www.ikdev.fr",
+        "position": "Intern as Full-Stack Developer",
+        "company": "IkDev"
+      }
+    ],
     "education": [
       {
         "endDate": "2020",

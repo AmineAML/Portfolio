@@ -1,5 +1,6 @@
 export interface curriculumVitae {
     basics:        Basics;
+    work:          Work[];
     education:     Cation[];
     skills:        Skills;
     certification: Cation[];
@@ -29,6 +30,14 @@ export interface Profile {
     username: string;
     url:      string;
     network:  string;
+}
+
+export interface Work {
+    endDate:     string;
+    startDate:   string;
+    website:     string;
+    position:    string;
+    company:     string;
 }
 
 export interface Cation {

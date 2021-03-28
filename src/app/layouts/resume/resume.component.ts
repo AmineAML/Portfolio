@@ -31,20 +31,20 @@ export class ResumeComponent implements OnInit {
 
   //CV with language of user with 2 json cv files per language
   userIsLanguage() {
-    let userLanguage = this.storage.get('Language');
-    if (userLanguage == '') {
+    // let userLanguage = this.storage.get('Language');
+    if (this.lang.language !== 'English') {
       //French CV
-      this.cvDownload = "";
+      this.cvDownload = "../../../assets/pdf/Resume/French/Amellouk, Amine - CV.pdf";
       this.downloadText = "Télécharger";
     } else { //Other languages than french
       //English CV
-      this.cvDownload = "";
+      this.cvDownload = "../../../assets/pdf/Resume/English/Amellouk, Amine - CV.pdf";
       this.downloadText = "Download";
     }
   }
 
   ngOnInit(): void {
-    //this.userIsLanguage();
+    this.userIsLanguage();
     if (this.lang.language == 'English') {
       this.cv = enResume;
     } else {

@@ -64,6 +64,7 @@ export const en = {
         website: 'Website',
         about: 'About',
         profiles: 'Profiles',
+        work: 'Experience',
         education: 'Education',
         courses: 'Thesis',
         skills: 'Skills',
