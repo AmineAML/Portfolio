@@ -9,6 +9,7 @@ import { ChatModule } from 'src/app/core/chat/chat.module';
 import { WelcomeRoutingModule } from './welcome-routing.module';
 import { CommonModule } from '@angular/common';
 import { LottieModule } from 'ngx-lottie';
+import { VideoDialogModule } from 'src/app/core/video-dialog/video-dialog.module';
 
 export function playerFactory() {
   return import('lottie-web');
@@ -31,7 +32,8 @@ export function playerFactory() {
     ChatModule,
     WelcomeRoutingModule,
     CommonModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    VideoDialogModule
   ]
 })
 export class WelcomeModule { }

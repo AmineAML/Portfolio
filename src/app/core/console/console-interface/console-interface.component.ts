@@ -25,10 +25,15 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
   //displayConsole = false;
   consoleButtonText = " Open console";
   commands = {
-    help: `Available commands: <span style="color: #209CEE">about</span>,
-            <span style="color: #209CEE">resume</span>,
-            <span style="color: #209CEE">skills</span>,
-            <span style="color: #209CEE">contact</span>,`,
+    help: `Available commands: 
+            <br>
+            <span style="color: #209CEE; margin-left: 10px;">about</span>
+            <br>
+            <span style="color: #209CEE; margin-left: 10px;">resume</span>
+            <br>
+            <span style="color: #209CEE; margin-left: 10px;">skills</span>
+            <br>
+            <span style="color: #209CEE; margin-left: 10px;">contact</span>`,
     about: `I'm Amine AMELLOUK, I'm ${this.currentAge} years of age, I'm a software developer, if you're into tech, economics, philosophy and history then I'm your guy! and I like history and technology`,
     /*skills: `I've worked with html5, css3, scss, bootstrap, materialize css, javascript, typescript, php, python, java, c#, sql server, mysql, firebase, angular, git, blazor <br />
                 Prefer using Angular and C#`,

@@ -7,6 +7,7 @@
 @import 'src/assets/themes/_animations.scss';
 //@import 'src/assets/themes/_colors.scss';
 @import 'src/assets/themes/_theme.scss';
+@import '~@angular/material/theming';
 
 html, body { 
     //Changed the height from 100% to 100vh to activate the AOS.js scroll animation
@@ -40,10 +41,16 @@ body {
     background-color: var(--text-tertiary-color) !important;
 }
 .mat-dialog-container {
-    background-color: #343A41;
+    // background-color: #343A41;
+    background-color: transparent;
+    border: transparent;
 }
 .mat-toolbar-row, .mat-toolbar-single-row {
   size: 100px;
+}
+
+.mat-dialog-container {
+    @include mat-elevation(0);
 }
 
 //Loading animation
