@@ -3,6 +3,10 @@
 //$color-three: #917164;
 $font-stack: 'Montserrat', sans-serif;
 
+:host {
+	position: relative;
+}
+
 div{
 	//position: relative;
     //margin-top: 17%;
@@ -167,7 +171,7 @@ $indicator-size: 24px;
 @media (min-width: 767px) {
 	.lottiefiles {
 		position: absolute;
-		bottom: 40%;
+		bottom: 50%;
 		right: 7%;
 	}
 }
@@ -175,7 +179,7 @@ $indicator-size: 24px;
 @media (min-width: 320px) and (max-width: 767px) {
 	.lottiefiles {
 		position: absolute;
-		bottom: 40%;
+		bottom: 50%;
 		right: 0px;
 	}
 }

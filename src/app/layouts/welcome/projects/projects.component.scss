@@ -142,10 +142,21 @@
     }
   }
 
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  @media (min-width: 300px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .wrapper {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   .container-section {
