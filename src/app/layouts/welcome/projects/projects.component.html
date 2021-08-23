@@ -18,14 +18,14 @@
                     <p>{{project.description}}</p>
                     <br />
                     <div>
-                        <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank">
+                        <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank" rel="noopener">
                             <fa-icon [icon]="faGithub"></fa-icon> Code
                         </a>
-                        <a *ngIf="project.demoLink" href="{{project.demoLink}}" target="_blank">
+                        <a *ngIf="project.demoLink" href="{{project.demoLink}}" target="_blank" rel="noopener">
                             <fa-icon [icon]="faEye"></fa-icon> Live
                         </a>
                         <a *ngIf="project.img" (toggleCmd)="toggleCmd($event)" (click)="openDialog(project.img)"
-                            style="cursor: pointer;" target="_blank">
+                            style="cursor: pointer;" target="_blank" rel="noopener">
                             <fa-icon [icon]="faPlayCircle"></fa-icon> Video
                         </a>
                     </div>
