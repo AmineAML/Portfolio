@@ -40,8 +40,8 @@ export class ConsoleInterfaceComponent implements OnInit, AfterViewChecked {
     */
     skills: `I'm comfortable with the following technologies: ${this.cv.skills.experiencedWith} <br />
               Familiar with: ${this.cv.skills.familiarWith}`,
-    contact: `You use the contact form bellow or connect with me at <a  rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" style="color: #209CEE">LinkedIn</a>`,
-    resume: `You can read my CV from <a rel="noopener" href="https://www.amineamellouk.com/resume" target="_blank" style="color: #209CEE">here</a>`
+    contact: `You use the contact form bellow or connect with me at <a  rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" rel="noopener" style="color: #209CEE">LinkedIn</a>`,
+    resume: `You can read my CV from <a rel="noopener" href="https://www.amineamellouk.com/resume" target="_blank" rel="noopener" style="color: #209CEE">here</a>`
   };
   openConsole = false
 
