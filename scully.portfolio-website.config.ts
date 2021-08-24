@@ -8,15 +8,11 @@ export const config: ScullyConfig = {
   routes: {
     '/': {
       type: 'json',
-      // slug: {
-      //   url: 'https://europe-west6-project-owlly.cloudfunctions.net/owlly/',
-      //   property: 'data.slug',
-      // },
       postRenderers: [getFlashPreventionPlugin()],
     },
   },
   puppeteerLaunchOptions: {
-    executablePath: 'chromium'
+    executablePath: process.env.CHROME_PATH || 'chromium'
   },
   // defaultPostRenderers : [getFlashPreventionPlugin()],
 };
