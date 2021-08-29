@@ -3,7 +3,7 @@
       "name": "Amine Amellouk",
       "label": "Développeur Full-Stack",
       "image": "https://media-exp1.licdn.com/dms/image/C4D03AQGFmEG5nXmTHQ/profile-displayphoto-shrink_200_200/0?e=1591228800&v=beta&t=GI9OCxfOH0toIy66WWNPiCMWDnsyd-2fEdJB5DH-oyo",
-      "summary": "Ma passion pour la technologie m'a conduit dans deux domaines relationnels. Ma volonté de comprendre le marché, l'économie est un chemin que j'ai choisi qui me permet de comprendre son fonctionnement et de faire des analyses pour le développer. Même si du temps investi sur ce chemin, le dévouement des soirées et des week-ends pour nourrir ma passion technologique, le développement informatique est un chemin qui m'a permis d'apprendre l'analyse, la conception et le développement d'applications et de logiciels. Ces parcours itératifs me permettent d'évoluer en fonction du budget et des besoins du marché pour proposer des solutions de qualité. Désire d'apprendre de différentes expériences à travers des aventures et des défis",
+      "summary": "Développeur avec une passion pour l'ingénierie Back-End et une formation en économie. À l'aise avec la création des APIs REST et de microservices ainsi que des SPAs, mes piles technologiques se composent principalement de Javascript, C# et Dart. Je suis pour la documentation, de la bonne architecture et des meilleures pratiques",
       "phone": "(+212) 609987524",
       "website": "https://www.amineamellouk.com",
       "email": "amine.amellouk@outlook.com",
@@ -36,7 +36,7 @@
         "endDate": "Présent",
         "startDate": "22-03-2021",
         "website": "https://www.ikdev.fr",
-        "position": "Stagiaire Développeur Full-Stack",
+        "position": "Stagiaire Développeur Back-End",
         "company": "IkDev"
       }
     ],
