@@ -19,13 +19,14 @@ div{
 		width: 70%;
 		height: 50%;
 		line-height: normal;
+		font-weight: bold;
 		.otherDevicesP {
 			font-family: $font-stack;
 			//color: $color-one;
 			color: var(--text-primary-color);
 			font-size: 6vw;
 			#lastNameColor {
-				//color: $color-two;
+				//color: $color-two;var(--chat-icon-color)
 				color: var(--text-secondary-color);
 			}
 			.NameTyping{
@@ -47,6 +48,18 @@ div{
 				//color: $color-three;
 				color: var(--text-title-color);
 			}
+		}
+		#slogan {
+			font-size: 2vw;
+			font-family: 'futura-lt-w01-light', sans-serif;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			color: var(--text-primary-color);
+		}
+		button {
+			color: blanchedalmond;
+			background-color: var(--chat-icon-color);
+			margin-right: 2rem;
 		}
 	}
 	ul {

@@ -18,18 +18,18 @@ export class UiStyleToggleService {
     private readonly DARK_THEME_CLASS_NAME = 'theme-dark';
     private readonly LIGHT_THEME_CLASS_NAME = 'theme-light';
 
-    private lightThemeSelected = false;
-    public theme$ = new BehaviorSubject<ThemeMode>(ThemeMode.DARK);
+    private darkThemeSelected = false;
+    public theme$ = new BehaviorSubject<ThemeMode>(ThemeMode.LIGHT);
 
     constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) {
 
     }
 
     public setThemeOnStart() {
-        if (this.islightThemeSelected()) {
-            this.setLightTheme();
-        } else {
+        if (this.isDarkThemeSelected()) {
             this.setDarkTheme();
+        } else {
+            this.setLightTheme();
         }
         setTimeout(() => {
             document.body.classList.add('animate-colors-transition');
@@ -37,22 +37,22 @@ export class UiStyleToggleService {
     }
 
     public toggle() {
-        if (this.lightThemeSelected) {
-            this.setDarkTheme();
-        } else {
+        if (this.darkThemeSelected) {
             this.setLightTheme();
+        } else {
+            this.setDarkTheme();
         }
     }
-    private islightThemeSelected(): boolean {
-        this.lightThemeSelected = this.storage.get(this.THEME_KEY) === this.LIGHT_THEME_VALUE;
-        return this.lightThemeSelected;
+    private isDarkThemeSelected(): boolean {
+        this.darkThemeSelected = this.storage.get(this.THEME_KEY) === this.DARK_THEME_VALUE;
+        return this.darkThemeSelected;
     }
 
     private setDarkTheme() {
         this.storage.set(this.THEME_KEY, this.DARK_THEME_VALUE);
         document.body.classList.remove(this.LIGHT_THEME_CLASS_NAME);
         document.body.classList.add(this.DARK_THEME_CLASS_NAME);
-        this.lightThemeSelected = false;
+        this.darkThemeSelected = true;
         this.theme$.next(ThemeMode.DARK);
     }
 
@@ -60,7 +60,7 @@ export class UiStyleToggleService {
         this.storage.set(this.THEME_KEY, this.LIGHT_THEME_VALUE);
         document.body.classList.remove(this.DARK_THEME_CLASS_NAME);
         document.body.classList.add(this.LIGHT_THEME_CLASS_NAME);
-        this.lightThemeSelected = true;
+        this.darkThemeSelected = false;
         this.theme$.next(ThemeMode.LIGHT);
     }
     

@@ -1,17 +1,17 @@
-$text-primary-color: #3F3F44;
+$text-primary-color: #49515A;//#3F3F44;
 $text-primary-color-dark: #AD8174;
 
-$text-secondary-color: #FB7813;
-$text-secondary-color-dark: #A33327;
+$text-secondary-color: #49515A;//#FB7813;
+$text-secondary-color-dark: #AD8174;//#A33327;
 
-$text-title-color: #F79227;
-$text-title-color-dark: #917164;
+$text-title-color: #778492;//#F79227;
+$text-title-color-dark: #C7493A;//#917164;
 
 $scroll-indicator-color: #FFC38B;
 $scroll-indicator-color-dark: #998471;
 
 $background-secondary-color: #FF926B;
-$background-secondary-color-dark: #C7493A;
+$background-secondary-color-dark: #917164;//#C7493A;
 
 $text-tertiary-color: #020202;
 $text-tertiary-color-dark: #D8D2D2;
@@ -25,7 +25,7 @@ $text-accent-color-dark: #FFFAF0;
 $text-description-color: #000000;//#463d3d;
 $text-description-color-dark: #A4A4A4;
 
-$background-primay-color: #F8F5EF;//#FFFFFF;
+$background-primay-color: #F5F5F5;//#F8F5EF;//#FFFFFF;
 $background-primay-color-dark: #262626;
 
 $video-loading-animation: #FFF3CD;
@@ -36,6 +36,9 @@ $text-button-color-dark: #FFFAF0;
 
 $chat-icon-color: #FB7813;
 $chat-icon-color-dark: #917164;
+
+$section-background-color: #F1F1EB;
+$section-background-color-dark: #211C1C;
 
 $colors: (
     --text-primary-color: ($text-primary-color, $text-primary-color-dark),
@@ -50,5 +53,6 @@ $colors: (
     --background-primay-color: ($background-primay-color, $background-primay-color-dark),
     --video-loading-animation: ($video-loading-animation, $video-loading-animation-dark),
     --text-button-color: ($text-button-color, $text-button-color-dark),
-    --chat-icon-color: ($chat-icon-color, $chat-icon-color-dark)
+    --chat-icon-color: ($chat-icon-color, $chat-icon-color-dark),
+    --section-background-color: ($section-background-color, $section-background-color-dark)
 );

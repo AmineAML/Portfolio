@@ -18,10 +18,25 @@
         </li>
         -->
         <li fxHide fxShow.gt-sm>
-          <a (click)="goTo('projects')" [class.active]="active=='p'">portfolio /></a>
+          <a (click)="goTo('home')" [class.active]="active=='h'" class="animate">{{lang.nav.home}} /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a (click)="goTo('contact')" [class.active]="active=='c'">contact /></a>
+          <a (click)="goTo('projects')" [class.active]="active=='p'" class="animate">{{lang.nav.projects}} /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="goTo('about')" [class.active]="active=='a'" class="animate">{{lang.nav.about}} /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="goTo('contact')" [class.active]="active=='c'" class="animate">contact /></a>
+        </li>
+        <li fxHide fxShow.gt-sm class="extra-padding">
+          <a rel="noopener" href="https://blog.amineamellouk.com" target="_blank">blog</a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a routerLink="./resume">{{lang.nav.resume}}</a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="toggleLanguage()">{{languageTranslate}}</a>
         </li>
         <!--
         <li fxHide fxShow.gt-sm>
@@ -53,12 +68,12 @@
               <!--<a href="javascript:;" (click)="goTo('home')">HOME /></a>
               <a href="javascript:;" (click)="goTo('about')">ABOUT /></a>
               -->
-              <a (click)="goTo('projects')">portfolio /></a>
-              <a (click)="goTo('contact')">contact /></a>
-              <a (click)="toggleConsole()">console /></a>
-              <a (click)="toggleChatbot()">chatbot /></a>
+              <a (click)="goTo('projects')">{{lang.nav.projects}} /></a>
+              <a (click)="goTo('contact')">contact   /></a>
+              <a (click)="toggleConsole()">console   /></a>
+              <a (click)="toggleChatbot()">chatbot   /></a>
               <a (click)="toggleLanguage()">{{languageTranslate}} /></a>
-              <a ><mat-slide-toggle (click)="LightAndDarkMODE()" [checked]="checked"></mat-slide-toggle></a>
+              <a ><mat-slide-toggle (click)="LightAndDarkMODE()" [checked]="!checked"></mat-slide-toggle></a>
             </div>
           </div>
         </li>

@@ -19,16 +19,16 @@
         -->
     <!--1st click it does work and close and another click it doesn't work-->
     <!--routerLink="/resume"-->
-    <a routerLink="./resume" *ngIf="isShow" [@slideOutIn]>
+    <a routerLink="./resume">
         <fa-icon [icon]="faFileAlt" size="lg" [attr.data-label]="lang.welcome.home.resume"></fa-icon>
     </a>
-    <a rel="noopener" href="https://github.com/AmineAML" target="_blank" *ngIf="isShow" [@slideOutInG]>
+    <a rel="noopener" href="https://github.com/AmineAML" target="_blank">
         <fa-icon [icon]="faGithub" size="lg" data-label="GitHub"></fa-icon>
     </a>
-    <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" *ngIf="isShow" [@slideOutInL]>
+    <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank">
         <fa-icon [icon]="faLinkedin" size="lg" data-label="LinkedIn"></fa-icon>
     </a>
-    <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank" *ngIf="isShow" [@slideOutInS]>
+    <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank">
         <fa-icon [icon]="faStackOverflow" size="lg" data-label="Stack Overflow"></fa-icon>
     </a>
     <a (click)="toggleChatbot(true)">
@@ -40,7 +40,7 @@
 </div>
 
 <div class="translation" fxShow fxHide.lt-md>
-    <a (click)="toggleLanguage()">{{languageTranslate}}</a>
+    <!-- <a (click)="toggleLanguage()">{{languageTranslate}}</a> -->
     <app-scroll-top-indicator></app-scroll-top-indicator>
 </div>
 

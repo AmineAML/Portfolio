@@ -67,7 +67,7 @@ export class ProjectsComponent implements OnInit {
 
   //Check for a touch screen and langauge
   isTouchScreen() {
-    if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+    if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)) {
       if (this.lang.language == 'English') {
         this.isTouch = "tap";
       } else {

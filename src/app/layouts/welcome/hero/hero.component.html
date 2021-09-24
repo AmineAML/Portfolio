@@ -2,22 +2,35 @@
 
     <div class="otherDevices">
         <p class="otherDevicesP">
-            <span>{{typewriter_display | slice:0:highlightStart}}</span>
+            <!-- <span>{{typewriter_display | slice:0:highlightStart}}</span>
             <span id="lastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
-            <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
+            <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span> -->
 
-            <span class="NameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span>
+            <!-- <span class="NameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span> -->
+
+            <span>{{lang.welcome.home.name}}</span>
         </p>
 
         <div id="title">
-            <h1>{{typewriter_display2}}</h1>
-            <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span>
+            <!-- <h1>{{typewriter_display2}}</h1>
+            <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span> -->
+            <h1>{{lang.welcome.home.title}}</h1>
         </div>
 
-        <ul *ngIf="HideShow" [@slideInOut]>
+        <div id="slogan">
+            <span>{{lang.welcome.home.slogan}}</span>
+        </div>
+
+        <div>
+            <button mat-button routerLink="./resume">{{lang.welcome.home.resume}}</button>
+            <button mat-button (click)="goTo('contact')">{{lang.welcome.home.contact}}!</button>
+        </div>
+
+        <!--<ul *ngIf="HideShow" [@slideInOut]>
             <li *ngIf="isShow" [@slideOutIn]>
+            -->
                 <!--routerLink="/resume"-->
-                <a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
+                <!--<a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
                     <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
                 </a>
             </li>
@@ -37,15 +50,16 @@
                 </a>
             </li>
         </ul>
+        -->
 
     </div>
 
 </div>
 
-<div class="buttonDisplayOnMobile" *ngIf="HideShow" [@slideInOut] fxHide fxShow.lt-md>
+<!-- <div class="buttonDisplayOnMobile" *ngIf="HideShow" [@slideInOut] fxHide fxShow.lt-md>
     <button mat-button (click)="goTo('projects')">Portfolio</button>
     <button mat-button (click)="goTo('contact')">Contact me</button>
-</div>
+</div> -->
 
 <div class="scrollIndicator" *ngIf="HideShow" [@slideInOut]></div>
 
