@@ -37,6 +37,9 @@ $text-button-color-dark: #FFFAF0;
 $chat-icon-color: #FB7813;
 $chat-icon-color-dark: #917164;
 
+$section-background-color: #F1F1EB;
+$section-background-color-dark: #211C1C;
+
 $colors: (
     --text-primary-color: ($text-primary-color, $text-primary-color-dark),
     --text-secondary-color: ($text-secondary-color, $text-secondary-color-dark),
@@ -50,5 +53,6 @@ $colors: (
     --background-primay-color: ($background-primay-color, $background-primay-color-dark),
     --video-loading-animation: ($video-loading-animation, $video-loading-animation-dark),
     --text-button-color: ($text-button-color, $text-button-color-dark),
-    --chat-icon-color: ($chat-icon-color, $chat-icon-color-dark)
+    --chat-icon-color: ($chat-icon-color, $chat-icon-color-dark),
+    --section-background-color: ($section-background-color, $section-background-color-dark)
 );

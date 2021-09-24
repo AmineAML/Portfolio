@@ -85,7 +85,7 @@
               flex-direction: row;
             }
             a {
-              color: var(--text-secondary-color);
+              color: var(--chat-icon-color);
               text-decoration: none;
             }
           }
@@ -138,6 +138,17 @@
       .videoContainer {
         z-index: 7;
         position: absolute;
+      }
+      .projecto {
+        background-color: var(--section-background-color);
+        border-radius: 2%;
+        height: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
     }
   }

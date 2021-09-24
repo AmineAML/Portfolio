@@ -7,6 +7,8 @@ export const en = {
             preTitle: 'Front-End Developer',
             anotherPreTitle: 'Back-End Developer',
             resume: 'Resume',
+            contact: 'Let\'s talk',
+            slogan: 'I\'m a software Developer with a background in economics, a passion for the Back-End engineering and for the DevOps.'
         },
         projects: {
             title: 'Projects',
@@ -41,6 +43,7 @@ export const en = {
         contact: {
             titleAndButtonText: 'Contact me',
             name: 'Name',
+            button: 'Send',
         },
     },
     error: {
@@ -72,6 +75,12 @@ export const en = {
         experienceWith: 'Experienced with',
         familiarWith: "Familiar with",
         languages: 'Languages'
+    },
+    nav: {
+        home: 'Home',
+        projects: 'Projects',
+        about: 'About',
+        resume: 'Resume'
     }
 
     /*// simple function using string literal and interpolation

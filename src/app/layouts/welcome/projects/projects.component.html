@@ -2,13 +2,13 @@
     <div>
         <span class="mat-display-1 title">{{lang.welcome.projects.title}}</span>
         <br>
-        <span class="mat-subheading-2">{{lang.welcome.projects.instructions1stPart}} {{isTouch}}
-            {{lang.welcome.projects.instructions2ndPart}}</span>
+        <!-- <span class="mat-subheading-2">{{lang.welcome.projects.instructions1stPart}} {{isTouch}}
+            {{lang.welcome.projects.instructions2ndPart}}</span> -->
     </div>
     <!-- <div class="wrapper" data-aos="fade-up-right"> -->
     <div class="wrapper">
         <div *ngFor="let project of projects" id="projectOnHoverEffect">
-            <div>
+            <div class="projecto">
                 <h2>{{project.name}}</h2>
                 <ul *ngIf='project.technologies'>
                     <li *ngFor="let listOfTechnologies of project.technologies; let lastItem=last;">

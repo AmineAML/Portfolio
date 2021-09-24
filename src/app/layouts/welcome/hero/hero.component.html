@@ -2,25 +2,28 @@
 
     <div class="otherDevices">
         <p class="otherDevicesP">
-            <span>{{typewriter_display | slice:0:highlightStart}}</span>
+            <!-- <span>{{typewriter_display | slice:0:highlightStart}}</span>
             <span id="lastNameColor">{{typewriter_display | slice:highlightStart:highlightStart+highlightLength}}</span>
-            <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span>
+            <span>{{typewriter_display | slice:highlightStart+highlightLength:typewriter_display.length}}</span> -->
 
-            <span class="NameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span>
+            <!-- <span class="NameTyping" id="animatioNameTyping" *ngIf="typingSign">|</span> -->
+
+            <span>{{lang.welcome.home.name}}</span>
         </p>
 
         <div id="title">
-            <h1>{{typewriter_display2}}</h1>
-            <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span>
+            <!-- <h1>{{typewriter_display2}}</h1>
+            <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span> -->
+            <h1>{{lang.welcome.home.title}}</h1>
         </div>
 
         <div id="slogan">
-            <span>I'm a software Developer with a background in economics, a passion for the Back-End engineering and for the DevOps.</span>
+            <span>{{lang.welcome.home.slogan}}</span>
         </div>
 
         <div>
-            <button mat-button routerLink="./resume">Resume</button>
-            <button mat-button (click)="goTo('contact')">Let's talk!</button>
+            <button mat-button routerLink="./resume">{{lang.welcome.home.resume}}</button>
+            <button mat-button (click)="goTo('contact')">{{lang.welcome.home.contact}}!</button>
         </div>
 
         <!--<ul *ngIf="HideShow" [@slideInOut]>
@@ -53,10 +56,10 @@
 
 </div>
 
-<div class="buttonDisplayOnMobile" *ngIf="HideShow" [@slideInOut] fxHide fxShow.lt-md>
+<!-- <div class="buttonDisplayOnMobile" *ngIf="HideShow" [@slideInOut] fxHide fxShow.lt-md>
     <button mat-button (click)="goTo('projects')">Portfolio</button>
     <button mat-button (click)="goTo('contact')">Contact me</button>
-</div>
+</div> -->
 
 <div class="scrollIndicator" *ngIf="HideShow" [@slideInOut]></div>
 

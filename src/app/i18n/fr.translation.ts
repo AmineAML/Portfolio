@@ -9,6 +9,8 @@ export const fr: Translation = {
       preTitle: 'Développeur Front-End',
       anotherPreTitle: 'Développeur Back-End',
       resume: 'CV',
+      contact: 'Me Parlez',
+      slogan: 'Je suis un développeur de logiciels avec une formation en économie, une passion pour l\'ingénierie Back-End et pour le DevOps.'
     },
     projects: {
       title: 'Projets',
@@ -43,6 +45,7 @@ export const fr: Translation = {
     contact: {
       titleAndButtonText: 'Contactez moi',
       name: 'Nom',
+      button: 'Envoyer',
     },
   },
   error: {
@@ -74,6 +77,12 @@ export const fr: Translation = {
     experienceWith: 'Expérimenté avec',
     familiarWith: "Familier avec",
     languages: 'Langues'
+  },
+  nav: {
+    home: 'Acceuil',
+    projects: 'Projets',
+    about: 'À propos',
+    resume: 'CV'
   }
 
   /*// function using string literal and interpolation with constant determining the plural postfix
