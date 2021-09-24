@@ -4,8 +4,8 @@ export const fr: Translation = {
   language: 'Français',
   welcome: {
     home: {
-      name: 'Amine AMELLOUK',
-      title: 'Développeur Full-Stack',
+      name: 'Amine Amellouk',
+      title: 'Développeur Logiciel',
       preTitle: 'Développeur Front-End',
       anotherPreTitle: 'Développeur Back-End',
       resume: 'CV',

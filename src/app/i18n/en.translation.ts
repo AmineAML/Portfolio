@@ -2,8 +2,8 @@ export const en = {
     language: 'English',
     welcome: {
         home: {
-            name: 'Amine AMELLOUK',
-            title: 'Full-Stack Developer',
+            name: 'Amine Amellouk',
+            title: 'Software Developer',
             preTitle: 'Front-End Developer',
             anotherPreTitle: 'Back-End Developer',
             resume: 'Resume',

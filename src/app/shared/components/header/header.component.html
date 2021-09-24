@@ -18,10 +18,22 @@
         </li>
         -->
         <li fxHide fxShow.gt-sm>
-          <a (click)="goTo('projects')" [class.active]="active=='p'">portfolio /></a>
+          <a (click)="goTo('home')" [class.active]="active=='h'" class="animate">home /></a>
         </li>
         <li fxHide fxShow.gt-sm>
-          <a (click)="goTo('contact')" [class.active]="active=='c'">contact /></a>
+          <a (click)="goTo('about')" [class.active]="active=='a'" class="animate">about /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="goTo('contact')" [class.active]="active=='c'" class="animate">contact /></a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="goTo('projects')" [class.active]="active=='p'" class="animate">projects /></a>
+        </li>
+        <li fxHide fxShow.gt-sm class="extra-padding">
+          <a routerLink="./resume">resume</a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a (click)="toggleLanguage()">{{languageTranslate}}</a>
         </li>
         <!--
         <li fxHide fxShow.gt-sm>

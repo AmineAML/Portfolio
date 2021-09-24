@@ -127,24 +127,6 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   cAbout
   cProjects
   cContact
-  @HostListener("window:scroll", ['$event'])
-  onWebAppScroll(event) {
-    if (this.isElementInViewport(this.cHome, this.percentagevisibilityInViewport)) {
-      this.componentInViewport = "h";
-    }
-
-    if (this.isElementInViewport(this.cAbout, this.percentagevisibilityInViewport)) {
-      this.componentInViewport = "a";
-    }
-
-    if (this.isElementInViewport(this.cProjects, this.percentagevisibilityInViewportProjects)) {
-      this.componentInViewport = "p";
-    }
-
-    if (this.isElementInViewport(this.cContact, this.percentagevisibilityInViewport)) {
-      this.componentInViewport = "c";
-    }
-  }
 
   isElementInViewport(elem, percentVisible) {
     let 
@@ -235,6 +217,27 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     }
 
     this.userLanguage();
+  }
+
+  @HostListener("window:scroll", ['$event'])
+  onWebAppScroll(event) {
+    if (this.isElementInViewport(this.cHome, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "h";
+    }
+
+    if (this.isElementInViewport(this.cAbout, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "a";
+    }
+
+    if (this.isElementInViewport(this.cProjects, this.percentagevisibilityInViewportProjects)) {
+      this.componentInViewport = "p";
+    }
+
+    if (this.isElementInViewport(this.cContact, this.percentagevisibilityInViewport)) {
+      this.componentInViewport = "c";
+    }
+
+    console.log(this.componentInViewport)
   }
 
   ngAfterViewInit() {

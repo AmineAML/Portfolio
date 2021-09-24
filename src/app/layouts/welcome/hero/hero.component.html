@@ -14,10 +14,20 @@
             <span class="TitleTyping" id="animatioNameTyping" *ngIf="typingSign2">|</span>
         </div>
 
-        <ul *ngIf="HideShow" [@slideInOut]>
+        <div id="slogan">
+            <span>I'm a software Developer with a background in economics, a passion for the Back-End engineering and for the DevOps.</span>
+        </div>
+
+        <div>
+            <button mat-button routerLink="./resume">Resume</button>
+            <button mat-button (click)="goTo('contact')">Let's talk!</button>
+        </div>
+
+        <!--<ul *ngIf="HideShow" [@slideInOut]>
             <li *ngIf="isShow" [@slideOutIn]>
+            -->
                 <!--routerLink="/resume"-->
-                <a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
+                <!--<a routerLink="./resume" matTooltip={{lang.welcome.home.resume}}>
                     <fa-icon [icon]="faFileAlt" size="2x"></fa-icon>
                 </a>
             </li>
@@ -37,6 +47,7 @@
                 </a>
             </li>
         </ul>
+        -->
 
     </div>
 
