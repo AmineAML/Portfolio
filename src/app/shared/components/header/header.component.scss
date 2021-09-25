@@ -171,6 +171,13 @@ mat-toolbar {
                 right: 35px;
                 font-size: 40px;
             }
+            li .overlay .changetheme {
+                position: absolute;
+                top: 15px;
+                left: 35px;
+                font-size: 40px;
+                color: var(--chat-icon-color);
+            }
         }
     }
     @media (max-width: 480px) {
