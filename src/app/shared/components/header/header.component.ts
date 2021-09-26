@@ -93,7 +93,6 @@ export class HeaderComponent implements OnInit {
 
   userThemeMode() {
     this.userTheme = this.storage.get('THEME');
-    console.log(this.userTheme)
     if (this.userTheme == 'DARK') {
       this.themeToChange = this.lang.shared.header.theme.light;
       this.checked = false;
