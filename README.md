@@ -15,7 +15,7 @@
 </p>
 
 ![screenshot](thumbnail_of_portfolio.png)
-There's also light theme
+There's also dark theme
 
 <p>
 I developed my portfolio as a way of learning Angular with the idea that it should be a project within my portfolio itself, thus I've implemented interesting features and also an ester egg
