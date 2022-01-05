@@ -15,14 +15,13 @@
 </p>
 
 ![screenshot](thumbnail_of_portfolio.png)
-There's also dark theme
 
 <p>
 I developed my portfolio as a way of learning Angular with the idea that it should be a project within my portfolio itself, thus I've implemented interesting features and also an ester egg
 
-English version: <a href="https://www.amineamellouk.com/en" target="_blank">amineamellouk.com/en</a>
+English: <a href="https://www.amineamellouk.com/en" target="_blank">amineamellouk.com/en</a>
 
-French version: <a href="https://www.amineamellouk.com/fr" target="_blank">amineamellouk.com/fr</a>
+French: <a href="https://www.amineamellouk.com/fr" target="_blank">amineamellouk.com/fr</a>
 </p>
 
 ## Key Features
