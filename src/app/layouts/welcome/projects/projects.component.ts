@@ -86,10 +86,10 @@ export class ProjectsComponent implements OnInit {
     this.isTouchScreen();
     if (this.lang.language == 'English') {
       this.projectsJSON = enPjts.projects;
-      this.projects = this.projectsJSON.slice(0);
+      this.projects = this.projectsJSON.slice(0).filter(p => p.moodboard == false);
     } else {
       this.projectsJSON = frPjts.projects;
-      this.projects = this.projectsJSON.slice(0);
+      this.projects = this.projectsJSON.slice(0).filter(p => p.moodboard == false);
     }
   }
 

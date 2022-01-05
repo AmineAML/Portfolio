@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
   constructor(private toggleLightAndDarkMode: UiStyleToggleService, 
     @Inject(LOCAL_STORAGE) private storage: StorageService, 
     @Inject(TRANSLATION) public readonly lang: Translation,
-    private _router: Router,
+    public router: Router,
     private toggleLanguageTranslations: LanguageToggleService) { }
 
   

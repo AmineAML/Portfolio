@@ -1,6 +1,42 @@
 {
   "projects": [
     {
+      "name": "Blog",
+      "technologies": [
+        {
+          "t": "Strapi CMS"
+        },
+        {
+          "t": "PostgreSQL"
+        },
+        {
+          "t": "ImageKit CDN"
+        },
+        {
+          "t": "Astro"
+        },
+        {
+          "t": "Svelte"
+        },
+        {
+          "t": "Tailwind CSS"
+        },
+        {
+          "t": "DaisyUI"
+        },
+        {
+          "t": "Docker"
+        }
+      ],
+      "description": "My personal SEO friendly blog",
+      "demoLink": "https://blog.amineamellouk.com/",
+      "codeLink": "https://github.com/AmineAML/blog-astro-svelte",
+      "displayImg": false,
+      "img": "",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_blog.png",
+      "moodboard": false
+    },
+    {
       "name": "The Social Network",
       "technologies": [
         {
@@ -41,7 +77,9 @@
       "demoLink": "https://thesocialnetwork.amineamellouk.com/",
       "codeLink": "https://github.com/AmineAML/TheSocialNetwork",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/thesocialnetwork.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/thesocialnetwork.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_the_social_network.png",
+      "moodboard": false
     },
     {
       "name": "Discord Bot",
@@ -78,7 +116,9 @@
       "demoLink": "",
       "codeLink": "https://github.com/AmineAML/DiscordBot",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/DiscordBot.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/DiscordBot.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_discord_bot.png",
+      "moodboard": true
     },
     {
       "name": "Portfolio",
@@ -103,7 +143,9 @@
       "demoLink": "https://www.amineamellouk.com",
       "codeLink": "https://github.com/AmineAML/Portfolio",
       "displayImg": false,
-      "img": ""
+      "img": "",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_portfolio.png",
+      "moodboard": false
     },
     {
       "name": "Traveliva",
@@ -125,7 +167,9 @@
       "demoLink": "",
       "codeLink": "",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/Traveliva.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/Traveliva.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_traveliva.png",
+      "moodboard": true
     },
     {
       "name": "Cube Solves Timer",
@@ -138,7 +182,9 @@
       "demoLink": "",
       "codeLink": "https://github.com/AmineAML/CubeSolvesTimer",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/CubeTimeSolverV.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_cubesolvestimer.png",
+      "moodboard": true
     },
     {
       "name": "NoteTaker",
@@ -151,7 +197,9 @@
       "demoLink": "",
       "codeLink": "https://github.com/AmineAML/NoteTaker",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/NoteTakerV.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_notetaker.png",
+      "moodboard": true
     },
     {
       "name": "UniFace",
@@ -170,7 +218,9 @@
       "demoLink": "",
       "codeLink": "",
       "displayImg": false,
-      "img": "assets/videosBetterPerformance/project-videos/UniFace.mp4"
+      "img": "assets/videosBetterPerformance/project-videos/UniFace.mp4",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_uniface.png",
+      "moodboard": true
     }
   ]
 }

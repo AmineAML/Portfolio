@@ -50,11 +50,29 @@ export class MetaService {
         if (data.metadata.keywords) {
           this.metaService.updateTag({ name: 'robots', content: data.metadata.keywords })
         } else {
-          this.metaService.updateTag({ name: 'keywords', content: `Front-End developer, front end developer, développeur, software, engineer, Software engineer, Développement informatique, Économie, économie, écoomiste, Back-End, back end, Back-End developer, front-end, front end, développeur front-end, développeur front end, développeur back end, développeur back-end, Computer Science, computer science, web development, développeur web, front office, développeur front office, développeur back office, Intégrateur Web, Full-Stack, Full Stack, full stack, Full-Stack developper, full-stack developper, développeur full-stack, développeur full stack, développeur web front end, developpeur web front end, amine, Amine, amellouk, Amellouk, Amine Amellouk, amine amellouk` })
+          this.metaService.addTag({ name: 'keywords', content: `developer, APIs, SSG, SPA, software developer, economics, applications, web, mobile, SEO, cloud, CDN, development, code, devops, back-end, backend, freelance, freelancer` })
         }
 
         //More meta tags of social media from https://moz.com/blog/meta-data-templates-123
  
+        // Social media tags
+        this.metaService.addTags([
+          { name: 'og:title', content: data.metadata.title },
+          { name: 'og:type', content: 'website' },
+          { name: 'og:url', content: 'https://www.amineamellouk.com' },
+          { name: 'og:description', content: data.metadata.description },
+          { name: 'og:image', content: 'https://www.amineamellouk.com/assets/imgs/thumbnail_of_portfolio.png' }
+        ])
+
+        // Twitter tags
+        this.metaService.addTags([
+          { name: 'twitter:card', content: 'summary' },
+          { name: 'twitter:site', content: '@aml_amine' },
+          { name: 'twitter:title', content: 'Amine Amellouk\'s Portfolio' },
+          { name: 'twitter:description', content: data.metadata.description },
+          { name: 'twitter:image', content: 'https://www.amineamellouk.com/assets/imgs/thumbnail_of_portfolio.png' },
+          { name: 'twitter:image:alt', content: 'Amine Amellouk\'s Portfolio Thumbnail' }
+        ])
       })
  
     })

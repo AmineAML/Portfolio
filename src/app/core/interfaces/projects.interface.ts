@@ -6,6 +6,7 @@ export interface IProjects {
     codeLink:     string;
     displayImg:   boolean;
     img:          string;
+    moodboard:    boolean;
 }
 
 export interface ITechnology {

@@ -81,6 +81,9 @@ export const en = {
         projects: 'Projects',
         about: 'About',
         resume: 'Resume'
+    },
+    moodboard: {
+        title: 'Moodboard is a collection of projects that showcase a variety of my skills, these could be projects that were built for fun, end of year studies projects or other experimentation projects with new techs and areas of software development.'
     }
 
     /*// simple function using string literal and interpolation

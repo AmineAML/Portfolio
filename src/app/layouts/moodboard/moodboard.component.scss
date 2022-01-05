@@ -1,0 +1,203 @@
+:host {
+    font-family: 'futura-lt-w01-light', sans-serif;
+    div {
+      padding-left: 40px;
+      padding-right: 40px;
+      position: relative;
+      margin: 10vh;
+      /*
+      span {
+        color: #BEBAB9; 
+        //margin-left: 8%;
+      }*/
+      div {
+        margin-top:0; 
+        margin-bottom: 0; 
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        opacity: 0.9;
+        div {
+          margin-bottom: 0%;
+          span {
+            color: var(--text-content-color);
+            //margin-bottom: 0;
+          }
+          div {
+            //cursor: pointer;
+            margin-bottom: 5%;
+            max-width: 50vw;
+            button {
+              float: left;
+              min-width: 150px;
+              max-width: 250px;
+              display: block;
+              margin: 1em;
+              padding: 1em 2em;
+              border: none;
+              background: none;
+              color: inherit;
+              //vertical-align: middle;
+              position: relative;
+              z-index: 1
+            }
+            button.active {
+              color: orange;
+            }
+            span.title {
+              //color: #D8D2D2; //not applied
+              color: var(--text-tertiary-color); //not applied
+              cursor: initial;
+              //font-size: 4vw;
+              line-height: 1.6;
+            }
+            h2 {
+              //color: #D8D2D2;
+              color: var(--text-tertiary-color);
+              // text-decoration: underline;
+            }
+            ul {
+              list-style-type: none;
+              //color: whitesmoke;
+              color: var(--text-accent-color);
+              margin:0;
+              margin-bottom: 5px;
+              padding:0;
+              li {
+                display: inline;
+                span {
+                  //color: whitesmoke;
+                  color: var(--text-accent-color);
+                }
+              }
+            }
+            div {
+              p {
+                //color: #A4A4A4;
+                color: var(--text-description-color);
+              }
+              div {
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap: 2vw;
+                flex-direction: row;
+              }
+              a {
+                color: var(--chat-icon-color);
+                text-decoration: none;
+                background-color: rgb(255, 255, 255);
+                padding: 5px;
+                border-radius: 10%;
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+            }
+            button {
+              //background-color: whitesmoke;
+              color: var(--text-accent-color);
+              margin-left: 10px;
+            }
+          }
+          #projectOnHoverEffect:hover {
+            opacity: 1;
+            //filter: brightness(200%);
+          }
+          .video-container {
+            //width: 100%;
+            object-fit: contain;
+            //height: 300px;
+            // position: fixed;
+            //top: 25%;
+            //left: 25%;
+            //width: 50%;
+            // height: 50%;
+            // top: 25%;
+            // right: 2%;
+            // z-index: 10;
+            height: 100%;
+            // top: 10%;
+            right: 10%;
+            // position: absolute;
+          }
+          @media (min-width: 320px) and (max-width: 767px) {
+            img, video {
+              width: 45vh;
+            }
+          }
+          app-seleton-loader {
+            object-fit: contain;
+            position: fixed;
+            top: 50%;
+            right: 50%;
+          }
+        }
+        //Note that nth-child works with binary meaning it doesn't start with 123 rather it does start with 0123
+        div:nth-child(1) {
+          button {
+            background-color: var(--text-secondary-color);
+            color: var(--text-button-color);
+          }
+        }
+        .videoContainer {
+          z-index: 7;
+          position: absolute;
+        }
+        .projecto {
+          background-color: var(--section-background-color);
+          border-radius: 2%;
+          height: 100%;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          display: flex;
+          // align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        //   max-width: 100%;
+        }
+      }
+    }
+  
+    @media (min-width: 300px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 40vw);
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: auto;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .wrapper {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: auto;
+      }
+    }
+  
+    .container-section {
+      padding-left: 10vw;
+      padding-right: 10vw;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10vh;
+      flex-direction: column;
+      span {
+        color: var(--text-content-color);
+        line-height: 1.6;
+      }
+    }
+
+    #projectOnHoverEffect {
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }

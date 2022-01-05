@@ -17,16 +17,16 @@
           <a href="javascript:;" (click)="goTo('about')" [class.active]="active=='a'">ABOUT /></a>
         </li>
         -->
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-sm *ngIf="!router.url.includes('moodboard')">
           <a (click)="goTo('home')" [class.active]="active=='h'" class="animate">{{lang.nav.home}} /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-sm *ngIf="!router.url.includes('moodboard')">
           <a (click)="goTo('projects')" [class.active]="active=='p'" class="animate">{{lang.nav.projects}} /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-sm *ngIf="!router.url.includes('moodboard')">
           <a (click)="goTo('about')" [class.active]="active=='a'" class="animate">{{lang.nav.about}} /></a>
         </li>
-        <li fxHide fxShow.gt-sm>
+        <li fxHide fxShow.gt-sm *ngIf="!router.url.includes('moodboard')">
           <a (click)="goTo('contact')" [class.active]="active=='c'" class="animate">contact /></a>
         </li>
         <li fxHide fxShow.gt-sm class="extra-padding">
@@ -34,6 +34,9 @@
         </li>
         <li fxHide fxShow.gt-sm>
           <a routerLink="./resume">{{lang.nav.resume}}</a>
+        </li>
+        <li fxHide fxShow.gt-sm>
+          <a routerLink="./moodboard">Moodboard</a>
         </li>
         <li fxHide fxShow.gt-sm>
           <a (click)="toggleLanguage()">{{languageTranslate}}</a>
@@ -81,6 +84,7 @@
               <a rel="noopener" href="https://www.linkedin.com/in/amine-amellouk" target="_blank" matTooltip="LinkedIn">LinkedIn</a>
               <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank" matTooltip="Stack Overflow">Stack<br/> Overflow</a>
               <a routerLink="./resume">{{lang.nav.resume}}</a>
+              <a routerLink="./moodboard">Moodboard</a>
               <a (click)="toggleConsole()">console</a>
               <a (click)="toggleChatbot()">chatbot</a>
               <a (click)="toggleLanguage()">{{languageTranslate}}</a>

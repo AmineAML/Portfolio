@@ -83,7 +83,10 @@ export const fr: Translation = {
     projects: 'Projets',
     about: 'À propos',
     resume: 'CV'
-  }
+  },
+  moodboard: {
+    title: 'Moodboard est une collection de projets qui mettent en valeur une variété de mes compétences, il peut s\'agir de projets construits pour le plaisir, de projets d\'études de fin d\'année ou d\'autres projets d\'expérimentation avec de nouvelles technologies et domaines de développement de logiciels.'
+}
 
   /*// function using string literal and interpolation with constant determining the plural postfix
   // in more complicated cases you could use this function to implement logic yourself or integrate ICU message format

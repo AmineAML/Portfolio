@@ -1,24 +1,27 @@
+<app-header [active]="componentInViewport" (toggleCmd)="toggleCmd($event)" (toggleChabot)="toggleChatbot($event)"></app-header>
+
 <div class="container-section">
     <div>
-        <span class="mat-display-1 title">{{lang.welcome.projects.title}}</span>
+        <span class="mat-display-1 title">{{lang.moodboard.title}}</span>
         <br>
         <!-- <span class="mat-subheading-2">{{lang.welcome.projects.instructions1stPart}} {{isTouch}}
             {{lang.welcome.projects.instructions2ndPart}}</span> -->
     </div>
+    <br>
     <!-- <div class="wrapper" data-aos="fade-up-right"> -->
-    <div class="wrapper">
+    <div class="wrapper" style="margin: auto;">
         <div *ngFor="let project of projects" id="projectOnHoverEffect">
             <div class="projecto">
-                <h2>{{project.name}}</h2>
-                <img src="{{project.thumbnail_picture}}" alt="" srcset="" style="max-width: 100%;">
-                <ul *ngIf='project.technologies'>
+                <h2 style="margin: auto;">{{project.name}}</h2>
+                <img src="{{project.thumbnail_picture}}" alt="" srcset="" style="max-width: 50%; margin: auto;">
+                <ul *ngIf='project.technologies' style="margin: auto;">
                     <li *ngFor="let listOfTechnologies of project.technologies; let lastItem=last;">
                         {{listOfTechnologies.t}} <span *ngIf="!lastItem"> | </span></li>
                 </ul>
-                <div>
+                <div style="margin: auto; display: contents;">
                     <p class="mat-body-1">{{project.description}}</p>
                     <br />
-                    <div>
+                    <div style="margin: auto;">
                         <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank" rel="noopener">
                             <fa-icon [icon]="faGithub"></fa-icon> Code
                         </a>
@@ -40,3 +43,5 @@
 <button *ngIf="dialogOpened" style="position: absolute; top: 0%; left: 2%;">X</button>
 
 <br />
+
+<app-footer></app-footer>

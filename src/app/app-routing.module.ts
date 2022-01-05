@@ -43,8 +43,8 @@ const app_routes: Routes = [
         loadChildren: () => import('./layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule),
         data: {
           metadata: {
-            title: 'Amine Amellouk | Full-Stack Developer',
-            description: 'Full-Stack developer from Morocco who enjoys building things, I develop web and mobile applications.'
+            title: 'Amine Amellouk | Software Developer',
+            description: 'A software developer with a background in economics who enjoys developing APIs, SSGs and SPAs applications.'
           },
           animation: 'welcome'
         }
@@ -55,7 +55,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'Resume | Amine Amellouk',
-            description: 'Amine Amellouk\'s curriculum vitae'
+            description: 'My resume'
           },
           animation: 'resume'
         }
@@ -69,6 +69,17 @@ const app_routes: Routes = [
             description: "Thesis list"
           },
           animation: 'pdf'
+        }
+      },
+      {
+        path: 'moodboard',
+        loadChildren: () => import('./layouts/moodboard/moodboard.languages.module').then(m => m.MoodboardEnModule),
+        data: {
+          metadata: {
+            title: 'Moodboard | Amine Amellouk',
+            description: 'Other portfolio projects.'
+          },
+          animation: 'moodboard'
         }
       },
       {
@@ -105,7 +116,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'Amine Amellouk | Développeur Full-Stack',
-            description: 'Développeur Full-Stack de Maroc qui aime construire des choses, je développe des applications web et des applications mobiles.'
+            description: 'Un développeur de logiciels avec une formation en économie qui aime développer des applications API, SSG et SPA.'
           },
           animation: 'welcome'
         }
@@ -116,7 +127,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'CV | Amine Amellouk',
-            description: 'Le CV de Amine Amellouk'
+            description: 'Mon CV'
           },
           animation: 'resume'
         }
@@ -130,6 +141,17 @@ const app_routes: Routes = [
             description: "Liste des projet de fin d'études"
           },
           animation: 'pdf'
+        }
+      },
+      {
+        path: 'moodboard',
+        loadChildren: () => import('./layouts/moodboard/moodboard.languages.module').then(m => m.MoodboardFrModule),
+        data: {
+          metadata: {
+            title: 'Moodboard | Amine Amellouk',
+            description: 'D\'autres projets du portfolio.'
+          },
+          animation: 'moodboard'
         }
       },
       {
