@@ -26,6 +26,12 @@
         },
         {
           "t": "Docker"
+        },
+        {
+          "t": "Netlify"
+        },
+        {
+          "t": "GitHub Actions"
         }
       ],
       "description": "mon blog personnel conforme au SEO",
