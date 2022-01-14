@@ -1,6 +1,138 @@
 {
   "projects": [
     {
+      "name": "Thermopolia",
+      "technologies": [
+        {
+          "t": ".Net"
+        },
+        {
+          "t": "Docker"
+        },
+        {
+          "t": "PostgreSQL"
+        },
+        {
+          "t": "Redis"
+        },
+        {
+          "t": "Entity Framework Core"
+        },
+        {
+          "t": "FluentEmail"
+        },
+        {
+          "t": "Hangfire"
+        },
+        {
+          "t": "Recipe Search API"
+        },
+        {
+          "t": "Swagger"
+        },
+        {
+          "t": "Nginx"
+        },
+        {
+          "t": "Github Actions"
+        },
+        {
+          "t": "SvelteKit"
+        },
+        {
+          "t": "Tailwind CSS"
+        },
+        {
+          "t": "DaisyUI"
+        },
+        {
+          "t": "Figma"
+        },
+        {
+          "t": "JavaScript"
+        },
+        {
+          "t": "C#"
+        }
+      ],
+      "description": "Une application Web et newsletter de recommandation de recettes offrant des suggestions d'aliments, de boissons et de régimes alimentaires encourageant une alimentation facile et saine",
+      "demoLink": "https://thermopolia.amiproj.dev/",
+      "codeLink": "https://github.com/AmineAML/thermopolia-app",
+      "displayImg": false,
+      "img": "",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_thermopolia.png",
+      "moodboard": false
+    },
+    {
+      "name": "Fadayiy",
+      "technologies": [
+        {
+          "t": "NestJS"
+        },
+        {
+          "t": "GraphQL"
+        },
+        {
+          "t": "PostgreSQL"
+        },
+        {
+          "t": "Docker"
+        },
+        {
+          "t": "Astro"
+        },
+        {
+          "t": "Svelte"
+        },
+        {
+          "t": "Tailwind CSS"
+        },
+        {
+          "t": "DaisyUI"
+        },
+        {
+          "t": "Vercel"
+        },
+        {
+          "t": "GitHub Actions"
+        },
+        {
+          "t": "Nginx"
+        },
+        {
+          "t": "Bing Image Search API"
+        },
+        {
+          "t": "Launch Library 2 API"
+        },
+        {
+          "t": "APOD API"
+        },
+        {
+          "t": "EPIC API"
+        },
+        {
+          "t": "Logo API"
+        },
+        {
+          "t": "Graphql-request"
+        },
+        {
+          "t": "JavaScript"
+        },
+        {
+          "t": "TypeScript"
+        }
+      ],
+      "description": "Un site Web généré statiquement pour les données spatiales montrant les stations, les astronautes, les agences spatiales, l'image de la Terre, l'astronomie et les lancements",
+      "demoLink": "https://fadayiy.amiproj.dev/",
+      "codeLink": "https://github.com/AmineAML/fadayiy-app",
+      "displayImg": false,
+      "img": "",
+      "thumbnail_picture": "../../../../assets/imgs/thumbnail_of_fadayiy.png",
+      "moodboard": false
+    },
+    {
       "name": "Blog",
       "technologies": [
         {
@@ -35,7 +167,7 @@
         }
       ],
       "description": "mon blog personnel conforme au SEO",
-      "demoLink": "https://blog.amineamellouk.com/",
+      "demoLink": "https://echospacedev.com/",
       "codeLink": "https://github.com/AmineAML/blog-astro-svelte",
       "displayImg": false,
       "img": "",
@@ -83,7 +215,7 @@
         }
       ],
       "description": "Un réseau social visant à connecter des personnes ayant des loisirs similaires",
-      "demoLink": "https://thesocialnetwork.amineamellouk.com/",
+      "demoLink": "https://the-social-network.amiproj.dev/",
       "codeLink": "https://github.com/AmineAML/TheSocialNetwork",
       "displayImg": false,
       "img": "assets/videosBetterPerformance/project-videos/thesocialnetwork.mp4",
