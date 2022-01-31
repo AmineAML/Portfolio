@@ -9,13 +9,14 @@ export const fr: Translation = {
       preTitle: 'Développeur Front-End',
       anotherPreTitle: 'Développeur Back-End',
       resume: 'CV',
-      contact: 'Me Parlez',
+      viewProjects: 'Voir les projets',
       slogan: 'Je suis un développeur de logiciels avec une formation en économie spécialisée dans la conception et le développement de présence et de solutions numériques. Je me concentre sur les API, le DevOps et l\'exploration des nouvelles tendances de codage.'
     },
     projects: {
       title: 'Projets distinctifs',
       instructions1stPart: 'Vous pouvez',
-      instructions2ndPart: 'sur un projet pour un demo'
+      instructions2ndPart: 'sur un projet pour un demo',
+      previewButton: 'Aperçu en direct'
     },
     about: {
       title: 'À propos de moi',

@@ -22,8 +22,8 @@
         </div>
 
         <div>
+            <button mat-button (click)="goTo('projects')">{{lang.welcome.home.viewProjects}}</button>
             <button mat-button routerLink="./resume">{{lang.welcome.home.resume}}</button>
-            <button mat-button (click)="goTo('contact')">{{lang.welcome.home.contact}}!</button>
         </div>
 
         <!--<ul *ngIf="HideShow" [@slideInOut]>

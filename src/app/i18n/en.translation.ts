@@ -7,13 +7,14 @@ export const en = {
             preTitle: 'Front-End Developer',
             anotherPreTitle: 'Back-End Developer',
             resume: 'Resume',
-            contact: 'Let\'s talk',
+            viewProjects: 'View Projects',
             slogan: 'I\'m a software developer with a background in economics specializing in designing and developing digital presence and solutions. I\'m focused on APIs, DevOps and exploring new trends in coding.'
         },
         projects: {
             title: 'Featured projects',
             instructions1stPart: 'You can',
-            instructions2ndPart: 'on a project for a demo'
+            instructions2ndPart: 'on a project for a demo',
+            previewButton: 'Live preview'
         },
         about: {
             title: 'About me',

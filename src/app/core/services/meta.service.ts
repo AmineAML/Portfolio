@@ -50,7 +50,7 @@ export class MetaService {
         if (data.metadata.keywords) {
           this.metaService.updateTag({ name: 'robots', content: data.metadata.keywords })
         } else {
-          this.metaService.addTag({ name: 'keywords', content: `developer, APIs, SSG, SPA, software developer, economics, applications, web, mobile, SEO, cloud, CDN, development, code, devops, back-end, backend, freelance, freelancer` })
+          this.metaService.addTag({ name: 'keywords', content: `developer, APIs, SSG, SPA, software developer, economics, applications, web, mobile, SEO, cloud, CDN, development, code, devops, back-end, backend, freelance, freelancer, back-end developer, back-end engineer, api developer, devops developer devops engineer, ssg developer, spa developer, jamstack developer, seo developer, software developer, nodejs developer, node.js developer .net developer, dotnet developer, nestjs developer, angular developer, svelte developer` })
         }
 
         //More meta tags of social media from https://moz.com/blog/meta-data-templates-123

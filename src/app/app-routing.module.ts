@@ -44,7 +44,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'Amine Amellouk | Software Developer',
-            description: 'A software developer with a background in economics who\'s developing APIs, SSGs and SPAs applications.'
+            description: 'A software developer with a background in economics who\'s developing APIs, SSGs, SPAs and Jamstack applications.'
           },
           animation: 'welcome'
         }
@@ -116,7 +116,7 @@ const app_routes: Routes = [
         data: {
           metadata: {
             title: 'Amine Amellouk | Développeur Full-Stack',
-            description: 'Un développeur de logiciels avec une formation en économie qui développe des applications API, SSG et SPA.'
+            description: 'Un développeur de logiciels avec une formation en économie qui développe des applications API, SSG, SPA et Jamstack.'
           },
           animation: 'welcome'
         }
