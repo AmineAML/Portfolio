@@ -93,6 +93,17 @@
               padding-left: 10px;
               padding-right: 10px;
             }
+            a.primary {
+                color: var(--background-primay-color);
+                text-decoration: none;
+                background-color: rgb(255, 255, 255);
+                padding: 5px;
+                border-radius: 10%;
+                padding-left: 10px;
+                padding-right: 10px;
+                // border: 2px solid var(--background-primay-color);
+                background-color: var(--chat-icon-color);
+            }
           }
           button {
             //background-color: whitesmoke;

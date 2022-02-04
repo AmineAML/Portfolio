@@ -101,6 +101,8 @@ export class HeroComponent implements OnInit {
   public typewriter_text2_anotherpretitle: string;
   public typewriter_display2: string = "";
 
+  public language = localStorage.getItem('LANGUAGE')
+
   typingCallback2(that, title) {
     let total_length = that.typewriter_text2_pretitle.length;
     let current_length = that.typewriter_display2.length;

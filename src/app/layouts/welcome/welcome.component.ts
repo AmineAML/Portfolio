@@ -5,7 +5,7 @@ import { trigger, transition, animate, style, keyframes, state } from '@angular/
 import { Translation, TRANSLATION, WebsiteLanguage } from "../../i18n/utils";
 import { Subject } from 'rxjs';
 import { LanguageToggleService } from 'src/app/core/services/language-toggle.service';
-import { faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-welcome',
@@ -75,6 +75,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   faGithub = faGithub;
   faFileAlt = faFileAlt;
   faStackOverflow = faStackOverflow;
+  faTwitter = faTwitter;
 
   isShow: boolean = false;
 

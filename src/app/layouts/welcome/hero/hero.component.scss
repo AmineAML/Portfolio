@@ -61,6 +61,12 @@ div{
 			background-color: var(--chat-icon-color);
 			margin-right: 2rem;
 		}
+		button.secondary {
+			border: 2px solid blanchedalmond;
+			color: var(--chat-icon-color);
+			margin-right: 2rem;
+			background-color: transparent;
+		}
 	}
 	ul {
 		padding: 0;
@@ -156,7 +162,7 @@ $indicator-size: 24px;
 		//width: 100%;
 		bottom: 10%;
 		left: 50%;
-		
+		cursor: pointer;
 		&:before {
 			@include scroll-indicator();
 			content: "";

@@ -7,7 +7,7 @@
 <!--Other browser specific-->
 <app-hero *ngIf="!heightDivChange" id="home" class="fullScreenSections"></app-hero>
 <!--<app-home *ngIf="!heightDivChange" id="homeShowOnlySmallDevices" class="fullScreenSections" fxShow fxHide.gt-md></app-home>-->
-<app-projects id="projects" class="fullScreenSections" fxLayoutAlign="space-around center"></app-projects>
+<app-projects id="projects" class="fullScreenSections" fxLayoutAlign="space-around "></app-projects>
 <app-about id="about" class="fullScreenSections" fxLayoutAlign="center center"></app-about>
 <app-contact id="contact" class="fullScreenSections" fxLayoutAlign="center center" fxFlexFill></app-contact>
 <app-footer></app-footer>
@@ -30,6 +30,9 @@
     </a>
     <a rel="noopener" href="https://stackoverflow.com/users/10453610/amineze" target="_blank">
         <fa-icon [icon]="faStackOverflow" size="lg" data-label="Stack Overflow"></fa-icon>
+    </a>
+    <a rel="noopener" href="https://twitter.com/aml_amine" target="_blank">
+        <fa-icon [icon]="faTwitter" size="lg" data-label="Twitter"></fa-icon>
     </a>
     <a (click)="toggleChatbot(true)">
         <fa-icon [icon]="faRobot" size="lg" data-label="Chatbot"></fa-icon>
