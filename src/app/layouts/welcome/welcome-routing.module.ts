@@ -6,6 +6,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { ToolboxComponent } from './toolbox/toolbox.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent }
@@ -16,5 +17,5 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class WelcomeRoutingModule {
-  static components = [ WelcomeComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactComponent ];
+  static components = [ WelcomeComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactComponent, ToolboxComponent ];
 }

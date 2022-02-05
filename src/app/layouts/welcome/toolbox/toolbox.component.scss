@@ -1,0 +1,48 @@
+:host {
+  font-family: 'futura-lt-w01-light', sans-serif;
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    p {
+      color: var(--text-description-color);
+    }
+  }
+
+  .item {
+    flex: 0 0 calc(16.66% - 20px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 300px) {
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .container-section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10vh;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    span {
+      color: var(--text-content-color);
+      line-height: 1.6;
+    }
+  }
+}
