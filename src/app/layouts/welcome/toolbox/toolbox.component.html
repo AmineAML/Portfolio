@@ -1,0 +1,19 @@
+<div class="container-section">
+    <div class="content">
+        <span class="mat-display-1 title" fxLayout="row" fxLayoutAlign="center center">My Toolbox</span>
+    </div>
+    <div *ngFor="let tools of toolbox">
+        <div class="content">
+            <span class="mat-subheading-1" fxLayout="row" fxLayoutAlign="center center">{{tools.title}}</span>
+        </div>
+        <div class="content">
+            <div class="wrapper">
+                <div *ngFor="let tool of tools.links" class="item">
+                    <img src="{{tool.media}}" alt="" srcset=""
+                        style="max-width: 100px; height: 100%; object-fit: contain; margin-left: auto; margin-right: auto;">
+                    <p fxLayoutAlign="center center">{{tool.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
