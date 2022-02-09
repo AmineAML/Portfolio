@@ -80,7 +80,7 @@
                 }
               ],
               "serviceWorker": true,
-              "ngswConfigPath": "src/assets/ngsw-config.json"
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
