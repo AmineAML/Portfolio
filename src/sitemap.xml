@@ -158,6 +158,32 @@
             href="https://www.amineamellouk.com/fr/pdf/pfe_licence_en_ingenierie_des_applications_mobiles"/>
 </url>
 <url>
+<loc>https://www.amineamellouk.com/en/moodboard</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/moodboard"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/moodboard"/>
+</url>
+<url>
+<loc>https://www.amineamellouk.com/fr/moodboard</loc>
+<lastmod>2020-11-24T13:30:30+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link 
+            rel="alternate"
+            hreflang="en"
+            href="https://www.amineamellouk.com/en/moodboard"/>
+<xhtml:link 
+            rel="alternate"
+            hreflang="fr"
+            href="https://www.amineamellouk.com/fr/moodboard"/>
+</url>
+<url>
 <loc>https://www.amineamellouk.com/hi</loc>
 <lastmod>2020-11-24T13:30:30+00:00</lastmod>
 <priority>0.80</priority>
