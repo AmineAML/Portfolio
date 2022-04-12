@@ -3,7 +3,7 @@ import { getFlashPreventionPlugin } from '@scullyio/scully-plugin-flash-preventi
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
-  projectName: "portfolio-website",
+  projectName: "portfoliowebsite",
   outDir: './dist/static',
   routes: {
     '/': {

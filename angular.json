@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-website": {
+    "portfoliowebsite": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio-website",
+            "outputPath": "dist/portfoliowebsite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -97,10 +97,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "portfolio-website:build:production"
+              "browserTarget": "portfoliowebsite:build:production"
             },
             "development": {
-              "browserTarget": "portfolio-website:build:development"
+              "browserTarget": "portfoliowebsite:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -108,7 +108,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolio-website:build"
+            "browserTarget": "portfoliowebsite:build"
           }
         },
         "test": {
@@ -150,10 +150,10 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "portfolio-website:serve:production"
+              "devServerTarget": "portfoliowebsite:serve:production"
             },
             "development": {
-              "devServerTarget": "portfolio-website:serve:development"
+              "devServerTarget": "portfoliowebsite:serve:development"
             }
           },
           "defaultConfiguration": "development"
@@ -161,5 +161,5 @@
       }
     }
   },
-  "defaultProject": "portfolio-website"
+  "defaultProject": "portfoliowebsite"
 }
