@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
 @import 'src/assets/Fonts/scss/modules/_fonts.scss';
 //@import '~simplebar/dist/simplebar.css';
 //Better imported by link tag from index.html
@@ -7,7 +8,6 @@
 @import 'src/assets/themes/_animations.scss';
 //@import 'src/assets/themes/_colors.scss';
 @import 'src/assets/themes/_theme.scss';
-@import '~@angular/material/theming';
 
 html, body { 
     //Changed the height from 100% to 100vh to activate the AOS.js scroll animation
@@ -50,7 +50,7 @@ body {
 }
 
 .mat-dialog-container {
-    @include mat-elevation(0);
+    @include mat.elevation(0);
 }
 
 //Loading animation
