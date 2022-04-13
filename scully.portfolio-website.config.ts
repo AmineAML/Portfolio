@@ -1,6 +1,28 @@
-import { ScullyConfig } from '@scullyio/scully';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getFlashPreventionPlugin } from '@scullyio/scully-plugin-flash-prevention';
 import '@scullyio/scully-plugin-puppeteer';
+
+import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+
+
+const SitemapPlugin = getSitemapPlugin();
+setPluginConfig(SitemapPlugin, {
+    urlPrefix: 'https://amineamellouk.com',
+    sitemapFilename: 'sitemap.xml',
+    merge: false,
+    trailingSlash: true,
+    changeFreq: 'monthly',
+    priority: ['1.0', '0.9', '0.8', '0.7', '0.6', '0.5', '0.4', '0.3', '0.2', '0.1', '0.0'],
+    ignoredRoutes: ['/404', '/en/unavailable', '/fr/unavailable', '/en/404', '/fr/404'],
+    routes: {
+        // '/products/:productId': {
+        //     changeFreq: 'daily',
+        //     priority: '0.9',
+        //     sitemapFilename: 'sitemap-products.xml',
+        //     merge: true
+        // },
+    }
+});
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
@@ -15,11 +37,11 @@ export const config: ScullyConfig = {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },
-    '/en': {
+    '/en/portfolio': {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },
-    '/fr': {
+    '/fr/portfolio': {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },

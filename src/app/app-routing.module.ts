@@ -38,8 +38,10 @@ const app_routes: Routes = [
   { path: '', redirectTo: WebsiteLanguage.English, pathMatch: 'full' },
   {
     path: WebsiteLanguage.English, children: [
+      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
       {
-        path: '',
+        // Scully cannot scan empty paths, therefor instead we named them generically
+        path: 'portfolio',
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule),
         data: {
           metadata: {
@@ -110,8 +112,9 @@ const app_routes: Routes = [
   },
   {
     path: WebsiteLanguage.French, children: [
+      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
       {
-        path: '',
+        path: 'portfolio',
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
