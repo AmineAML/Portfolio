@@ -37,11 +37,13 @@ export const config: ScullyConfig = {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },
-    '/en/portfolio': {
+    // '/en/portfolio': {
+    '/en': {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },
-    '/fr/portfolio': {
+    // '/fr/portfolio': {
+    '/fr': {
       type: 'json',
       postRenderers: [getFlashPreventionPlugin()],
     },

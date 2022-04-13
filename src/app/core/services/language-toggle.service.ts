@@ -35,10 +35,12 @@ export class LanguageToggleService {
     public toggle() {
         if (this.isEnglishLanguageSelected()) {
             this.setFrenchLanguage();
-            this._router.navigate(['/' + WebsiteLanguage.French + '/portfolio']);
+            // this._router.navigate(['/' + WebsiteLanguage.French + '/portfolio']);
+            this._router.navigate(['/' + WebsiteLanguage.French]);
         } else {
             this.setEnglishLanguage();
-            this._router.navigate(['/' + WebsiteLanguage.English + '/portfolio']);
+            // this._router.navigate(['/' + WebsiteLanguage.English + '/portfolio']);
+            this._router.navigate(['/' + WebsiteLanguage.English]);
         }
     }
     
