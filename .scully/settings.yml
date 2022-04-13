@@ -1,2 +1,13 @@
 identifier: k6hbs3d8gbk13c52
 allowErrorCollect: false
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: portfolio-website
+homeFolder: >-
+  /home/azelk/Documents/IT_development/Web_development/Portfolio/portfolio-website
+distFolder: dist/portfolio-website
+outDir: >-
+  /home/azelk/Documents/IT_development/Web_development/Portfolio/portfolio-website/dist/static
+handle404: ''
