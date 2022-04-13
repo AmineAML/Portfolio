@@ -35,7 +35,7 @@ export function languageFactory(languageService: LanguageToggleService) {
     HttpClientModule,
     StorageServiceModule,
     ScullyLibModule.forRoot({ useTransferState: true, alwaysMonitor: true }),
-    ErrorModule,
+    // ErrorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ScullyLibModule,
   ],
