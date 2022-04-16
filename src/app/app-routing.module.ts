@@ -46,8 +46,8 @@ const app_routes: Routes = [
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule),
         data: {
           metadata: {
-            title: 'Amine Amellouk | Software Developer',
-            description: 'A software developer with a background in economics who\'s developing APIs, SSGs, SPAs and Jamstack applications.'
+            title: 'Amine Amellouk | Freelance Software Developer & DevOps',
+            description: 'A software developer with a background in economics who\'s developing APIs, SPAs and Jamstack applications.'
           },
           animation: 'welcome'
         }
@@ -120,8 +120,8 @@ const app_routes: Routes = [
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
-            title: 'Amine Amellouk | Développeur Full-Stack',
-            description: 'Un développeur de logiciels avec une formation en économie qui développe des applications API, SSG, SPA et Jamstack.'
+            title: 'Amine Amellouk | Freelance Développeur Full-Stack & DevOps',
+            description: 'Un développeur de logiciels avec une formation en économie qui développe des applications API, SPA et Jamstack.'
           },
           animation: 'welcome'
         }
