@@ -35,14 +35,16 @@ if (userLanguage == null) {
 //This works with Scully
 const app_routes: Routes = [
   //Redirect the user to English as the default language
-  { path: '', redirectTo: WebsiteLanguage.English + '/portfolio', pathMatch: 'full' },
+  // { path: '', redirectTo: WebsiteLanguage.English + '/portfolio', pathMatch: 'full' },
+  { path: '', redirectTo: WebsiteLanguage.English, pathMatch: 'full' },
   {
     path: WebsiteLanguage.English, children: [
-      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+      // { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
       {
         // Scully cannot scan empty paths, therefor instead we named them generically
-        path: 'portfolio',
-        // path: '',
+        // path: 'portfolio',
+        path: '',
+        pathMatch: 'full',
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeEnModule),
         data: {
           metadata: {
@@ -113,10 +115,11 @@ const app_routes: Routes = [
   },
   {
     path: WebsiteLanguage.French, children: [
-      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+      // { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
       {
-        path: 'portfolio',
-        // path: '',
+        // path: 'portfolio',
+        path: '',
+        pathMatch: 'full',
         loadChildren: () => import('src/app/layouts/welcome/welcome.languages.module').then(m => m.WelcomeFrModule),
         data: {
           metadata: {
