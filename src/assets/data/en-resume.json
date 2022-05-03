@@ -37,14 +37,26 @@
         "startDate": "24-10-2021",
         "website": "https://www.amineamellouk.com",
         "position": "Freelance Developer",
-        "company": "Freelance"
+        "company": "Freelance",
+        "tasks": [
+          "Built and managed a complex Microservices project using NodeJS (NestJS).",
+          "Worked on multiple Front-Ends, one being an e-commerce website with a CMS and another being an administration panel for a mobile application.",
+          "Had setup and managed multiple environments servers with creating pipeline scripts using Jenkins, Nginx and Docker.",
+          "Researched and written documents that proved valuable for architecture and decision making."
+        ]
       },
       {
         "endDate": "31-08-2021",
         "startDate": "22-03-2021",
         "website": "https://www.ikdev.fr",
         "position": "Intern as Back-End Developer",
-        "company": "IkDev"
+        "company": "IkDev",
+        "tasks": [
+          "Developed a complexe API using the Microservices architecture with Eureka, Zuul, NestJS, MongoDB, AWS.",
+          "Established the continuous delivery with Jenkins and Bitbucket as version control system.",
+          "Contributed to the development of a Flutter mobile application.",
+          "Maintained the documentation and worked in an environment using the Agile Scrum methodology."
+        ]
       }
     ],
     "education": [
@@ -90,8 +102,8 @@
       }
     ],
     "skills": {
-      "experiencedWith": "Angular, Git, TypeScript, Node.JS, Firebase, NestJS, REST APIs, UML, JWT, Microservices, MVC, OOP",
-      "familiarWith": "Docker, Redis, Vue 3, C#, SQL, NoSQL, Ubuntu Server, Session, Svelte, Dart",
+      "experiencedWith": "JavaScript, TypeScript, C#, NestJS, Node.JS, Angular, Svelte, REST APIs, Microservices, UML, C4 Model, Git, Docker, MongoDB, .Net",
+      "familiarWith": "Redis, Vue, PostgreSQL, Dart, Jenkins, GraphQL, Firebase",
       "keywords": [
         "HTML5",
         "CSS3 / SCSS",
@@ -118,7 +130,7 @@
     "languages": [
         {
             "language": "English",
-            "fluency": "Limited working proficiency"
+            "fluency": "Professional Proficiency"
         },
         {
             "language": "French",
@@ -127,7 +139,11 @@
         {
             "language": "Arabic",
             "fluency": "Native Speaker"
-        }
+        },
+        {
+          "language": "Spanish",
+          "fluency": "Beginner"
+      }
     ],
     "interests": [
       {
@@ -138,6 +154,9 @@
       },    
       {
         "name": "Fitness"
+      },
+      {
+        "name": "Cooking"
       }
     ]
 }

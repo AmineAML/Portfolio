@@ -38,6 +38,7 @@ export interface Work {
     website:     string;
     position:    string;
     company:     string;
+    tasks:       string[];
 }
 
 export interface Cation {

@@ -37,14 +37,26 @@
         "startDate": "24-10-2021",
         "website": "https://www.amineamellouk.com",
         "position": "Développeur Freelance",
-        "company": "Freelance"
+        "company": "Freelance",
+        "tasks": [
+          "Création et gestion d’un projet complexe de microservices en utilisant NodeJS (NestJS).",
+          "Réalisation de plusieurs Front-Ends, l’un étant un site e-commerce avec un CMS et un autre étant un panel d’administration pour une application mobile.",
+          "Avait configuré et géré plusieurs serveurs d’environnements avec la création de scripts de pipeline à l’aide de Jenkins, Nginx et Docker.",
+          "Avait recherché et créé des documents qui se sont avérés précieux pour l’architecture et la prise de décision."
+        ]
       },
       {
         "endDate": "31-08-2021",
         "startDate": "22-03-2021",
         "website": "https://www.ikdev.fr",
         "position": "Stagiaire Développeur Back-End",
-        "company": "IkDev"
+        "company": "IkDev",
+        "tasks": [
+          "Développement d’une API complexe utilisant l’architecture Microservices avec Eureka, Zuul, NestJS, MongoDB, AWS.",
+          "Mise en place de la livraison continue avec Jenkins et Bitbucket comme système de contrôle de version.",
+          "Contribution au développement d’une application mobile Flutter.",
+          "Maintenir la documentation et travailler dans un environnement utilisant la méthodologie Agile Scrum."
+        ]
       }
     ],
     "education": [
@@ -118,7 +130,7 @@
     "languages": [
         {
             "language": "Anglais",
-            "fluency": "Intermédiaire"
+            "fluency": "Avancé"
         },
         {
             "language": "Français",
@@ -126,8 +138,12 @@
         },
         {
             "language": "Arabe",
-            "fluency": "courant"
-        }
+            "fluency": "Maîtrise"
+        },
+        {
+          "language": "Espagnole",
+          "fluency": "Introductif"
+      }
     ],
     "interests": [
       {
@@ -138,6 +154,9 @@
       },    
       {
         "name": "Fitness"
+      },
+      {
+        "name": "Cooking"
       }
     ]
 }
