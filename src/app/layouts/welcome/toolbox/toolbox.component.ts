@@ -100,10 +100,10 @@ export class ToolboxComponent implements OnInit {
           name: '.Net',
           media: './../../../../assets/svg/back/dotnet.png'
         },
-        {
-          name: 'Restful APIs',
-          media: './../../../../assets/svg/back/rest-api.png'
-        },
+        // {
+        //   name: 'Restful APIs',
+        //   media: './../../../../assets/svg/back/rest-api.png'
+        // },
         {
           name: 'GraphQL',
           media: './../../../../assets/svg/back/graphql.svg'
@@ -112,14 +112,18 @@ export class ToolboxComponent implements OnInit {
           name: 'MongoDB',
           media: './../../../../assets/svg/back/mongodb.png'
         },
-        {
-          name: 'PostgreSQL',
-          media: './../../../../assets/svg/back/postgresql.svg'
-        },
+        // {
+        //   name: 'PostgreSQL',
+        //   media: './../../../../assets/svg/back/postgresql.svg'
+        // },
         {
           name: 'Redis',
           media: './../../../../assets/svg/back/redis.svg'
-        }
+        },
+        {
+          name: 'PostgreSQL',
+          media: './../../../../assets/svg/back/mssql.svg'
+        },
       ]
     },
     {
@@ -174,18 +178,18 @@ export class ToolboxComponent implements OnInit {
           name: 'OCI',
           media: './../../../../assets/svg/devops/oci.png'
         },
-        {
-          name: 'MongoDB Atlas',
-          media: './../../../../assets/svg/devops/mongodb-atlas.png'
-        },
+        // {
+        //   name: 'MongoDB Atlas',
+        //   media: './../../../../assets/svg/devops/mongodb-atlas.png'
+        // },
         {
           name: 'Docker',
           media: './../../../../assets/svg/devops/docker-icon.svg'
         },
-        {
-          name: 'GCP',
-          media: './../../../../assets/svg/devops/google-cloud.svg'
-        }
+        // {
+        //   name: 'GCP',
+        //   media: './../../../../assets/svg/devops/google-cloud.svg'
+        // }
       ]
     },
     {
