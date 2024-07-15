@@ -167,7 +167,7 @@
         }
       ],
       "description": "My personal SEO friendly blog",
-      "demoLink": "https://echospacedev.com/",
+      "demoLink": "https://echospacedev.netlify.app",
       "codeLink": "https://github.com/AmineAML/blog-astro-svelte",
       "displayImg": false,
       "img": "",
