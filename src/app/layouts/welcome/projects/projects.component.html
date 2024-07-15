@@ -19,9 +19,9 @@
                     <p class="mat-body-1">{{project.description}}</p>
                     <br />
                     <div>
-                        <a *ngIf="project.demoLink" href="{{project.demoLink}}" target="_blank" rel="noopener" class="primary">
+                        <!-- <a *ngIf="project.demoLink" href="{{project.demoLink}}" target="_blank" rel="noopener" class="primary">
                             <fa-icon [icon]="faEye"></fa-icon> {{lang.welcome.projects.previewButton}}
-                        </a>
+                        </a> -->
                         <a *ngIf="project.codeLink" href="{{project.codeLink}}" target="_blank" rel="noopener">
                             <fa-icon [icon]="faGithub"></fa-icon> Code
                         </a>
